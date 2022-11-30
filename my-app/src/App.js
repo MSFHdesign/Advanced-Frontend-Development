@@ -1,4 +1,4 @@
-import React from "react";
+
 import StartIntro from "./pages/start-intro/start-intro";
 import BtmNav from './components/btm-nav/btmNav'
 import "./app.css";
