@@ -1,14 +1,19 @@
 import React from "react";
-import StartIntro from "./pages/start-intro/start-intro";
-import BtmNav from './components/btm-nav/btmNav'
+import BtmNav from "./components/btm-nav/btmNav";
 import "./app.css";
+import { Route, Routes } from "react-router-dom";
+
+// Pages
+import Frontpage from "./pages/frontpage/frontpage";
+import StartIntro from "./pages/start-intro/start-intro";
 
 function App() {
   return (
-
-
     <div className="App">
-      <StartIntro />
+      <Routes>
+        <Route path="/" element={<StartIntro />} />
+        <Route path="/Frontpage" element={<Frontpage />} />
+      </Routes>
       <BtmNav />
     </div>
   );
