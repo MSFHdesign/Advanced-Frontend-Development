@@ -8,6 +8,7 @@ export default function StartIntro() {
       <div className="test2">
         <img className="logo" src={logo} alt="logo"></img>
         <h1>Kirkegårds historier</h1>
+        <h1>Hej Michael</h1>
         <div className="buttons">
           <Link to="/Frontpage">
             <button>Start</button>
