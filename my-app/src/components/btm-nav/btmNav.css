@@ -4,4 +4,27 @@ position: fixed;
 bottom: -5px;
 }
 
+.iconFlex {
+    position: absolute;
+        width: 100%;
+        top: 10%;
+    display: flex; 
+    justify-content: space-around;
+    align-content: center
+}
 
+
+.HomePic {
+    width: 67.97px;  
+}
+
+
+.Pointer {
+width: 61.39px;
+}
+
+.QRscanner {
+width: 72.59px;
+
+
+}
