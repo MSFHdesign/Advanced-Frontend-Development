@@ -22,11 +22,13 @@ h1 {
   font-family: var(--hFont);
   font-weight: var(--hFontWeight);
   text-align: center;
+  color: var(--txtColor);
 }
 
 .buttons {
   display: flex;
   flex-direction: column;
+  color: var(--txtColor);
 }
 
 .buttons button {
