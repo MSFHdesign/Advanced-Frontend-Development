@@ -11,3 +11,31 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* -------------Font---------------- */
+@font-face {
+  font-family: "Hurme Geometric Sans 4";
+  src: url("./HurmeGeometric/HurmeGeometricSans4-Thin.eot");
+  src: url("./HurmeGeometric/HurmeGeometricSans4-Thin.eot?#iefix")
+      format("embedded-opentype"),
+    url("./HurmeGeometric/HurmeGeometricSans4-Thin.woff") format("woff"),
+    url("./HurmeGeometric/HurmeGeometricSans4-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Hurme Geometric Sans 4";
+  src: url("./HurmeGeometric/HurmeGeometricSans4-SemiBold.eot");
+  src: url("./HurmeGeometric/HurmeGeometricSans4-SemiBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("./HurmeGeometric/HurmeGeometricSans4-SemiBold.woff") format("woff"),
+    url("./HurmeGeometric/HurmeGeometricSans4-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+:root {
+  --hFontFamily: "Hurme Geometric Sans 4";
+  --hFontWeight: 600;
+  --pFontFamily: "Hurme Geometric Sans 4";
+  --pFontWeight: 100;
+}
