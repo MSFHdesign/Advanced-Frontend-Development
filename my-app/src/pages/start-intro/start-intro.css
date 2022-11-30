@@ -1,6 +1,6 @@
 .test {
   background-image: url(../../pics/background.svg);
-  background-position: bottom;
+  background-position: center 30vh;
   background-repeat: no-repeat;
   height: 100vh;
 }
@@ -12,7 +12,7 @@
 
 .logo {
   width: 223px;
-  padding-top: 92px;
+  padding-top: 50px;
 }
 
 h1 {
