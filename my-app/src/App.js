@@ -1,6 +1,6 @@
 import React from "react";
 import StartIntro from "./pages/start-intro/start-intro";
-
+import BtmNav from './components/btm-nav/btmNav'
 import "./app.css";
 
 function App() {
@@ -9,6 +9,7 @@ function App() {
 
     <div className="App">
       <StartIntro />
+      <BtmNav />
     </div>
   );
 }
