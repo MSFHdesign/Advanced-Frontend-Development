@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.379c1cbd.css",
+    "main.js": "/static/js/main.bf344b15.js",
+    "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
+    "static/media/HurmeGeometricSans4-SemiBold.eot": "/static/media/HurmeGeometricSans4-SemiBold.78e1daaedb20388ae476.eot",
+    "static/media/HurmeGeometricSans4-SemiBold.ttf": "/static/media/HurmeGeometricSans4-SemiBold.328d7a46154f4b70a3fe.ttf",
+    "static/media/HurmeGeometricSans4-Thin.eot": "/static/media/HurmeGeometricSans4-Thin.0c57f71c16bffb43c797.eot",
+    "static/media/HurmeGeometricSans4-Thin.ttf": "/static/media/HurmeGeometricSans4-Thin.4667d4c1a43e7fb60012.ttf",
+    "static/media/HurmeGeometricSans4-SemiBold.woff": "/static/media/HurmeGeometricSans4-SemiBold.e1d82104d45ba66fcec1.woff",
+    "static/media/HurmeGeometricSans4-Thin.woff": "/static/media/HurmeGeometricSans4-Thin.de2c60c4af4d7187294f.woff",
+    "service-worker.js": "/service-worker.js",
+    "static/media/logo.svg": "/static/media/logo.68dc21eb9ff811ef138a3495518ccbdf.svg",
+    "static/media/background.svg": "/static/media/background.e37aa2c3d1951621fa9f.svg",
+    "static/media/qrscangreen.svg": "/static/media/qrscangreen.9101316e7c7593bcb40b130137d250b9.svg",
+    "static/media/homegreen.svg": "/static/media/homegreen.7b80bd377c71bacbc4707b03118e7353.svg",
+    "index.html": "/index.html",
+    "static/media/mapgreen.svg": "/static/media/mapgreen.875212d3ca8073a14ea965cdbd93944b.svg",
+    "main.379c1cbd.css.map": "/static/css/main.379c1cbd.css.map",
+    "main.bf344b15.js.map": "/static/js/main.bf344b15.js.map",
+    "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.379c1cbd.css",
+    "static/js/main.bf344b15.js"
+  ]
+}
