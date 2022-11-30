@@ -19,13 +19,16 @@
 
 h1 {
   font-size: 65.8px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--hFont);
+  font-weight: var(--hFontWeight);
   text-align: center;
+  color: var(--txtColor);
 }
 
 .buttons {
   display: flex;
   flex-direction: column;
+  color: var(--txtColor);
 }
 
 .buttons button {
@@ -34,6 +37,9 @@ h1 {
   width: 185px;
   height: 60px;
   border: 0px solid whitesmoke;
+  font-family: var(--hFont);
+  font-weight: var(--hFontWeight);
+  text-transform: uppercase;
   font-size: 35px;
   margin-bottom: 27px;
 }

@@ -34,8 +34,10 @@ code {
 }
 
 :root {
-  --hFontFamily: "Hurme Geometric Sans 4";
+  --hFont: "Hurme Geometric Sans 4";
   --hFontWeight: 600;
-  --pFontFamily: "Hurme Geometric Sans 4";
+  --btnFont: "Hurme Geometric Sans 4";
+  --pFont: "Hurme Geometric Sans 4";
   --pFontWeight: 100;
+  --txtColor: #333;
 }
