@@ -1,3 +1,7 @@
+:root{
+  --PrimColor: #8B9769; 
+}
+
 .App {
   font-size: 22;
 }

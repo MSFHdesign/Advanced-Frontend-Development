@@ -1,30 +1,19 @@
 
 .navBtm {
 position: fixed;
-bottom: -5px;
-}
-
-.iconFlex {
-    position: absolute;
-        width: 100%;
-        top: 10%;
-    display: flex; 
+bottom: 0;
+padding: 10px 0;
+width: 100%;
+height: 100px;
+background: var(--PrimColor);
+display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-around;
-    align-content: center
 }
 
-
-.HomePic {
-    width: 67.97px;  
-}
-
-
-.Pointer {
-width: 61.39px;
-}
-
-.QRscanner {
-width: 72.59px;
-
-
+.Icon {
+   height: 100px;
+    z-index: 1000;
+    width: calc((100% / 4) - 10px * 4);
 }
