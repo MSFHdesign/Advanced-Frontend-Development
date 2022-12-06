@@ -16,7 +16,7 @@ export default function btmNav() {
       <Link to="/Qr">
         <img src={QRscanner} alt="HQR" className="Icon" />
       </Link>
-      <Link to="/">  
+      <Link to="/Map">  
         <img src={MapGreen} alt="Map" className="Icon" />
       </Link>  
       
