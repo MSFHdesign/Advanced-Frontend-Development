@@ -1,14 +1,16 @@
-import './StoryStyle.css';
-function Story() {
-  return (
-    <div className="containerBox">
-        <h2> 
-            Fortæl historien
-        </h2>
+import React from 'react'
+import StoryAdd from './Story_add'
+import StoryDisplay from './Story_Display'
 
-        
+export default function Story() {
+  return (
+   
+    <div> 
+        <StoryAdd/> 
+        <StoryDisplay />
+    
     </div>
+
+
   )
 }
-
-export default Story
