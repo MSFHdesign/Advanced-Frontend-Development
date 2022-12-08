@@ -10,6 +10,7 @@ import Qr from "./pages/qr/qr";
 import Map from "./pages/map/map";
 import Story from "./pages/Story/Story.jsx";
 import Home from "./pages/home/Home.jsx";
+import Step0 from "./pages/intro/step0.jsx";
 import Step1 from "./pages/intro/step1.jsx";
 import Step2 from "./pages/intro/step2.jsx";
 import Step3 from "./pages/intro/step3.jsx";
@@ -27,6 +28,7 @@ function App() {
         <Route path="/Map" element={<Map />} />
         <Route path="/Qr" element={<Qr />} />
         <Route path="/story" element={<Story />} />
+        <Route path="/step0" element={<Step0 />} />
         <Route path="/step1" element={<Step1 />} />
         <Route path="/step2" element={<Step2 />} />
         <Route path="/step3" element={<Step3 />} />

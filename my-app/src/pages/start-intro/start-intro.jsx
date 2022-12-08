@@ -12,7 +12,7 @@ export default function StartIntro() {
           <Link to="/Frontpage">
             <button>Start</button>
           </Link>
-          <Link to="/Step1">
+          <Link to="/Step0">
             <button>Intro</button>
           </Link>
         </div>
