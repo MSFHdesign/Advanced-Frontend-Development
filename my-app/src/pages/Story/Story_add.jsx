@@ -23,6 +23,16 @@ export default function AddArticle() {
   //progress state
   const [progress, setProgress] = useState(0);
 
+  // const textInput = document.querySelector('.text-input');
+  // const dateInput = document.querySelector('.datepicker-input');
+  // dateInput.addEventListener('change', event => {
+  //   textInput.value = event.target.value;
+  //   // Reset the value so the picker always
+  //   // opens in a fresh state regardless of
+  //   // what was last picked
+  //   event.target.value = '';
+  // });
+
   // Change aint no thiiing
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -33,6 +43,7 @@ export default function AddArticle() {
   const handleImageChange = (e) => {
     setFormData({ ...formData, image: e.target.files[0] });
   };
+
 // sending da' shizzle out
   const handlePublish = () => {
     if (!formData.name || !formData.story || !formData.job || !formData.graveId ) {
@@ -58,13 +69,13 @@ export default function AddArticle() {
       () => {
         setFormData({
           name: "",
-          story: "",
-          image: "",
           born: "",
           dead: "",
+          image: "",
           job: "",
-          graveId: "",
           ErhvervLogo:"",
+          story: "",
+          graveId: "",
         });
 
         getDownloadURL(uploadImage.snapshot.ref).then((url) => {
@@ -137,42 +148,37 @@ export default function AddArticle() {
       </div>
 
       <div className="bornAndDeadContainer">
-        <div className="bornInput">
 
-          <div>Født:</div>
-
-          {/* Born */}
-
-          {/* <label htmlFor="">Født</label>
+        {/* Born */}
+        <span className="bornInput">
+          <span className="datepicker-toggle-button">Født:</span>
           <input
             type="date"
             name="born"
-            className="inputfield"
+            id="bornDate"
             value={formData.born}
             placeholder="Født"
             onChange={(e) => handleChange(e)}
-          /> */}
-        </div>
+            className="datepicker-input"
+          />
+        </span>
 
-        <div className="deadInput">
-          
-          <div>Død:</div>
-
-          {/* Dead */}
-          {/* <label htmlFor="">Død</label>
+        {/* Dead */}
+        <span className="deadInput">
+          <span className="datepicker-toggle-button">Død:</span>
           <input
             type="date"
             name="dead"
-            className="inputfield"
+            id="deadDate"
+            className="datepicker-input"
             value={formData.dead}
             onChange={(e) => handleChange(e)}
-          /> */}
-        </div>
+          />
+        </span>
       </div>
 
       <div className="imgInput">
         {/* IMG UPLOAD */ }
-        {/* <label htmlFor="">Image</label> */}
         <input
           type="file"
           name="image"
@@ -182,7 +188,7 @@ export default function AddArticle() {
           hidden
         />
         <label id="addImgContainer" htmlFor="imgUpload">Tilføj billede 
-          <svg width="30" height="auto" viewBox="0 0 392 392" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="30" height="30" viewBox="0 0 392 392" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M57.315 334.505C-19.105 258.085 -19.105 133.735 57.315 57.315C133.735 -19.105 258.085 -19.105 334.505 57.315C410.925 133.735 410.925 258.085 334.505 334.505C258.085 410.925 133.735 410.925 57.315 334.505V334.505ZM313.285 78.535C248.565 13.815 143.245 13.815 78.525 78.535C13.805 143.255 13.805 248.575 78.525 313.295C143.245 378.015 248.565 378.015 313.285 313.295C378.005 248.575 378.005 143.255 313.285 78.535V78.535Z" fill="#46512C"/>
             <path d="M305.405 180.915H210.905V86.415C210.905 78.135 204.185 71.415 195.905 71.415C187.625 71.415 180.905 78.135 180.905 86.415V180.915H86.405C78.125 180.915 71.405 187.635 71.405 195.915C71.405 204.195 78.125 210.915 86.405 210.915H180.905V305.415C180.905 313.695 187.625 320.415 195.905 320.415C204.185 320.415 210.905 313.695 210.905 305.415V210.915H305.405C313.685 210.915 320.405 204.195 320.405 195.915C320.405 187.635 313.685 180.915 305.405 180.915Z" fill="#46512C"/>
           </svg>
@@ -208,10 +214,10 @@ export default function AddArticle() {
           value={formData.job}
           placeholder="Erhverv"
           onChange={(e) => handleChange(e)}
-          hidden
+          
         />
         <label id="workInputField" htmlFor="workInput">Tilføj erhverv 
-          <svg width="30" height="auto" viewBox="0 0 392 392" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="30" height="30" viewBox="0 0 392 392" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M57.315 334.505C-19.105 258.085 -19.105 133.735 57.315 57.315C133.735 -19.105 258.085 -19.105 334.505 57.315C410.925 133.735 410.925 258.085 334.505 334.505C258.085 410.925 133.735 410.925 57.315 334.505V334.505ZM313.285 78.535C248.565 13.815 143.245 13.815 78.525 78.535C13.805 143.255 13.805 248.575 78.525 313.295C143.245 378.015 248.565 378.015 313.285 313.295C378.005 248.575 378.005 143.255 313.285 78.535V78.535Z" fill="#46512C"/>
             <path d="M305.405 180.915H210.905V86.415C210.905 78.135 204.185 71.415 195.905 71.415C187.625 71.415 180.905 78.135 180.905 86.415V180.915H86.405C78.125 180.915 71.405 187.635 71.405 195.915C71.405 204.195 78.125 210.915 86.405 210.915H180.905V305.415C180.905 313.695 187.625 320.415 195.905 320.415C204.185 320.415 210.905 313.695 210.905 305.415V210.915H305.405C313.685 210.915 320.405 204.195 320.405 195.915C320.405 187.635 313.685 180.915 305.405 180.915Z" fill="#46512C"/>
           </svg>
@@ -250,7 +256,17 @@ export default function AddArticle() {
 
       <div className="submitHistoryBtn">
         <button className="btn formsubmit" onClick={handlePublish}>
-          Færdig
+          <svg width="30" height="30" viewBox="0 0 392 392" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_233_1995)">
+            <path d="M196 0C87.75 0 0 87.75 0 196C0 304.25 87.75 392 196 392C304.25 392 392 304.25 392 196C392 87.75 304.25 0 196 0ZM305.5 211H211V305.5C211 313.78 204.28 320.5 196 320.5C187.72 320.5 181 313.78 181 305.5V211H86.5C78.22 211 71.5 204.28 71.5 196C71.5 187.72 78.22 181 86.5 181H181V86.5C181 78.22 187.72 71.5 196 71.5C204.28 71.5 211 78.22 211 86.5V181H305.5C313.78 181 320.5 187.72 320.5 196C320.5 204.28 313.78 211 305.5 211Z" fill="#46512C"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_233_1995">
+            <rect width="392" height="392" fill="white"/>
+            </clipPath>
+            </defs>
+          </svg>
+          Tilføj historien
         </button>
       </div>
     </div>
