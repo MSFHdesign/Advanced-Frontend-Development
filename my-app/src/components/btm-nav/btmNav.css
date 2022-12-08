@@ -4,12 +4,13 @@ position: fixed;
 bottom: 0;
 padding: 10px 0;
 width: 100%;
-height: 100px;
-background: var(--PrimColor);
+height: 80px;
+background: var(--GreenDark);
 display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    box-sizing:content-box;
 }
 
 .Icon {
