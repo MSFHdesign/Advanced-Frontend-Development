@@ -9,16 +9,21 @@ import StartIntro from "./pages/start-intro/start-intro";
 import Qr from "./pages/qr/qr";
 import Map from "./pages/map/map";
 import Story from './pages/Story/Story.jsx';
+import Home from './pages/home/Home.jsx';
+
 
 function App() {
   return (
     <div className="App">
       <Routes>
+        
         <Route path="/" element={<StartIntro />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/Frontpage" element={<Frontpage />} />
         <Route path="/Map" element={<Map />} />
         <Route path="/Qr" element={<Qr />} />
         <Route path="/story" element={<Story />} />
+
       </Routes>
       <BtmNav />
     </div>
