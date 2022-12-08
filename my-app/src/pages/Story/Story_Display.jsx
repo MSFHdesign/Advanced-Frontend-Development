@@ -5,6 +5,8 @@ import { db } from "../../firebaseConfig";
 
 export default function Articles() {
   const [Articles, SetArticles] = useState([]);
+  const [search, setSearch]= useState("");
+
   useEffect(() => {
     const articleRef = collection(db, "Historier");
     const q = query(articleRef, orderBy("graveId"));
@@ -20,6 +22,12 @@ export default function Articles() {
 
   return (
     <div className="historie">
+      <form>
+       
+       <input onChange={(e) =>{setSearch(e.target.value)}}/>
+       <button type="submit"> Søg </button>
+  
+  </form>
       {Articles.length === 0 ? (
         <p>Henter historier</p>
       ) : (

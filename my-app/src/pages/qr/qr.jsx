@@ -1,20 +1,23 @@
 import React, { Component } from 'react'
 import QrReader from 'react-qr-scanner'
-
+ 
 class Qr extends Component {
+  
   constructor(props){
+    
     super(props)
     this.state = {
       delay: 100,
       result: 'No result',
     }
-
+ 
     this.handleScan = this.handleScan.bind(this)
   }
   handleScan(data){
-    this.setState({
+    let value= this.setState({
       result: data,
     })
+    console.log(value);
   }
   handleError(err){
     console.error(err)
@@ -24,18 +27,19 @@ class Qr extends Component {
       height: 240,
       width: 320,
     }
-
+ 
     return(
       <div>
         <QrReader
           delay={this.state.delay}
           style={previewStyle}
           onError={this.handleError}
-          onScan={this.handleScan} 
+          onScan={this.handleScan}
           />
-        <p>{this.state.result}</p>
+        <p>{this.state.result}</p>`enter code here`
+        
       </div>
     )
   }
 }
-export default Qr
+export default Qr;

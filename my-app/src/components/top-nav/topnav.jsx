@@ -5,7 +5,8 @@ function Topnav() {
   return (
     <div className='topNavbox'>
         <img src={logo} alt="Kirkegårds appen" className='srcLogo'/>
-            <p> </p>
+       
+
     </div>
   )
 }
