@@ -120,101 +120,139 @@ export default function AddArticle() {
   };
   return (
     <div className="addStoryBox">
-      <h2>Tilføj historie</h2>
-    {/*Name here */ }
-      <label htmlFor="">name</label>
-      <input
-        type="text"
-        name="name"
-        className="inputfield"
-        value={formData.name}
-        onChange={(e) => handleChange(e)}
-      />
-<br/>
-    {/* Born */}
-      <label htmlFor="">Født</label>
-      <input
-        type="date"
-        name="born"
-        className="inputfield"
-        value={formData.born}
-        onChange={(e) => handleChange(e)}
-      />
-<br/>
-    {/* Dead */}
-      <label htmlFor="">Død</label>
-      <input
-        type="date"
-        name="dead"
-        className="inputfield"
-        value={formData.dead}
-        onChange={(e) => handleChange(e)}
-      />
 
+      <h2>Fortæl historien</h2>
 
-<br/>
-      {/* area for telling your story */ }
-      <label htmlFor="">story</label>
-      <textarea
-        name="story"
-        className="inputfield"
-        value={formData.story}
-        onChange={(e) => handleChange(e)}
-      />
+      <div className="nameInput">
+        {/*Name here */ }
+        {/* <label htmlFor="">Navn</label> */}
+        <input
+          type="text"
+          name="name"
+          className="inputfield"
+          value={formData.name}
+          placeholder="Navn..."
+          onChange={(e) => handleChange(e)}
+        />
+      </div>
 
-<br/>
-    {/* IMG UPLOAD */ }
-      <label htmlFor="">Image</label>
-      <input
-        type="file"
-        name="image"
-        accept="image/*"
-        className="inputfield"
-        onChange={(e) => handleImageChange(e)}
-      />
+      <div className="bornAndDeadContainer">
+        <div className="bornInput">
 
-      {progress === 0 ? null : (
-        <div className="progess">
-          <div
-            className="progressBar"
-          >
-            {`uploader image ${progress}%`}
-          </div>
+          <div>Født:</div>
+
+          {/* Born */}
+
+          {/* <label htmlFor="">Født</label>
+          <input
+            type="date"
+            name="born"
+            className="inputfield"
+            value={formData.born}
+            placeholder="Født"
+            onChange={(e) => handleChange(e)}
+          /> */}
         </div>
-      )}
 
-<br/>
-    {/* Line of work */}
-      <label htmlFor="">Erhverv</label>
-      <input
-        type="text"
-        name="job"
-        className="inputfield"
-        value={formData.job}
-        onChange={(e) => handleChange(e)}
-      />
-    {/* Grave ID */}
-      <label htmlFor="">Grav nummer</label>
-      <input
-        type="number"
-        min="1" max="400"
-        name="graveId"
-        className="inputfield"
-        value={formData.graveId}
-        onChange={(e) => handleChange(e)}
-      />
-      <select value="ErhvervLogo" onChange={(e) => handleChange(e)}>
-        <option value=" 1 ">1</option>
-        <option value=" 2 ">2</option>
-        <option value=" 3 ">3</option>
-      </select>
+        <div className="deadInput">
+          
+          <div>Død:</div>
 
+          {/* Dead */}
+          {/* <label htmlFor="">Død</label>
+          <input
+            type="date"
+            name="dead"
+            className="inputfield"
+            value={formData.dead}
+            onChange={(e) => handleChange(e)}
+          /> */}
+        </div>
+      </div>
 
-<br/>
+      <div className="imgInput">
+        {/* IMG UPLOAD */ }
+        {/* <label htmlFor="">Image</label> */}
+        <input
+          type="file"
+          name="image"
+          accept="image/*"
+          id="imgUpload"
+          onChange={(e) => handleImageChange(e)}
+          hidden
+        />
+        <label id="addImgContainer" htmlFor="imgUpload">Tilføj billede 
+          <svg width="30" height="auto" viewBox="0 0 392 392" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M57.315 334.505C-19.105 258.085 -19.105 133.735 57.315 57.315C133.735 -19.105 258.085 -19.105 334.505 57.315C410.925 133.735 410.925 258.085 334.505 334.505C258.085 410.925 133.735 410.925 57.315 334.505V334.505ZM313.285 78.535C248.565 13.815 143.245 13.815 78.525 78.535C13.805 143.255 13.805 248.575 78.525 313.295C143.245 378.015 248.565 378.015 313.285 313.295C378.005 248.575 378.005 143.255 313.285 78.535V78.535Z" fill="#46512C"/>
+            <path d="M305.405 180.915H210.905V86.415C210.905 78.135 204.185 71.415 195.905 71.415C187.625 71.415 180.905 78.135 180.905 86.415V180.915H86.405C78.125 180.915 71.405 187.635 71.405 195.915C71.405 204.195 78.125 210.915 86.405 210.915H180.905V305.415C180.905 313.695 187.625 320.415 195.905 320.415C204.185 320.415 210.905 313.695 210.905 305.415V210.915H305.405C313.685 210.915 320.405 204.195 320.405 195.915C320.405 187.635 313.685 180.915 305.405 180.915Z" fill="#46512C"/>
+          </svg>
+        </label>
+        {progress === 0 ? null : (
+          <div className="progess">
+            <div
+              className="progressBar"
+            >
+              {`uploader image ${progress}%`}
+            </div>
+          </div>
+        )}
+      </div>
 
-      <button className="btn formsubmit" onClick={handlePublish}>
-        Færdig
-      </button>
+      <div className="workInput">
+        {/* Line of work */}
+        {/* <label htmlFor="">Erhverv</label> */}
+        <input
+          type="text"
+          name="job"
+          id="workInput"
+          value={formData.job}
+          placeholder="Erhverv"
+          onChange={(e) => handleChange(e)}
+          hidden
+        />
+        <label id="workInputField" htmlFor="workInput">Tilføj erhverv 
+          <svg width="30" height="auto" viewBox="0 0 392 392" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M57.315 334.505C-19.105 258.085 -19.105 133.735 57.315 57.315C133.735 -19.105 258.085 -19.105 334.505 57.315C410.925 133.735 410.925 258.085 334.505 334.505C258.085 410.925 133.735 410.925 57.315 334.505V334.505ZM313.285 78.535C248.565 13.815 143.245 13.815 78.525 78.535C13.805 143.255 13.805 248.575 78.525 313.295C143.245 378.015 248.565 378.015 313.285 313.295C378.005 248.575 378.005 143.255 313.285 78.535V78.535Z" fill="#46512C"/>
+            <path d="M305.405 180.915H210.905V86.415C210.905 78.135 204.185 71.415 195.905 71.415C187.625 71.415 180.905 78.135 180.905 86.415V180.915H86.405C78.125 180.915 71.405 187.635 71.405 195.915C71.405 204.195 78.125 210.915 86.405 210.915H180.905V305.415C180.905 313.695 187.625 320.415 195.905 320.415C204.185 320.415 210.905 313.695 210.905 305.415V210.915H305.405C313.685 210.915 320.405 204.195 320.405 195.915C320.405 187.635 313.685 180.915 305.405 180.915Z" fill="#46512C"/>
+          </svg>
+        </label>
+      </div>
+
+      <div className="historyInput">
+        {/* area for telling your story */ }
+        {/* <label htmlFor="">story</label> */}
+        <textarea
+          name="story"
+          className="inputfield"
+          value={formData.story}
+          placeholder="Skriv historien her..."
+          onChange={(e) => handleChange(e)}
+        />
+      </div>
+
+      <div className="graveIdInput">
+        {/* Grave ID */}
+        <label htmlFor="">Grav nummer</label>
+        <input
+          type="number"
+          min="1" max="400"
+          name="graveId"
+          className="inputfield"
+          value={formData.graveId}
+          onChange={(e) => handleChange(e)}
+        />
+        <select value="ErhvervLogo" onChange={(e) => handleChange(e)}>
+          <option value=" 1 ">1</option>
+          <option value=" 2 ">2</option>
+          <option value=" 3 ">3</option>
+        </select>
+      </div>
+
+      <div className="submitHistoryBtn">
+        <button className="btn formsubmit" onClick={handlePublish}>
+          Færdig
+        </button>
+      </div>
     </div>
   );
 }
