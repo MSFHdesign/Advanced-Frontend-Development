@@ -7,5 +7,6 @@
 
 .App {
   font-size: 22;
-  background-color: var(--BGColor);
+  margin: 0;
+  padding: 0;
 }

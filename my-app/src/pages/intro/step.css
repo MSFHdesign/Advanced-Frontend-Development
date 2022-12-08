@@ -14,24 +14,35 @@
 .box {
   background-color: white;
   border-radius: 30px;
-  height: 60vh;
-  width: 90vw;
+  height: 70vh;
+  width: 80vw;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5vw;
 }
 
 h1 {
-  font-size: 65.8px;
+  font-size: 50px;
   font-family: var(--hFont);
   font-weight: var(--hFontWeight);
   text-align: center;
   color: var(--txtColor);
 }
+p {
+  font-family: var(--hFont);
+  font-size: 25px;
+}
+
+.logo {
+  height: 100px;
+  padding: 0;
+}
 
 .buttons1 {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   color: var(--txtColor);
 }
 
@@ -44,13 +55,11 @@ h1 {
   font-family: var(--hFont);
   font-weight: var(--hFontWeight);
   text-transform: uppercase;
-  font-size: 35px;
-}
-
-#hollow {
+  font-size: 25px;
 }
 
 #solid {
   background-color: #34430f;
   color: white;
+  margin-left: 5vw;
 }
