@@ -7,7 +7,7 @@ export default function Articles() {
   const [Articles, SetArticles] = useState([]);
   useEffect(() => {
     const articleRef = collection(db, "Historier");
-    const q = query(articleRef, orderBy("createdAt"));
+    const q = query(articleRef, orderBy("graveId"));
     onSnapshot(q, (snapshot) => {
       const articles = snapshot.docs.map((doc) => ({
         id: doc.id,
@@ -23,13 +23,14 @@ export default function Articles() {
       {Articles.length === 0 ? (
         <p>Henter historier</p>
       ) : (
-        Articles.map(({ id, name, born, dead, story, imageUrl, createdAt, job }) => (
+        Articles.map(({ id, name, born, dead, story, imageUrl, createdAt, job, graveId, }) => (
           <div className="StoriesBox" key={id}>
           
             <div className="StoryBox">
 
                 <img src={imageUrl} alt="title" />
-              <h2>{name}</h2>
+              <h2>{name}</h2> 
+              <p> {graveId} </p>
               <h3> født: {born} død: {dead}</h3>
               <p>indsendt: {createdAt.toDate().toDateString()}</p>
               <p> {job} </p>

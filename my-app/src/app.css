@@ -1,5 +1,8 @@
 :root{
-  --PrimColor: #8B9769; 
+  --GreenDark: #889468;
+  --GreenMid:  #adb891;
+  --GreenLight: #d6ddc2;
+
 }
 
 .App {

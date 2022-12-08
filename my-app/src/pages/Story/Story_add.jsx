@@ -15,7 +15,9 @@ export default function AddArticle() {
     dead: "",
     image: "",
     createdAt: Timestamp.now().toDate(),
-    job: ""
+    job: "",
+    gravId: "",
+    ErhvervLogo:"",
   });
 
   //progress state
@@ -27,13 +29,13 @@ export default function AddArticle() {
     console.log(formData);
   };
 
-  // 
+  // Pictures can be rocking
   const handleImageChange = (e) => {
     setFormData({ ...formData, image: e.target.files[0] });
   };
-
+// sending da' shizzle out
   const handlePublish = () => {
-    if (!formData.name || !formData.story || !formData.job ) {
+    if (!formData.name || !formData.story || !formData.job || !formData.graveId ) {
       alert("Alle felter skal udfyldes");
       return;
     }
@@ -60,6 +62,9 @@ export default function AddArticle() {
           image: "",
           born: "",
           dead: "",
+          job: "",
+          graveId: "",
+          ErhvervLogo:"",
         });
 
         getDownloadURL(uploadImage.snapshot.ref).then((url) => {
@@ -74,6 +79,8 @@ export default function AddArticle() {
               born: formData.born,
               dead: formData.dead,
               job: formData.job,  
+              graveId: formData.graveId,
+              ErhvervLogo: formData.ErhvervLogo,
 
 
             })
@@ -95,6 +102,8 @@ export default function AddArticle() {
                 born: formData.born,
                 dead: formData.dead,
                 job: formData.job,  
+                graveId: formData.graveId,
+                ErhvervLogo: formData.ErhvervLogo,
 
             })
               .then(() => {
@@ -125,7 +134,7 @@ export default function AddArticle() {
     {/* Born */}
       <label htmlFor="">Født</label>
       <input
-        type="text"
+        type="date"
         name="born"
         className="inputfield"
         value={formData.born}
@@ -135,7 +144,7 @@ export default function AddArticle() {
     {/* Dead */}
       <label htmlFor="">Død</label>
       <input
-        type="text"
+        type="date"
         name="dead"
         className="inputfield"
         value={formData.dead}
@@ -184,6 +193,21 @@ export default function AddArticle() {
         value={formData.job}
         onChange={(e) => handleChange(e)}
       />
+    {/* Grave ID */}
+      <label htmlFor="">Grav nummer</label>
+      <input
+        type="number"
+        min="1" max="400"
+        name="graveId"
+        className="inputfield"
+        value={formData.graveId}
+        onChange={(e) => handleChange(e)}
+      />
+      <select value="ErhvervLogo" onChange={(e) => handleChange(e)}>
+        <option value=" 1 ">1</option>
+        <option value=" 2 ">2</option>
+        <option value=" 3 ">3</option>
+      </select>
 
 
 <br/>
