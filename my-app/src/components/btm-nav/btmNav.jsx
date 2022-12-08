@@ -1,3 +1,6 @@
+
+import { Link, useLocation } from "react-router-dom";
+
 import "./btmNav.css";
 
 // aktive ikoner
@@ -13,8 +16,6 @@ import inactiveMap from '../../pics/navicon/mapInactive.svg'
 import inactiveStory from '../../pics/navicon/storyInactive.svg'
 
 
-
-import { Link, useLocation } from "react-router-dom";
 
 
 export default function BtmNav() {

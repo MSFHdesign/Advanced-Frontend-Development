@@ -18,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<StartIntro />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/*" element={<Home />} />
         <Route path="/Frontpage" element={<Frontpage />} />
         <Route path="/Map" element={<Map />} />
         <Route path="/Qr" element={<Qr />} />
