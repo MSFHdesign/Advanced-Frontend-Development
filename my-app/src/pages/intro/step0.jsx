@@ -1,21 +1,21 @@
 import "../../pages/intro/step.css";
 import { Link } from "react-router-dom";
-import icon from "../../pics/navicon/mapInactive.svg";
 
-export default function Step3() {
+export default function Step0() {
   return (
     <div className="bg">
       <div className="box">
         <h1>Start guide</h1>
         <p>
-          Tryk på “Kort”-ikonet for at gå til kortoversigten over kirkegården.
+          Kirkegårds historier er en app, hvor Du kan læse historier om dem, som
+          ligger begravet på Åbyhøj Kirkegård. Den giver dig også mulighed for
+          selv at dele historier, om dem som Du har mistet.
         </p>
-        <img className="logo" src={icon} alt="logo"></img>
         <div className="buttons1">
           <Link to="/Frontpage">
             <button>Skip</button>
           </Link>
-          <Link to="/step4">
+          <Link to="/step2">
             <button id="solid">Næste</button>
           </Link>
         </div>

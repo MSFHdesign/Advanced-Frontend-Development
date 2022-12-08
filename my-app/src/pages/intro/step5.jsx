@@ -2,7 +2,7 @@ import "../../pages/intro/step.css";
 import { Link } from "react-router-dom";
 import icon from "../../pics/navicon/storyInactive.svg";
 
-export default function Step1() {
+export default function Step5() {
   return (
     <div className="bg">
       <div className="box">
