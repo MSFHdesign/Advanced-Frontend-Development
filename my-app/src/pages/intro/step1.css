@@ -1,0 +1,56 @@
+.bg {
+  background-image: url(../../pics/background.svg);
+  background-position: 0 30vh;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.box {
+  background-color: white;
+  border-radius: 30px;
+  height: 60vh;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+h1 {
+  font-size: 65.8px;
+  font-family: var(--hFont);
+  font-weight: var(--hFontWeight);
+  text-align: center;
+  color: var(--txtColor);
+}
+
+.buttons1 {
+  display: flex;
+  justify-content: space-around;
+  color: var(--txtColor);
+}
+
+.buttons1 button {
+  background-color: whitesmoke;
+  border-radius: 30px;
+  width: 150px;
+  height: 60px;
+  border: 3.5px solid #34430f;
+  font-family: var(--hFont);
+  font-weight: var(--hFontWeight);
+  text-transform: uppercase;
+  font-size: 35px;
+}
+
+#hollow {
+}
+
+#solid {
+  background-color: #34430f;
+  color: white;
+}

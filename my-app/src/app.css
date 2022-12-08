@@ -1,11 +1,11 @@
-:root{
+:root {
   --GreenDark: #889468;
-  --GreenMid:  #adb891;
+  --GreenMid: #adb891;
   --GreenLight: #d6ddc2;
-
+  --BGColor: #f2f2f2;
 }
 
 .App {
   font-size: 22;
+  background-color: var(--BGColor);
 }
-
