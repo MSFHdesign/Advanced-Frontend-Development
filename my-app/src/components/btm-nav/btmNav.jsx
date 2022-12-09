@@ -23,14 +23,14 @@ export default function BtmNav() {
         <img src={activeHome} alt="Home" className="Icon" height="100px" /> 
         </Link> 
             : /* Ellers så skal du være grøn sød tak */ 
-        <Link to="/home"> <img src={inactiveHome} alt="Home" className="Icon" height="100px" />  </Link>}
+        <Link to="/home"> <img src={inactiveHome} alt="Home" className="Icon" id="homeMenuIcon" height="100px" />  </Link>}
       
         {/*QR */}
         {location.pathname === /* Hvis pathname er  */  "/qr" ? /* SÅ vær hvid */  <Link to="/qr">
         <img src={activeQr} alt="Home" className="Icon" height="100px" /> 
         </Link> 
             : /* Ellers så skal du være grøn sød tak */ 
-        <Link to="/qr"> <img src={inactiveQr} alt="Home" className="Icon" height="100px" /></Link>}
+        <Link to="/qr"> <img src={inactiveQr} alt="Home" className="Icon" id="qrMenuIcon" height="100px" /></Link>}
 
         {/* Map */}
         {location.pathname === /* Hvis pathname er  */  "/map" ? /* SÅ vær hvid */  <Link to="/map">
