@@ -9,11 +9,11 @@ export default function StartIntro() {
         <img className="logoMain" src={logo} alt="logo"></img>
         <h1>Kirkegårds historier</h1>
         <div className="buttons">
-          <Link to="/Frontpage">
+          <Link to="/Step0">
             <button>Start</button>
           </Link>
-          <Link to="/Step0">
-            <button>Intro</button>
+          <Link to="/Frontpage">
+            <button>Skip intro</button>
           </Link>
         </div>
       </div>

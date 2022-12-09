@@ -6,9 +6,9 @@ export default function Step4() {
   return (
     <div className="bg">
       <div className="box">
-        <h1>Start guide</h1>
-        <p>Tryk på søgefeltet for at søge efter grave.</p>
+        <h1>Startguide</h1>
         <img className="logo" src={icon} alt="logo"></img>
+        <p>Søgefelt.<br></br>Find begravede ved at søge på deres navn eller gravstedets nummer.</p>
         <div className="buttons1">
           <Link to="/Frontpage">
             <button>Skip</button>

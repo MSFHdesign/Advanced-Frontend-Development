@@ -39,7 +39,7 @@ h1 {
   border: 0px solid whitesmoke;
   font-family: var(--hFont);
   font-weight: var(--hFontWeight);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: 35px;
   margin-bottom: 27px;
 }

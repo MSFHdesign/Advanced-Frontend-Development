@@ -6,9 +6,9 @@ export default function Step2() {
   return (
     <div className="bg">
       <div className="box">
-        <h1>Start guide</h1>
-        <p>Tryk på “Scan”-ikonet for at scanne QR-koder.</p>
+        <h1>Startguide</h1>
         <img className="logo" src={icon} alt="logo"></img>
+        <p>QR-scanner.<br></br>Scan et gravsteds QR-kode for at læse den begravedes livshistorie.</p>
         <div className="buttons1">
           <Link to="/Frontpage">
             <button>Skip</button>
