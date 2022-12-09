@@ -241,7 +241,7 @@ export default function AddArticle() {
 
       <div className="graveIdInput">
         {/* Grave ID */}
-        <label htmlFor="">Grav nummer</label>
+        <label htmlFor="">Gravnummer</label>
         <input
           type="number"
           min="1" max="400"
@@ -260,16 +260,9 @@ export default function AddArticle() {
       <div className="submitHistoryBtn">
         <button className="btn formsubmit" onClick={handlePublish}>
           <svg width="30" height="30" viewBox="0 0 392 392" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_233_1995)">
-            <path d="M196 0C87.75 0 0 87.75 0 196C0 304.25 87.75 392 196 392C304.25 392 392 304.25 392 196C392 87.75 304.25 0 196 0ZM305.5 211H211V305.5C211 313.78 204.28 320.5 196 320.5C187.72 320.5 181 313.78 181 305.5V211H86.5C78.22 211 71.5 204.28 71.5 196C71.5 187.72 78.22 181 86.5 181H181V86.5C181 78.22 187.72 71.5 196 71.5C204.28 71.5 211 78.22 211 86.5V181H305.5C313.78 181 320.5 187.72 320.5 196C320.5 204.28 313.78 211 305.5 211Z" fill="#46512C"/>
-            </g>
-            <defs>
-            <clipPath id="clip0_233_1995">
-            <rect width="392" height="392" fill="white"/>
-            </clipPath>
-            </defs>
+          <path d="M196,0C87.75,0,0,87.75,0,196s87.75,196,196,196,196-87.75,196-196S304.25,0,196,0Zm119.25,83.23c-97.96,95.74-144.92,239.42-145.39,240.86-1.93,6-7.41,10.16-13.7,10.4-.19,0-.39,.01-.58,.01-6.07,0-11.57-3.67-13.88-9.32L73.35,158.04c-3.13-7.67,.54-16.43,8.21-19.56,7.67-3.13,16.43,.54,19.56,8.21l53.87,131.75c5.88-14.3,13.69-32.03,23.53-51.77,22.92-46.01,61.61-111.97,115.76-164.9,5.92-5.79,15.42-5.68,21.21,.24s5.68,15.42-.24,21.21Z" fill="#8b9769"/>
           </svg>
-          Tilføj historien
+          Færdig
         </button>
       </div>
     </div>
