@@ -4,7 +4,7 @@ position: fixed;
 bottom: 0;
 padding: 10px 0;
 width: 100%;
-height: 80px;
+height: 70px;
 background: var(--GreenDark);
 display: flex;
     flex-direction: row;
@@ -14,7 +14,7 @@ display: flex;
 }
 
 .Icon {
-   height: 80px;
+   height: 55px;
     z-index: 1000;
     width: calc(100%);
 }
