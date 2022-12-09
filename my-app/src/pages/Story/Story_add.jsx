@@ -1,3 +1,6 @@
+import "../../pages/Story/StoryStyle.css";
+import "../../pages/Story/storystyle.css.map";
+// import "../../pages/Story/storystyle.scss";
 import { addDoc, collection, Timestamp } from "firebase/firestore";
 import React, { useState } from "react";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
@@ -132,7 +135,7 @@ export default function AddArticle() {
   return (
     <div className="addStoryBox">
 
-      <h2>Fortæl historien</h2>
+      <h2>Opret historie</h2>
 
       <div className="nameInput">
         {/*Name here */ }
