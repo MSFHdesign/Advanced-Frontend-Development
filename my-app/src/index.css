@@ -54,4 +54,18 @@ code {
   --pFontWeight: 400;
   --txtColor: #333;
   --dGreen: #46512c;
+  --GreenDark: #889468;
+  --GreenMid: #adb891;
+  --GreenLight: #d6ddc2;
+  --BGColor: #f2f2f2;
+}
+
+h1, h2, h3, h4, h5, h6, button {
+  font-family: var(--hFont);
+  font-weight: var(--hFontWeight);
+}
+
+p {
+  font-family: var(--pFont);
+  font-weight: var(--pFontWeight);
 }

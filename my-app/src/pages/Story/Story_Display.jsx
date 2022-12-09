@@ -39,8 +39,8 @@ export default function Articles() {
                 <img src={imageUrl} alt="title" />
               <h2>{name}</h2> 
               <p> {graveId} </p>
-              <h3> født: {born} død: {dead}</h3>
-              <p>indsendt: {createdAt.toDate().toDateString()}</p>
+              <h3> Født: {born} Død: {dead}</h3>
+              <p>Indsendt: {createdAt.toDate().toDateString()}</p>
               <p> {job} </p>
               <h4>{story}</h4>
 

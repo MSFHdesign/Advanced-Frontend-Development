@@ -1,5 +1,5 @@
-import "../../pages/Story/StoryStyle.css";
-import "../../pages/Story/storystyle.css.map";
+// import "../../pages/Story/StoryStyle.css";
+// import "../../pages/Story/storystyle.css.map";
 // import "../../pages/Story/storystyle.scss";
 import { addDoc, collection, Timestamp } from "firebase/firestore";
 import React, { useState } from "react";
