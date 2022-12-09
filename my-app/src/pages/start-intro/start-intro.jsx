@@ -7,14 +7,16 @@ export default function StartIntro() {
     <div className="test">
       <div className="test2">
         <img className="logoMain" src={logo} alt="logo"></img>
-        <h1>Kirkegårds historier</h1>
-        <div className="buttons">
-          <Link to="/Step0">
-            <button>Start</button>
-          </Link>
-          <Link to="/Frontpage">
-            <button>Skip intro</button>
-          </Link>
+        <div className="introContent">
+          <h1 className="introHeader">Kirkegårds historier</h1>
+          <div className="buttons">
+            <Link to="/Step0">
+              <button>Start</button>
+            </Link>
+            <Link to="/Frontpage">
+              <button>Skip intro</button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
