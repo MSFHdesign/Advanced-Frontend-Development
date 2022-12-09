@@ -1,7 +1,7 @@
 import React from "react";
 import BtmNav from "./components/btm-nav/btmNav";
 import "./app.css";
-import "./pages/Story/storystyle.css";
+import "./pages/Story/storystyle.css.map";
 import { Route, Routes } from "react-router-dom";
 
 // Pages
