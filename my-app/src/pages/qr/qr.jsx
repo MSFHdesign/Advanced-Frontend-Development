@@ -1,41 +1,42 @@
-import "../../pages/qr/qr.css";
 import React, { useState } from "react";
-import QrReader from "react-qr-scanner";
+import { Link } from "react-router-dom";
+import QrScan from "react-qr-reader";
 
-const Example = () => {
-  const delay = 500;
-
-  const previewStyle = {
-    height: "auto",
-    width: "100%",
-  };
-
-  const [result, setResult] = useState(
-    "Scan QR koden på gravsteder for at finde historien"
-  );
-
-  const handleScan = (result) => {
-    if (result) {
-      setResult(result);
+function QR() {
+  const [qrscan, setQrscan] = useState("No result");
+  const handleScan = (data) => {
+    if (data) {
+      setQrscan(data);
     }
   };
-
-  const handleError = (error) => {
-    console.log(error);
+  const handleError = (err) => {
+    console.error(err);
   };
 
   return (
-    <>
-      <QrReader
-        className="QRreader"
-        delay={delay}
-        style={previewStyle}
-        onError={handleError}
-        onScan={handleScan}
-      />
-      <p>{result}</p>
-    </>
-  );
-};
+    <div>
+      <Link to="/"></Link>
+      <span>QR Scanner</span>
 
-export default Example;
+      <center>
+        <div>
+          <QrScan
+            delay={300}
+            onError={handleError}
+            onScan={handleScan}
+            style={{ height: 240, width: 320 }}
+          />
+        </div>
+      </center>
+
+      <textarea name="test" value={qrscan} readOnly></textarea>
+      <div>
+        <Link to={qrscan}>
+          <button>tryk ik på mig</button>
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+export default QR;
