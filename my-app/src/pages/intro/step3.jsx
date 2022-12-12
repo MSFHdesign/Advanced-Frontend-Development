@@ -12,7 +12,7 @@ export default function Step3() {
         Kort over kirkegården.<br></br>Klik på gravene for at se information om de begravede.
         </p>
         <div className="buttons1">
-          <Link to="/Frontpage">
+          <Link to="/home">
             <button>Skip</button>
           </Link>
           <Link to="/step4">

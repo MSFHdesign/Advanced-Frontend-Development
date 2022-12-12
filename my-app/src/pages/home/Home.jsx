@@ -7,9 +7,6 @@ export default function Home() {
       <TopNav />
         <h2> Home </h2>
         <StoryDisplay />
-
-
-
     </>
   )
 }

@@ -10,7 +10,7 @@ export default function Step4() {
         <img className="logo" src={icon} alt="logo"></img>
         <p>Søgefelt.<br></br>Find begravede ved at søge på deres navn eller gravstedets nummer.</p>
         <div className="buttons1">
-          <Link to="/Frontpage">
+          <Link to="/home">
             <button>Skip</button>
           </Link>
           <Link to="/step5">

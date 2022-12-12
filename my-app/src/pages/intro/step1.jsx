@@ -10,7 +10,7 @@ export default function Step1() {
         <img className="logo" src={icon} alt="logo"></img>
         <p>Forsiden.<br></br>Her kan du se udvalgte livshistorier.</p>
         <div className="buttons1">
-          <Link to="/Frontpage">
+          <Link to="/home">
             <button>Skip</button>
           </Link>
           <Link to="/step2">
