@@ -8,7 +8,7 @@ import { Route, Routes } from "react-router-dom";
 import Frontpage from "./pages/frontpage/frontpage";
 import StartIntro from "./pages/start-intro/start-intro";
 import Qr from "./pages/qr/qr";
-import Map from "./pages/map/map";
+// import Map from "./pages/map/map";
 import Story from "./pages/Story/Story.jsx";
 import Home from "./pages/home/Home.jsx";
 import Step0 from "./pages/intro/step0.jsx";
@@ -26,7 +26,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/*" element={<Home />} />
         <Route path="/Frontpage" element={<Frontpage />} />
-        <Route path="/Map" element={<Map />} />
+        {/* <Route path="/Map" element={<Map />} /> */}
         <Route path="/Qr" element={<Qr />} />
         <Route path="/story" element={<Story />} />
         <Route path="/step0" element={<Step0 />} />
