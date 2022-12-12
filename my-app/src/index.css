@@ -61,24 +61,6 @@ code {
   --GreenLight: #d6ddc2;
   --BGColor: #f2f2f2;
   --BtnColor: #ffffff;
-
-/* fonts */
-  --font100: {
-    font-family: "Hurme Geometric Sans 4";
-    src: url("./HurmeGeometric/HurmeGeometricSans4-Thin.eot");
-    src: url("./HurmeGeometric/HurmeGeometricSans4-Thin.eot?#iefix")
-    format("embedded-opentype"),
-    url("./HurmeGeometric/HurmeGeometricSans4-Thin.woff") format("woff"),
-    url("./HurmeGeometric/HurmeGeometricSans4-Thin.ttf") format("truetype");
-    font-weight: 100;
-    font-style: normal;
-  }
-
-/* btn  */
-  --border: {
-    width: 180px;
-    padding: 10px;
-  }
 }
 
 h1, h2, h3, h4, h5, h6, button {
