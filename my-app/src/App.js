@@ -18,6 +18,8 @@ import Step3 from "./pages/intro/step3.jsx";
 import Step4 from "./pages/intro/step4.jsx";
 import Step5 from "./pages/intro/step5.jsx";
 
+import Name from './pages/People/Name.jsx';
+
 function App() {
   return (
     <div className="App">
@@ -28,6 +30,7 @@ function App() {
         <Route path="/Frontpage" element={<Frontpage />} />
         {/* <Route path="/Map" element={<Map />} /> */}
         <Route path="/Qr" element={<Qr />} />
+         <Route path="/Qr/:Name" element={<Name />} />
         <Route path="/story" element={<Story />} />
         <Route path="/step0" element={<Step0 />} />
         <Route path="/step1" element={<Step1 />} />
