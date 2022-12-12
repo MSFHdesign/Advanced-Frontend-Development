@@ -6,15 +6,12 @@ export default function Step5() {
   return (
     <div className="bg">
       <div className="box">
-        <h1>Start guide</h1>
-        <p>Tryk på plus for at tilføje en historie om en afdød.</p>
+        <h1>Startguide</h1>
         <img className="logo" src={icon} alt="logo"></img>
+        <p>Opret livshistorie.<br></br>Skriv en historie om en af de begravede.</p>
         <div className="buttons1">
           <Link to="/Frontpage">
-            <button>Skip</button>
-          </Link>
-          <Link to="/Frontpage">
-            <button id="solid">Færdig</button>
+            <button id="step5Button">Færdig</button>
           </Link>
         </div>
       </div>

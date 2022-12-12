@@ -5,20 +5,46 @@
   background-size: 100vw;
   height: 100vh;
   width: 100vw;
+  position: relative;
+  min-width: 320px;
 }
 .test2 {
+  /* position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
 }
 
 .logoMain {
-  width: 223px;
-  padding-top: 50px;
+  width: 40%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%);
 }
 
-h1 {
-  font-size: 65.8px;
+.introContent {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.introHeader {
+  font-size: 3.2em;
+  width: 80%;
+  margin: 16px 0;
   font-family: var(--hFont);
   font-weight: var(--hFontWeight);
   text-align: center;
@@ -28,6 +54,7 @@ h1 {
 .buttons {
   display: flex;
   flex-direction: column;
+  align-items: center;
   color: var(--txtColor);
 }
 
@@ -39,7 +66,50 @@ h1 {
   border: 0px solid whitesmoke;
   font-family: var(--hFont);
   font-weight: var(--hFontWeight);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: 35px;
-  margin-bottom: 27px;
+  margin-bottom: 16px;
+}
+
+@media only screen and (min-width: 481px) {
+  .test {
+    background-image: url(../../pics/backgroundDesktop.svg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 150%;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .logoMain {
+    width: 200px;
+  }
+
+  .introContent {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 65%;
+    transform: translate(20% -50%);
+  }
+
+  .introHeader {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .test {
+    background-image: url(../../pics/backgroundDesktop.svg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .introHeader {
+    margin: 0 0 80px 0;
+  }
 }

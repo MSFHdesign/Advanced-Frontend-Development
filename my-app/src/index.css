@@ -36,12 +36,36 @@ code {
   font-weight: 600;
   font-style: normal;
 }
+@font-face {
+  font-family: "Hurme Geometric Sans 4";
+  src: local('Hurme Geometric Sans No.4 Regular'), local('Hurme-Geometric-Sans-No.4-Regular'),
+      url('./HurmeGeometric/HurmeGeometricSans4-Regular.woff2') format('woff2'),
+      url('./HurmeGeometric/HurmeGeometricSans4-Regular.woff') format('woff'),
+      url('./HurmeGeometric/HurmeGeometricSans4-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
 
 :root {
   --hFont: "Hurme Geometric Sans 4";
   --hFontWeight: 600;
   --btnFont: "Hurme Geometric Sans 4";
   --pFont: "Hurme Geometric Sans 4";
-  --pFontWeight: 100;
+  --pFontWeight: 400;
   --txtColor: #333;
+  --dGreen: #46512c;
+  --GreenDark: #889468;
+  --GreenMid: #adb891;
+  --GreenLight: #d6ddc2;
+  --BGColor: #f2f2f2;
+}
+
+h1, h2, h3, h4, h5, h6, button {
+  font-family: var(--hFont);
+  font-weight: var(--hFontWeight);
+}
+
+p {
+  font-family: var(--pFont);
+  font-weight: var(--pFontWeight);
 }
