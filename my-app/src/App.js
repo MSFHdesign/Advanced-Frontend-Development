@@ -11,6 +11,7 @@ import Qr from "./pages/qr/qr";
 // import Map from "./pages/map/map";
 import Story from "./pages/Story/Story.jsx";
 import Home from "./pages/home/Home.jsx";
+import Topnav from "./components/top-nav/topnav";
 import Step0 from "./pages/intro/step0.jsx";
 import Step1 from "./pages/intro/step1.jsx";
 import Step2 from "./pages/intro/step2.jsx";
@@ -41,6 +42,7 @@ function App() {
         <Route path="/step5" element={<Step5 />} />
         <Route path="/Livshistorie/:Name" element={<Livshistorie />} />
       </Routes>
+      <Topnav />
       <BtmNav />
     </div>
   );
