@@ -12,6 +12,9 @@
 .StoryBox h3 {
   font-size: 18px;
 }
+.StoryBox h3 img {
+  width: 20px;
+}
 
 .nameInput {
   width: 100%;

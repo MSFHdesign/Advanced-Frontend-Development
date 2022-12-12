@@ -1,7 +1,7 @@
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import React, { useState, useEffect } from "react";
 import { db } from "../../firebaseConfig";
-
+import stjerne from '../../pics/shapes/stjerne.svg'
 
 export default function Articles() {
   const [Articles, SetArticles] = useState([]);
@@ -54,7 +54,7 @@ export default function Articles() {
             <div className="StoryBox">
 
               <h2>{name}</h2> 
-              <h3> <img src="./pics/shapes/stjerne.png" alt="" /> {born} Død: {dead}</h3>
+              <h3> <img src={stjerne} alt="" /> {born} Død: {dead}</h3>
               <img src={imageUrl} alt="title" />
               <p> {job} </p>
               <p> {graveId} </p>
