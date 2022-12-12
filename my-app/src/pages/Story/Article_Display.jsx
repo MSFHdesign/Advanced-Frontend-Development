@@ -26,7 +26,7 @@ export default function Artikler() {
     <div className="historie">
 
       {Artikler.length === 0 ? (
-        <p> Nothing to see</p>
+        <p> Nothing to see, yet....</p>
         ) : (
         Artikler.map(({ Navn, id }) => (
           <div className="StoriesBox" key={id}>

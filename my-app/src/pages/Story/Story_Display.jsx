@@ -1,7 +1,9 @@
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import React, { useState, useEffect } from "react";
+import { NavLink, BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { db } from "../../firebaseConfig";
 import stjerne from '../../pics/shapes/stjerne.svg'
+import kors from '../../pics/shapes/kors.svg'
 
 export default function Articles() {
   const [Articles, SetArticles] = useState([]);
@@ -42,7 +44,7 @@ export default function Articles() {
        <button type="submit"> Søg </button>
        <button type="reset" onClick={reset}> reset </button>
   
-  </form>
+      </form>
 
   
       {Articles.length === 0 ? (
@@ -52,20 +54,37 @@ export default function Articles() {
           <div className="StoriesBox" key={id}>
           
             <div className="StoryBox">
-
               <h2>{name}</h2> 
-              <h3> <img src={stjerne} alt="" /> {born} Død: {dead}</h3>
-              <img src={imageUrl} alt="title" />
-              <p> {job} </p>
-              <p> {graveId} </p>
-              {/* <p>Indsendt: {createdAt.toDate().toDateString()}</p> */}
-            
-              <h4>{story}</h4>
-
-
-              <div className={!imageUrl ? "noimg" : "img"}>
-
+              <h3><img src={stjerne} alt="Stjerne"/> {born} <img src={kors} alt="Kors"/> {dead}</h3>
+              <div id="StoryBoxImg"><img src={imageUrl} alt="title" /></div>
+              
+              <div className="showMoreContent">
+                <p id="work"> {job} </p>
+                <p id="graveId"> {graveId} </p>
+                {/* <p>Indsendt: {createdAt.toDate().toDateString()}</p> */}
+                <h4 id="story">{story}</h4>
               </div>
+              <NavLink
+                to={{pathname:'/HistoryPrivate'}}
+                state={{
+                  name: name,
+                  bornImg: stjerne,
+                  born: born,
+                  deadImg: kors,
+                  dead: dead,
+                  img: imageUrl,
+                  work: job,
+                  graveId: graveId,
+                  story: story
+                }}
+              >
+                <button>
+                  Vis historien
+                </button>
+              </NavLink>
+
+              {/* what is dis?? */}
+              {/* <div className={!imageUrl ? "noimg" : "img"}> </div> */}
               </div>
           </div>
         ))

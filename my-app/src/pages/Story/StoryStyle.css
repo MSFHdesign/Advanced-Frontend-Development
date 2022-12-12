@@ -1,19 +1,57 @@
+.historie {
+  margin-bottom: 86px;
+}
+
 .StoriesBox {
-  background-color: aqua;
+  background-color: #ffffff;
   width: 80%;
-  margin: 0 auto;
+  margin: 16px auto 0;
+  border-radius: 30px;
 }
 
 .StoryBox h2 {
   font-size: 40px;
   text-align: center;
   width: 100%;
+  overflow-wrap: break-word;
+  padding: 16px 0 16px 0;
+  margin: 0;
 }
 .StoryBox h3 {
   font-size: 18px;
+  text-align: center;
+  margin: 0;
+  padding: 0 0 16px 0;
 }
 .StoryBox h3 img {
-  width: 20px;
+  width: 12px;
+}
+.StoryBox #StoryBoxImg {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 0 0 16px 0;
+}
+.StoryBox #StoryBoxImg img {
+  width: 60%;
+}
+.StoryBox #work {
+  font-size: 18px;
+  margin: 0;
+  padding: 0 0 16px 0;
+  text-align: center;
+}
+.StoryBox #graveId {
+  font-size: 18px;
+  margin: 0;
+  padding: 0 0 16px 0;
+  text-align: center;
+}
+.StoryBox #story {
+  font-size: 20px;
+  margin: 0;
+  padding: 0 0 16px 0;
 }
 
 .nameInput {
