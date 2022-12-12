@@ -1,4 +1,5 @@
-import TopNav from '../../components/top-nav/topnav'
+import TopNav from '../../components/top-nav/topnav';
+import StoryDisplay from '../../pages/Story/Story_Display'
 
 import ArticleDisplay from '../Story/Article_Display'
 
@@ -7,10 +8,7 @@ export default function Home() {
       <>
       <TopNav />
         <h2> Home </h2>
-
-    <ArticleDisplay/>
-
-
+        <StoryDisplay />
     </>
   )
 }

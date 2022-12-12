@@ -53,12 +53,13 @@ export default function Articles() {
           
             <div className="StoryBox">
 
-                <img src={imageUrl} alt="title" />
               <h2>{name}</h2> 
-              <p> {graveId} </p>
-              <h3> Født: {born} Død: {dead}</h3>
-              <p>Indsendt: {createdAt.toDate().toDateString()}</p>
+              <h3> <img src="./pics/shapes/stjerne.png" alt="" /> {born} Død: {dead}</h3>
+              <img src={imageUrl} alt="title" />
               <p> {job} </p>
+              <p> {graveId} </p>
+              {/* <p>Indsendt: {createdAt.toDate().toDateString()}</p> */}
+            
               <h4>{story}</h4>
 
 

@@ -10,7 +10,7 @@ export default function Step2() {
         <img className="logo" src={icon} alt="logo"></img>
         <p>QR-scanner.<br></br>Scan et gravsteds QR-kode for at læse den begravedes livshistorie.</p>
         <div className="buttons1">
-          <Link to="/Frontpage">
+          <Link to="/home">
             <button>Skip</button>
           </Link>
           <Link to="/step3">

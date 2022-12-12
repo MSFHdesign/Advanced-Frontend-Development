@@ -10,7 +10,7 @@ export default function Step0() {
         Kirkegårds historier er et arkiv for livshistorier om dem, der ligger begravet på Åbyhøj Kirkegård.
         </p>
         <div className="buttons1">
-          <Link to="/Frontpage">
+          <Link to="/home">
             <button>Skip</button>
           </Link>
           <Link to="/step1">

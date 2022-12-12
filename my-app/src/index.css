@@ -26,6 +26,7 @@ code {
   font-weight: 100;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Hurme Geometric Sans 4";
   src: url("./HurmeGeometric/HurmeGeometricSans4-SemiBold.eot");
@@ -36,6 +37,7 @@ code {
   font-weight: 600;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Hurme Geometric Sans 4";
   src: local('Hurme Geometric Sans No.4 Regular'), local('Hurme-Geometric-Sans-No.4-Regular'),
@@ -58,6 +60,7 @@ code {
   --GreenMid: #adb891;
   --GreenLight: #d6ddc2;
   --BGColor: #f2f2f2;
+  --BtnColor: #ffffff;
 }
 
 h1, h2, h3, h4, h5, h6, button {

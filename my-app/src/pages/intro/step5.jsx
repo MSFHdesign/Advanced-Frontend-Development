@@ -10,7 +10,7 @@ export default function Step5() {
         <img className="logo" src={icon} alt="logo"></img>
         <p>Opret livshistorie.<br></br>Skriv en historie om en af de begravede.</p>
         <div className="buttons1">
-          <Link to="/Frontpage">
+          <Link to="/home">
             <button id="step5Button">Færdig</button>
           </Link>
         </div>
