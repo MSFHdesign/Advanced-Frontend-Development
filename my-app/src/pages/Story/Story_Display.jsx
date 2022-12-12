@@ -11,9 +11,15 @@ export default function Articles() {
   const SearchStory=(e)=> {
     e.preventDefault()
     SetArticles(Articles.filter((Articles) =>
+    //Filters 
     Articles.name.toLowerCase().includes(search.toLowerCase())
     ))
 }
+  const reset=(e) => {
+    e.preventDefault()
+    SetArticles(Articles.filter)
+  }
+
 
   useEffect(() => {
     const articleRef = collection(db, "Historier");
@@ -34,10 +40,13 @@ export default function Articles() {
        
        <input onChange={(e) =>{setSearch(e.target.value)}}/>
        <button type="submit"> Søg </button>
+       <button type="reset" onClick={reset}> reset </button>
   
   </form>
+
+  
       {Articles.length === 0 ? (
-        <p>Henter historier</p>
+        <p>Henter historier...</p>
       ) : (
         Articles.map(({ id, name, born, dead, story, imageUrl, createdAt, job, graveId, }) => (
           <div className="StoriesBox" key={id}>
