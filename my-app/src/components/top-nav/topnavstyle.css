@@ -1,8 +1,15 @@
 .topNavbox {
-    padding: 10px 10px;
-    display: flex;
-    justify-content: space-between;
-}
+  
+        position: fixed;
+        top: 0;
+        padding: 10px 0;
+        width: 100%;
+        height: 70px;
+        display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            box-sizing:content-box;
+        }
 
 .srcLogo {
     height: 50px;

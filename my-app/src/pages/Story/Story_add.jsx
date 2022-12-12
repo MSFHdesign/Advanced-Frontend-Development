@@ -23,15 +23,6 @@ export default function AddArticle() {
   //progress state
   const [progress, setProgress] = useState(0);
 
-  // const textInput = document.querySelector('.text-input');
-  // const dateInput = document.querySelector('.datepicker-input');
-  // dateInput.addEventListener('change', event => {
-  //   textInput.value = event.target.value;
-  //   // Reset the value so the picker always
-  //   // opens in a fresh state regardless of
-  //   // what was last picked
-  //   event.target.value = '';
-  // });
 
   // Change aint no thiiing
   const handleChange = (e) => {
@@ -129,6 +120,9 @@ export default function AddArticle() {
       }
     );
   };
+
+
+
   return (
     <div className="addStoryBox">
 

@@ -7,6 +7,14 @@ export default function Articles() {
   const [Articles, SetArticles] = useState([]);
   const [search, setSearch]= useState("");
 
+  // Søge funktion 
+  const SearchStory=(e)=> {
+    e.preventDefault()
+    SetArticles(Articles.filter((Articles) =>
+    Articles.name.toLowerCase().includes(search.toLowerCase())
+    ))
+}
+
   useEffect(() => {
     const articleRef = collection(db, "Historier");
     const q = query(articleRef, orderBy("graveId"));
@@ -22,7 +30,7 @@ export default function Articles() {
 
   return (
     <div className="historie">
-      <form>
+      <form onSubmit={(e)=>{SearchStory(e)}}>
        
        <input onChange={(e) =>{setSearch(e.target.value)}}/>
        <button type="submit"> Søg </button>
