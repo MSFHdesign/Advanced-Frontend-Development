@@ -1,15 +1,16 @@
-.addStoryBox {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 315px;
+.StoriesBox {
+  background-color: aqua;
+  width: 80%;
   margin: 0 auto;
 }
 
-.addStoryBox h2 {
+.StoryBox h2 {
   font-size: 40px;
   text-align: center;
   width: 100%;
+}
+.StoryBox h3 {
+  font-size: 18px;
 }
 
 .nameInput {
