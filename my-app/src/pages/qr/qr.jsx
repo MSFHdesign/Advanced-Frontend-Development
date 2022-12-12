@@ -1,7 +1,6 @@
 import "../../pages/qr/qr.css";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 import QrScan from "react-qr-reader";
 
 function QRscanner() {
@@ -13,6 +12,7 @@ function QRscanner() {
       setQrscan(data);
       URL = `/${data}`;
       navigate(URL);
+      console.log(qrscan);
     }
   };
   const handleError = (err) => {
@@ -24,13 +24,6 @@ function QRscanner() {
       <span>QR Scanner</span>
       <div className="qrscanner">
         <QrScan delay={300} onError={handleError} onScan={handleScan} />
-      </div>
-      <textarea readOnly value={qrscan}></textarea>
-
-      <div>
-        <Link to={qrscan}>
-          <button>tryk ik på mig</button>
-        </Link>
       </div>
     </div>
   );
