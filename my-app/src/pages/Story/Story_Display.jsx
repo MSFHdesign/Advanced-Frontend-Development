@@ -1,6 +1,6 @@
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import React, { useState, useEffect } from "react";
-import { NavLink, BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { db } from "../../firebaseConfig";
 import stjerne from "../../pics/shapes/stjerne.svg";
 import kors from "../../pics/shapes/kors.svg";
@@ -22,10 +22,7 @@ export default function Articles() {
         )
     );
   };
-  const reset = (e) => {
-    e.preventDefault();
-    SetArticles(Articles.filter);
-  };
+
 
   useEffect(() => {
     const articleRef = collection(db, "Historier");
@@ -47,10 +44,7 @@ export default function Articles() {
         <input onChange={(e) => { setSearch(e.target.value); }}/>
         <div id="searchButtons">
           <button type="submit"> Søg </button>
-          <button type="reset" onClick={reset}>
-            {" "}
-            Reset{" "}
-          </button>
+        
         </div>
       </form>
 

@@ -12,7 +12,7 @@ function QRscanner() {
   const handleScan = (data) => {
     if (data) {
       setQrscan(data);
-      URL = `/${data}`;
+      URL = `/qr/${data}`;
       navigate(URL);
       console.log(qrscan);
     }
