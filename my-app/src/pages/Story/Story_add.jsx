@@ -240,8 +240,6 @@ export default function AddArticle() {
       <JobIcons/>
 
       <div className="historyInput">
-        {/* area for telling your story */ }
-        {/* <label htmlFor="">story</label> */}
         <textarea
           name="story"
           className="inputfield"
@@ -253,7 +251,7 @@ export default function AddArticle() {
 
       <div className="graveIdInput">
         {/* Grave ID */}
-        <label htmlFor="">Gravnummer</label>
+        <label htmlFor="">Gravnummer:</label>
         <input
           type="number"
           min="1" max="400"
