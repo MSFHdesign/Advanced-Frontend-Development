@@ -16,7 +16,7 @@ export default function HistoryPrivate() {
            
                 
                 <div id="StoryBoxImg">
-                {!state.imageUrl ? "" : <img src={state.imageUrl} alt="title" /> } 
+                {!state.img ? "" : <img src={state.img} alt="title" /> } 
                 </div>
 
                 <div className="showMoreContent" id="showMoreContent">
