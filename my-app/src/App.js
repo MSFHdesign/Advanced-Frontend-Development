@@ -5,7 +5,7 @@ import "./pages/Story/StoryStyle.css";
 import { Route, Routes } from "react-router-dom";
 
 // Pages
-import Frontpage from "./pages/frontpage/frontpage";
+
 import StartIntro from "./pages/start-intro/start-intro";
 import Qr from "./pages/qr/qr";
 // import Map from "./pages/map/map";
@@ -24,6 +24,7 @@ import NameStory from "./pages/Story/OpenArticle";
 
 import NameTest from "./pages/Story/Article_Display"
 
+
 function App() {
   return (
     <div className="App">
@@ -31,7 +32,6 @@ function App() {
         <Route path="/" element={<StartIntro />} />
         <Route path="/home" element={<Home />} />
         <Route path="/*" element={<Home />} />
-        <Route path="/Frontpage" element={<Frontpage />} />
         {/* <Route path="/Map" element={<Map />} /> */}
         <Route path="/Qr" element={<Qr />} />
     
