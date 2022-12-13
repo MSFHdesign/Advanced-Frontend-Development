@@ -20,7 +20,9 @@ import Step4 from "./pages/intro/step4.jsx";
 import Step5 from "./pages/intro/step5.jsx";
 import Livshistorie from "./pages/Story/OpenStory.jsx";
 
-import Name from "./pages/People/Name.jsx";
+import NameStory from "./pages/Story/OpenArticle";
+
+import NameTest from "./pages/Story/Article_Display"
 
 function App() {
   return (
@@ -32,7 +34,12 @@ function App() {
         <Route path="/Frontpage" element={<Frontpage />} />
         {/* <Route path="/Map" element={<Map />} /> */}
         <Route path="/Qr" element={<Qr />} />
-        <Route path="/Qr/:Name" element={<Name />} />
+        <Route path="/:Navn" element={<NameStory />} />
+        <Route path="/qr/Michael" element={<NameStory />} />
+        
+        <Route path="/Qr/TESTER" element={<NameTest />} />
+
+
         <Route path="/story" element={<Story />} />
         <Route path="/step0" element={<Step0 />} />
         <Route path="/step1" element={<Step1 />} />
@@ -40,6 +47,7 @@ function App() {
         <Route path="/step3" element={<Step3 />} />
         <Route path="/step4" element={<Step4 />} />
         <Route path="/step5" element={<Step5 />} />
+
         <Route path="/Livshistorie/:Name" element={<Livshistorie />} />
       </Routes>
       <Topnav />
