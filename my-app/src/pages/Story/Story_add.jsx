@@ -6,8 +6,7 @@ import React, { useState } from "react";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { storage, db } from "../../firebaseConfig";
 import { toast } from "react-toastify";
-
-
+import JobIcons from "./ChooseJobIcon";
 
 export default function AddArticle() {
   // form clear after submit
@@ -143,7 +142,7 @@ export default function AddArticle() {
           onChange={(e) => handleChange(e)}
         />
       </div>
-      
+
       <div className="nameInput">
         {/*Name here */ }
         {/* <label htmlFor="">Navn</label> */}
@@ -233,6 +232,8 @@ export default function AddArticle() {
           </svg>
         </label>
       </div>
+
+      <JobIcons/>
 
       <div className="historyInput">
         {/* area for telling your story */ }
