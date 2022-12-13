@@ -34,8 +34,9 @@ function App() {
         <Route path="/Frontpage" element={<Frontpage />} />
         {/* <Route path="/Map" element={<Map />} /> */}
         <Route path="/Qr" element={<Qr />} />
-        <Route path="/:Navn" element={<NameStory />} />
-        <Route path="/qr/Michael" element={<NameStory />} />
+    
+        <Route path="/qr/:Navn" element={<NameStory />} />
+    
         
         <Route path="/Qr/TESTER" element={<NameTest />} />
 

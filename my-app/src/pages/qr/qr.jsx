@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import QrScan from "react-qr-reader";
 
+
+
 function QRscanner() {
   const [qrscan, setQrscan] = useState("No result");
   const navigate = useNavigate();
