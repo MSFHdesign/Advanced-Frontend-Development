@@ -239,19 +239,24 @@ a:active {text-decoration: none;}
         }
     }
 
-    .imgInput, .workInput {
-        width: 150px;
-        background-color: #ffffff;
-        padding: 10px;
-        margin-bottom: 16px;
-        border-radius: 15px;
-        border-width: 0;
-        font-size: 18px;
+    #imgWorkFlex {
+        display: flex;
+        flex-direction: column;
+    
+        .imgInput, .workInput {
+            width: 150px;
+            background-color: #ffffff;
+            padding: 10px;
+            margin-bottom: 16px;
+            border-radius: 15px;
+            border-width: 0;
+            font-size: 18px;
 
-        #addImgContainer, #workInputField {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            #addImgContainer, #workInputField {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
         }
     }
 

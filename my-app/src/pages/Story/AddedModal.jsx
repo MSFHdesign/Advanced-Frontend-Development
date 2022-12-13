@@ -13,9 +13,9 @@ const AddedModal = props => {
           <h2 className='modal-title'>{props.title}</h2>
         </div>
         <div className='modal-body'>{props.children}</div>
-        <div className='modal-footer'>
-          <button onClick={props.onClose}>Close</button>
-        </div>
+        {/* <div className='modal-footer'>
+          <button onClick={props.onClose}>Tilbage</button>
+        </div> */}
       </div>
     </div>
   )

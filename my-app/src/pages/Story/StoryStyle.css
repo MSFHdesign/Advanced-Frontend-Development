@@ -222,7 +222,11 @@ a:active {
   padding: 0;
   cursor: pointer;
 }
-.addStoryBox .imgInput, .addStoryBox .workInput {
+.addStoryBox #imgWorkFlex {
+  display: flex;
+  flex-direction: column;
+}
+.addStoryBox #imgWorkFlex .imgInput, .addStoryBox #imgWorkFlex .workInput {
   width: 150px;
   background-color: #ffffff;
   padding: 10px;
@@ -231,7 +235,7 @@ a:active {
   border-width: 0;
   font-size: 18px;
 }
-.addStoryBox .imgInput #addImgContainer, .addStoryBox .imgInput #workInputField, .addStoryBox .workInput #addImgContainer, .addStoryBox .workInput #workInputField {
+.addStoryBox #imgWorkFlex .imgInput #addImgContainer, .addStoryBox #imgWorkFlex .imgInput #workInputField, .addStoryBox #imgWorkFlex .workInput #addImgContainer, .addStoryBox #imgWorkFlex .workInput #workInputField {
   display: flex;
   justify-content: space-between;
   align-items: center;
