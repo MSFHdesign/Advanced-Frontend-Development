@@ -20,6 +20,7 @@ export default function AddArticle() {
     job: "",
     gravId: "",
     ErhvervLogo:"",
+    lastname: "",
   });
 
   //progress state
@@ -69,6 +70,7 @@ export default function AddArticle() {
           ErhvervLogo:"",
           story: "",
           graveId: "",
+          lastname:"",
         });
 
         getDownloadURL(uploadImage.snapshot.ref).then((url) => {
@@ -85,6 +87,7 @@ export default function AddArticle() {
               job: formData.job,  
               graveId: formData.graveId,
               ErhvervLogo: formData.ErhvervLogo,
+              lastname: formData.lastname,
 
 
             })
@@ -108,6 +111,7 @@ export default function AddArticle() {
                 job: formData.job,  
                 graveId: formData.graveId,
                 ErhvervLogo: formData.ErhvervLogo,
+                lastname: formData.lastname,
 
             })
               .then(() => {
@@ -148,9 +152,9 @@ export default function AddArticle() {
         {/* <label htmlFor="">Navn</label> */}
         <input
           type="text"
-          name="name"
+          name="lastname"
           className="inputfield"
-          value={formData.name}
+          value={formData.lastname}
           placeholder="Efternavn..."
           onChange={(e) => handleChange(e)}
         />
