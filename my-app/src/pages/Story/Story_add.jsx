@@ -7,7 +7,17 @@ import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { storage, db } from "../../firebaseConfig";
 import { toast } from "react-toastify";
 
-
+// job icons
+import book from "../../pics/jobicons/book.svg";
+import briefcase from "../../pics/jobicons/briefcase.svg";
+import dollar from "../../pics/jobicons/dollar.svg";
+import hammer from "../../pics/jobicons/hammer.svg";
+import leaf from "../../pics/jobicons/leaf.svg";
+import ruler from "../../pics/jobicons/ruler.svg";
+import saw from "../../pics/jobicons/saw.svg";
+import suit from "../../pics/jobicons/suit.svg";
+import node from "../../pics/jobicons/node.svg";
+import pencil from "../../pics/jobicons/pencil.svg";
 
 export default function AddArticle() {
   // form clear after submit
@@ -143,7 +153,7 @@ export default function AddArticle() {
           onChange={(e) => handleChange(e)}
         />
       </div>
-      
+
       <div className="nameInput">
         {/*Name here */ }
         {/* <label htmlFor="">Navn</label> */}
@@ -232,6 +242,22 @@ export default function AddArticle() {
             <path d="M305.405 180.915H210.905V86.415C210.905 78.135 204.185 71.415 195.905 71.415C187.625 71.415 180.905 78.135 180.905 86.415V180.915H86.405C78.125 180.915 71.405 187.635 71.405 195.915C71.405 204.195 78.125 210.915 86.405 210.915H180.905V305.415C180.905 313.695 187.625 320.415 195.905 320.415C204.185 320.415 210.905 313.695 210.905 305.415V210.915H305.405C313.685 210.915 320.405 204.195 320.405 195.915C320.405 187.635 313.685 180.915 305.405 180.915Z" fill="#46512C"/>
           </svg>
         </label>
+      </div>
+
+      <div className="jobIconContainer">
+        <div className="jobIcons">
+          <img src={book} alt="Bog" />
+          <img src={briefcase} alt="Taske" />
+          <img src={dollar} alt="Penge" />
+          <img src={hammer} alt="Hammer" />
+          <img src={leaf} alt="Blade" />
+          <img src={ruler} alt="lineal" />
+          <img src={saw} alt="Sav" />
+          <img src={suit} alt="Jakkesæt" />
+          <img src={node} alt="Node" />
+          <img src={pencil} alt="Blyant" />
+        </div>
+        <button>Tilføj</button>
       </div>
 
       <div className="historyInput">
