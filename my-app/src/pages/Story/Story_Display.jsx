@@ -15,10 +15,10 @@ export default function Articles() {
     SetArticles(
       Articles.filter((Articles) =>
         //Filters
-        Articles.name.toLowerCase().includes(search.toLowerCase()),
-        Articles.dead.toString().includes(search.toString()),
-        Articles.born.toString().includes(search.toString()),
-        Articles.graveId.toString().includes(search.toString()),
+        Articles.name.toLowerCase().includes(search.toLowerCase())||
+        Articles.dead.toString().includes(search.toString())||
+        Articles.born.toString().includes(search.toString())||
+        Articles.graveId.toString().includes(search.toString())
         )
     );
   };
