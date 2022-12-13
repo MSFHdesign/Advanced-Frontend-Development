@@ -10,9 +10,10 @@ export default function Articles() {
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState("Historier hentes...")
 
-
   // Søge funktion
+
   const SearchStory = (e) => {
+
     e.preventDefault();
     setLoading (
       "Intet at vise"
@@ -25,7 +26,10 @@ export default function Articles() {
         Articles.born.toString().includes(search.toString())||
         Articles.graveId.toString().includes(search.toString())
         )
-    );
+
+        );
+        
+
   };
 
 
@@ -49,7 +53,7 @@ export default function Articles() {
         
         <div id="searchButtons">
         
-         <input placeholder="Søg" onChange={(e) => { setSearch(e.target.value); }}/> <button type="submit"> Søg </button>
+         <input placeholder="Søg på navn" onChange={(e) => { setSearch(e.target.value); }}/> <button type="submit"> Søg </button>
 
         </div>
       </form>
