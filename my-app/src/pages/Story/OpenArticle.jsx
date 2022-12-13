@@ -8,7 +8,7 @@ import kors from "../../pics/shapes/kors.svg";
 export default function HistoryPrivate() {
     const location = useLocation();
   
-    console.log(location.pathname.split('qr/'));
+    console.log(location.pathname.split('/qr/'));
     const [Artikler, SetArtikler] = useState([]);
 
 

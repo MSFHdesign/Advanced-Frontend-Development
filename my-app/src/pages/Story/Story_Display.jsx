@@ -52,10 +52,10 @@ export default function Articles() {
         <p>Henter historier...</p>
       ) : (
         Articles.map(
-          ({id, name, born, dead, story, imageUrl, createdAt, job, graveId}) => (
+          ({id, name, born, dead, story, imageUrl, lastname, job, graveId}) => (
             <div className="StoriesBox" key={id}>
               <div className="StoryBox">
-                <h2>{name}</h2>
+                <h2>{name} {lastname}</h2>
                 <h3>
                   <img src={stjerne} alt="Stjerne" /> {born}{" "}
                   <img src={kors} alt="Kors" /> {dead}
@@ -84,6 +84,7 @@ export default function Articles() {
                     work: job,
                     graveId: graveId,
                     story: story,
+                    lastname: lastname,
                   }} >
                   <button>Vis historien</button>
                 </NavLink>
