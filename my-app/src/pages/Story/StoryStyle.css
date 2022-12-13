@@ -251,7 +251,12 @@ a:active {
   padding: 10px 0;
   margin-bottom: 16px;
 }
-.addStoryBox .jobIconContainer .jobIcons img {
+.addStoryBox .jobIconContainer .jobIcons button {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.addStoryBox .jobIconContainer .jobIcons button img {
   width: 80px;
   margin: 4px;
 }

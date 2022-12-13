@@ -6,18 +6,7 @@ import React, { useState } from "react";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { storage, db } from "../../firebaseConfig";
 import { toast } from "react-toastify";
-
-// job icons
-import book from "../../pics/jobicons/book.svg";
-import briefcase from "../../pics/jobicons/briefcase.svg";
-import dollar from "../../pics/jobicons/dollar.svg";
-import hammer from "../../pics/jobicons/hammer.svg";
-import leaf from "../../pics/jobicons/leaf.svg";
-import ruler from "../../pics/jobicons/ruler.svg";
-import saw from "../../pics/jobicons/saw.svg";
-import suit from "../../pics/jobicons/suit.svg";
-import node from "../../pics/jobicons/node.svg";
-import pencil from "../../pics/jobicons/pencil.svg";
+import JobIcons from "./ChooseJobIcon";
 
 export default function AddArticle() {
   // form clear after submit
@@ -244,21 +233,7 @@ export default function AddArticle() {
         </label>
       </div>
 
-      <div className="jobIconContainer">
-        <div className="jobIcons">
-          <img src={book} alt="Bog" />
-          <img src={briefcase} alt="Taske" />
-          <img src={dollar} alt="Penge" />
-          <img src={hammer} alt="Hammer" />
-          <img src={leaf} alt="Blade" />
-          <img src={ruler} alt="lineal" />
-          <img src={saw} alt="Sav" />
-          <img src={suit} alt="Jakkesæt" />
-          <img src={node} alt="Node" />
-          <img src={pencil} alt="Blyant" />
-        </div>
-        <button>Tilføj</button>
-      </div>
+      <JobIcons/>
 
       <div className="historyInput">
         {/* area for telling your story */ }
