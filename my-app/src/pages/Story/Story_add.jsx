@@ -129,7 +129,7 @@ export default function AddArticle() {
   return (
     <div className="addStoryBox">
 
-      <h2>Opret historie</h2>
+      <h2 className="addHistoryHeader">Opret historie</h2>
 
       <div className="nameInput">
         {/*Name here */ }
@@ -140,6 +140,19 @@ export default function AddArticle() {
           className="inputfield"
           value={formData.name}
           placeholder="Navn..."
+          onChange={(e) => handleChange(e)}
+        />
+      </div>
+      
+      <div className="nameInput">
+        {/*Name here */ }
+        {/* <label htmlFor="">Navn</label> */}
+        <input
+          type="text"
+          name="name"
+          className="inputfield"
+          value={formData.name}
+          placeholder="Efternavn..."
           onChange={(e) => handleChange(e)}
         />
       </div>

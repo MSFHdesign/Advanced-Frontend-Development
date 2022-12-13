@@ -148,6 +148,10 @@ a:active {
   border-color: #46512C;
 }
 
+.addHistoryHeader {
+  text-align: center;
+}
+
 .nameInput {
   width: 100%;
   margin-bottom: 16px;
