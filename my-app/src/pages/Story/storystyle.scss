@@ -1,5 +1,39 @@
+a:link {text-decoration: none;}
+a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+a:active {text-decoration: none;}
+
 .historie {
     margin-bottom: 86px;
+    margin-top: 86px;
+}
+
+.searchContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    input {
+        padding: 15px;
+        margin-bottom: 16px;
+        font-size: 18px;
+        border-radius: 30px;
+        border-width: 0;
+    }
+
+    #searchButtons {
+        button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 30px;
+            border-width: 3.5px;
+            border-color: #46512C;
+            background-color: #ffffff;
+            font-size: 18px;
+        }
+    }
 }
 
 .StoriesBox {
@@ -7,6 +41,12 @@
     width: 80%;
     margin: 16px auto 0;
     border-radius: 30px;
+    width: 90%;
+}
+
+#StoriesBoxOpen {
+    margin-top: 86px;
+    margin-bottom: 86px;
 }
 
 .StoryBox {
@@ -58,9 +98,44 @@
     }
 
     #story {
-        font-size: 20px;
+        font-size: 18px;
         margin: 0;
-        padding: 0 0 16px 0;
+        padding: 0;
+        font-weight: 400;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    h4 {
+        font-weight: 400;
+        padding-bottom: 16px;
+        font-size: 18px;
+        margin-top: 0;
+    }
+
+    .showMoreContentHidden {
+        display: none;
+    }
+
+    #showMoreContent {
+        display: block;
+    }
+
+    .showHistoryBtn {
+        display: flex;
+        justify-content: center;
+
+        button {
+            padding: 10px 20px;
+            margin: 16px 0;
+            border-radius: 30px;
+            border-width: 3.5px;
+            border-color: #46512C;
+            background-color: #ffffff;
+            font-size: 18px;
+        }
     }
 }
 

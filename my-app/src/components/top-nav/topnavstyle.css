@@ -1,17 +1,16 @@
 .topNavbox {
-  
-        position: fixed;
-        top: 0;
-        padding: 10px 0;
-        width: 100%;
-        height: 70px;
-        display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            box-sizing:content-box;
-        }
+    position: fixed;
+    top: 0;
+    padding: 16px;
+    width: 100%;
+    height: 50px;
+    background-color: #f2f2f2;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-around; */
+    /* box-sizing:content-box; */
+}
 
 .srcLogo {
     height: 50px;
-    
 }
