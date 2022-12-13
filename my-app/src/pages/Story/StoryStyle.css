@@ -1,3 +1,4 @@
+@charset "UTF-8";
 a:link {
   text-decoration: none;
 }
@@ -150,7 +151,7 @@ a:active {
 
 .addStoryBox {
   width: 90%;
-  margin: 0 auto;
+  margin: 0 auto 86px;
 }
 .addStoryBox .addHistoryHeader {
   text-align: center;
@@ -235,16 +236,137 @@ a:active {
   justify-content: space-between;
   align-items: center;
 }
-.addStoryBox .historyInput textarea {
-  width: 285px;
+.addStoryBox .jobIconContainer {
+  width: 100%;
+  border-radius: 30px;
+  background-color: #ffffff;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.addStoryBox .jobIconContainer h4 {
+  text-align: center;
+}
+.addStoryBox .jobIconContainer .jobIcons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 16px;
+}
+.addStoryBox .jobIconContainer .jobIcons ul {
+  list-style-type: none;
+}
+.addStoryBox .jobIconContainer .jobIcons li {
+  display: inline-block;
+}
+.addStoryBox .jobIconContainer .jobIcons input[type=checkbox][id^=jobIconbox] {
+  display: none;
+}
+.addStoryBox .jobIconContainer .jobIcons label {
+  border: 3.5px solid #ffffff;
+  border-radius: 60px;
+  padding: 0 !important;
+  display: block;
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
+}
+.addStoryBox .jobIconContainer .jobIcons label:before {
+  background-color: white;
+  color: white;
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.4s;
+  transform: scale(0);
+}
+.addStoryBox .jobIconContainer .jobIcons label img {
+  height: 60px;
+  width: auto;
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+}
+.addStoryBox .jobIconContainer .jobIcons :checked + label {
+  border: 3.5px solid #46512C;
+}
+.addStoryBox .jobIconContainer .jobIcons :checked + label:before {
+  content: "✓";
+  background-color: #8B9769;
+  transform: scale(1);
+  z-index: 30;
+}
+.addStoryBox .jobIconContainer .jobIcons :checked + label img {
+  transform: scale(0.9);
+  /* box-shadow: 0 0 5px #333; */
+  z-index: -1;
+  display: flex;
+}
+.addStoryBox .jobIconContainer button {
+  border-radius: 30px;
+  border-width: 3.5px;
+  border-color: #46512C;
+  background-color: #ffffff;
+  font-size: 18px;
+  padding: 5px 15px;
+  margin: 0 auto 16px;
+  width: 100px;
+}
+.addStoryBox .historyInput {
+  width: 100%;
+  margin: 0 auto 16px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.addStoryBox .historyInput .inputfield {
+  width: 100%;
   height: 100px;
   padding: 15px;
-  margin-bottom: 16px;
+  margin: 0;
   border-radius: 15px;
   border-width: 0;
+  font-size: 18px;
 }
 .addStoryBox .graveIdInput {
   margin-bottom: 16px;
+  background-color: #ffffff;
+  width: 100%;
+  height: 50px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.addStoryBox .graveIdInput label {
+  font-size: 18px;
+}
+.addStoryBox .graveIdInput input {
+  padding: 10px 15px;
+  width: 70px;
+  border-radius: 30px;
+  border-width: 1px;
+  border-color: #46512C;
+  font-size: 18px;
+}
+.addStoryBox .graveIdInput select {
+  padding: 5px;
+  font-size: 18px;
+  border-radius: 8px;
+  border-width: 0;
+}
+.addStoryBox .graveIdInput select option {
+  text-align: center;
 }
 .addStoryBox .submitHistoryBtn {
   width: 180px;

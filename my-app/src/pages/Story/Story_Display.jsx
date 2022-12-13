@@ -1,6 +1,6 @@
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import React, { useState, useEffect } from "react";
-import { NavLink, BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { db } from "../../firebaseConfig";
 import stjerne from "../../pics/shapes/stjerne.svg";
 import kors from "../../pics/shapes/kors.svg";
@@ -8,21 +8,26 @@ import kors from "../../pics/shapes/kors.svg";
 export default function Articles() {
   const [Articles, SetArticles] = useState([]);
   const [search, setSearch] = useState("");
+  const [loading, setLoading] = useState("Historier hentes...")
+
 
   // Søge funktion
   const SearchStory = (e) => {
     e.preventDefault();
+    setLoading (
+      "Intet at vise"
+    )
     SetArticles(
       Articles.filter((Articles) =>
         //Filters
-        Articles.name.toLowerCase().includes(search.toLowerCase())
-      )
+        Articles.name.toLowerCase().includes(search.toLowerCase())||
+        Articles.dead.toString().includes(search.toString())||
+        Articles.born.toString().includes(search.toString())||
+        Articles.graveId.toString().includes(search.toString())
+        )
     );
   };
-  const reset = (e) => {
-    e.preventDefault();
-    SetArticles(Articles.filter);
-  };
+
 
   useEffect(() => {
     const articleRef = collection(db, "Historier");
@@ -41,30 +46,29 @@ export default function Articles() {
     <div className="historie">
       <h1>Livshistorier</h1>
       <form className="searchContainer" onSubmit={(e) => { SearchStory(e); }}>
-        <input onChange={(e) => { setSearch(e.target.value); }}/>
+        
         <div id="searchButtons">
-          <button type="submit"> Søg </button>
-          <button type="reset" onClick={reset}>
-            {" "}
-            Reset{" "}
-          </button>
+        
+         <input placeholder="Søg" onChange={(e) => { setSearch(e.target.value); }}/> <button type="submit"> Søg </button>
+
         </div>
       </form>
+      
 
       {Articles.length === 0 ? (
-        <p>Henter historier...</p>
+        <p>{loading}</p>
       ) : (
         Articles.map(
-          ({id, name, born, dead, story, imageUrl, createdAt, job, graveId}) => (
+          ({id, name, born, dead, story, imageUrl, lastname, job, graveId}) => (
             <div className="StoriesBox" key={id}>
               <div className="StoryBox">
-                <h2>{name}</h2>
+                <h2>{name} {lastname}</h2>
                 <h3>
                   <img src={stjerne} alt="Stjerne" /> {born}{" "}
                   <img src={kors} alt="Kors" /> {dead}
                 </h3>
                 <div id="StoryBoxImg">
-                  <img src={imageUrl} alt="title" />
+                  {!imageUrl ? "" : <img src={imageUrl} alt="title" /> } 
                 </div>
 
                 <div className="showMoreContentHidden">
@@ -87,6 +91,7 @@ export default function Articles() {
                     work: job,
                     graveId: graveId,
                     story: story,
+                    lastname: lastname,
                   }} >
                   <button>Vis historien</button>
                 </NavLink>

@@ -13,6 +13,7 @@ import kors from "../../pics/shapes/kors.svg";
 
 
 
+import JobIcons from "./ChooseJobIcon";
 
 export default function AddArticle() {
   // form clear after submit
@@ -26,6 +27,7 @@ export default function AddArticle() {
     job: "",
     gravId: "",
     ErhvervLogo:"",
+    lastname: "",
   });
 
   //progress state
@@ -83,6 +85,7 @@ export default function AddArticle() {
           ErhvervLogo:"",
           story: "",
           graveId: "",
+          lastname:"",
         });
 
         getDownloadURL(uploadImage.snapshot.ref).then((url) => {
@@ -99,6 +102,7 @@ export default function AddArticle() {
               job: formData.job,  
               graveId: formData.graveId,
               ErhvervLogo: formData.ErhvervLogo,
+              lastname: formData.lastname,
 
 
             })
@@ -123,6 +127,7 @@ export default function AddArticle() {
                 job: formData.job,  
                 graveId: formData.graveId,
                 ErhvervLogo: formData.ErhvervLogo,
+                lastname: formData.lastname,
 
             })
               .then(() => {
@@ -158,15 +163,15 @@ export default function AddArticle() {
           onChange={(e) => handleChange(e)}
         />
       </div>
-      
+
       <div className="nameInput">
         {/*Name here */ }
         {/* <label htmlFor="">Navn</label> */}
         <input
           type="text"
-          name="name"
+          name="lastname"
           className="inputfield"
-          value={formData.name}
+          value={formData.lastname}
           placeholder="Efternavn..."
           onChange={(e) => handleChange(e)}
         />
@@ -249,9 +254,9 @@ export default function AddArticle() {
         </label>
       </div>
 
+      <JobIcons/>
+
       <div className="historyInput">
-        {/* area for telling your story */ }
-        {/* <label htmlFor="">story</label> */}
         <textarea
           name="story"
           className="inputfield"
@@ -263,7 +268,7 @@ export default function AddArticle() {
 
       <div className="graveIdInput">
         {/* Grave ID */}
-        <label htmlFor="">Gravnummer</label>
+        <label htmlFor="">Gravnummer:</label>
         <input
           type="number"
           min="1" max="400"
