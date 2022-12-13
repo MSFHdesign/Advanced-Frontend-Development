@@ -148,11 +148,20 @@ a:active {
   border-color: #46512C;
 }
 
-.nameInput {
+.addStoryBox {
+  width: 90%;
+  margin: 0 auto;
+}
+.addStoryBox .addHistoryHeader {
+  text-align: center;
+  font-size: 48px;
+  margin-top: 86px;
+}
+.addStoryBox .nameInput {
   width: 100%;
   margin-bottom: 16px;
 }
-.nameInput input {
+.addStoryBox .nameInput input {
   width: 100%;
   box-sizing: border-box;
   height: 40px;
@@ -161,15 +170,14 @@ a:active {
   font-size: 18px;
   padding: 5px 0 5px 15px;
 }
-
-.bornAndDeadContainer {
+.addStoryBox .bornAndDeadContainer {
   display: flex;
   width: 100%;
   box-sizing: border-box;
   justify-content: space-between;
   margin-bottom: 16px;
 }
-.bornAndDeadContainer .bornInput, .bornAndDeadContainer .deadInput {
+.addStoryBox .bornAndDeadContainer .bornInput, .addStoryBox .bornAndDeadContainer .deadInput {
   width: 80px;
   height: 40px;
   background-color: #ffffff;
@@ -179,7 +187,7 @@ a:active {
   display: inline-block;
   position: relative;
 }
-.bornAndDeadContainer .bornInput .datepicker-toggle-button, .bornAndDeadContainer .deadInput .datepicker-toggle-button {
+.addStoryBox .bornAndDeadContainer .bornInput .datepicker-toggle-button, .addStoryBox .bornAndDeadContainer .deadInput .datepicker-toggle-button {
   position: absolute;
   left: 0;
   top: 0;
@@ -193,7 +201,7 @@ a:active {
   align-items: center;
   justify-content: center;
 }
-.bornAndDeadContainer .bornInput .datepicker-input, .bornAndDeadContainer .deadInput .datepicker-input {
+.addStoryBox .bornAndDeadContainer .bornInput .datepicker-input, .addStoryBox .bornAndDeadContainer .deadInput .datepicker-input {
   position: absolute;
   left: 0;
   top: 0;
@@ -203,7 +211,7 @@ a:active {
   cursor: pointer;
   box-sizing: border-box;
 }
-.bornAndDeadContainer .datepicker-input::-webkit-calendar-picker-indicator {
+.addStoryBox .bornAndDeadContainer .datepicker-input::-webkit-calendar-picker-indicator {
   position: absolute;
   left: 0;
   top: 0;
@@ -213,8 +221,7 @@ a:active {
   padding: 0;
   cursor: pointer;
 }
-
-.imgInput, .workInput {
+.addStoryBox .imgInput, .addStoryBox .workInput {
   width: 150px;
   background-color: #ffffff;
   padding: 10px;
@@ -223,13 +230,12 @@ a:active {
   border-width: 0;
   font-size: 18px;
 }
-.imgInput #addImgContainer, .imgInput #workInputField, .workInput #addImgContainer, .workInput #workInputField {
+.addStoryBox .imgInput #addImgContainer, .addStoryBox .imgInput #workInputField, .addStoryBox .workInput #addImgContainer, .addStoryBox .workInput #workInputField {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-.historyInput textarea {
+.addStoryBox .historyInput textarea {
   width: 285px;
   height: 100px;
   padding: 15px;
@@ -237,16 +243,14 @@ a:active {
   border-radius: 15px;
   border-width: 0;
 }
-
-.graveIdInput {
+.addStoryBox .graveIdInput {
   margin-bottom: 16px;
 }
-
-.submitHistoryBtn {
+.addStoryBox .submitHistoryBtn {
   width: 180px;
   margin: 0 auto;
 }
-.submitHistoryBtn .formsubmit {
+.addStoryBox .submitHistoryBtn .formsubmit {
   width: 100%;
   display: flex;
   justify-content: space-between;

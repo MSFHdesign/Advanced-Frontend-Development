@@ -156,121 +156,133 @@ a:active {text-decoration: none;}
     }
 }
 
-.nameInput {
-    width: 100%;
-    margin-bottom: 16px;
+.addStoryBox {
+    width: 90%;
+    margin: 0 auto;
 
-    input {
+
+    .addHistoryHeader {
+        text-align: center;
+        font-size: 48px;
+        margin-top: 86px;
+    }
+
+    .nameInput {
+        width: 100%;
+        margin-bottom: 16px;
+
+        input {
+            width: 100%;
+            box-sizing: border-box;
+            height: 40px;
+            border-radius: 15px;
+            border-width: 0;
+            font-size: 18px;
+            padding: 5px 0 5px 15px;
+        }
+    }
+
+    .bornAndDeadContainer {
+        display: flex;
         width: 100%;
         box-sizing: border-box;
-        height: 40px;
-        border-radius: 15px;
-        border-width: 0;
-        font-size: 18px;
-        padding: 5px 0 5px 15px;
-    }
-}
-
-.bornAndDeadContainer {
-    display: flex;
-    width: 100%;
-    box-sizing: border-box;
-    justify-content: space-between;
-    margin-bottom: 16px;
-    
-    .bornInput, .deadInput {
-        width: 80px;
-        height: 40px;
-        background-color: #ffffff;
-        text-align: center;
-        // padding: 10px;
-        font-size: 18px;
-        border-radius: 15px;
-        display: inline-block;
-        position: relative;
-  
-        .datepicker-toggle-button {
-            position: absolute;
-            left: 0;
-            top: 0;
+        justify-content: space-between;
+        margin-bottom: 16px;
+        
+        .bornInput, .deadInput {
             width: 80px;
             height: 40px;
             background-color: #ffffff;
             text-align: center;
+            // padding: 10px;
+            font-size: 18px;
             border-radius: 15px;
-            border-width: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: inline-block;
+            position: relative;
+    
+            .datepicker-toggle-button {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 80px;
+                height: 40px;
+                background-color: #ffffff;
+                text-align: center;
+                border-radius: 15px;
+                border-width: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+    
+            .datepicker-input {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                cursor: pointer;
+                box-sizing: border-box;
+            }
         }
- 
-        .datepicker-input {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            cursor: pointer;
-            box-sizing: border-box;
-        }
-    }
 
-    .datepicker-input::-webkit-calendar-picker-indicator {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
-    }
-}
-
-.imgInput, .workInput {
-    width: 150px;
-    background-color: #ffffff;
-    padding: 10px;
-    margin-bottom: 16px;
-    border-radius: 15px;
-    border-width: 0;
-    font-size: 18px;
-
-    #addImgContainer, #workInputField {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
-
-.historyInput textarea {
-    width: 285px;
-    height: 100px;
-    padding: 15px;
-    margin-bottom: 16px;
-    border-radius: 15px;
-    border-width: 0;
-}
-
-.graveIdInput {
-    margin-bottom: 16px;
-}
-
-.submitHistoryBtn {
-    width: 180px;
-    margin: 0 auto;
-
-    .formsubmit {
+        .datepicker-input::-webkit-calendar-picker-indicator {
+        position: absolute;
+        left: 0;
+        top: 0;
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+        }
+    }
+
+    .imgInput, .workInput {
+        width: 150px;
         background-color: #ffffff;
+        padding: 10px;
+        margin-bottom: 16px;
         border-radius: 15px;
         border-width: 0;
-        padding: 5px 10px;
-        box-sizing: border-box;
         font-size: 18px;
+
+        #addImgContainer, #workInputField {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    .historyInput textarea {
+        width: 285px;
+        height: 100px;
+        padding: 15px;
+        margin-bottom: 16px;
+        border-radius: 15px;
+        border-width: 0;
+    }
+
+    .graveIdInput {
+        margin-bottom: 16px;
+    }
+
+    .submitHistoryBtn {
+        width: 180px;
+        margin: 0 auto;
+
+        .formsubmit {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            border-radius: 15px;
+            border-width: 0;
+            padding: 5px 10px;
+            box-sizing: border-box;
+            font-size: 18px;
+        }
     }
 }
