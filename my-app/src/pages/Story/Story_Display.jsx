@@ -8,10 +8,15 @@ import kors from "../../pics/shapes/kors.svg";
 export default function Articles() {
   const [Articles, SetArticles] = useState([]);
   const [search, setSearch] = useState("");
+  const [loading, setLoading] = useState("Historier hentes...")
+
 
   // Søge funktion
   const SearchStory = (e) => {
     e.preventDefault();
+    setLoading (
+      "Intet at vise"
+    )
     SetArticles(
       Articles.filter((Articles) =>
         //Filters
@@ -41,15 +46,17 @@ export default function Articles() {
     <div className="historie">
       <h1>Livshistorier</h1>
       <form className="searchContainer" onSubmit={(e) => { SearchStory(e); }}>
-        <input onChange={(e) => { setSearch(e.target.value); }}/>
-        <div id="searchButtons">
-          <button type="submit"> Søg </button>
         
+        <div id="searchButtons">
+        
+         <input placeholder="Søg" onChange={(e) => { setSearch(e.target.value); }}/> <button type="submit"> Søg </button>
+
         </div>
       </form>
+      
 
       {Articles.length === 0 ? (
-        <p>Henter historier...</p>
+        <p>{loading}</p>
       ) : (
         Articles.map(
           ({id, name, born, dead, story, imageUrl, lastname, job, graveId}) => (
