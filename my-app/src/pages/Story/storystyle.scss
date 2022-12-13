@@ -1,148 +1,288 @@
+a:link {text-decoration: none;}
+a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+a:active {text-decoration: none;}
+
+.historie {
+    margin-bottom: 86px;
+    margin-top: 86px;
+}
+
+.searchContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    input {
+        padding: 15px;
+        margin-bottom: 16px;
+        font-size: 18px;
+        border-radius: 30px;
+        border-width: 0;
+    }
+
+    #searchButtons {
+        button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 30px;
+            border-width: 3.5px;
+            border-color: #46512C;
+            background-color: #ffffff;
+            font-size: 18px;
+        }
+    }
+}
+
 .StoriesBox {
-    background-color: aqua;
+    background-color: #ffffff;
     width: 80%;
-    margin: 0 auto;
+    margin: 16px auto 0;
+    border-radius: 30px;
+    width: 90%;
+}
+
+#StoriesBoxOpen {
+    margin-top: 86px;
+    margin-bottom: 86px;
 }
 
 .StoryBox {
+    width: 80%;
+    margin: 0 auto;
+    padding: 16px;
+
     h2 {
     font-size: 40px;
     text-align: center;
     width: 100%;
+    overflow-wrap: break-word;
+    padding: 0 0 16px;
+    margin: 0;
     }
 
     h3 {
         font-size: 18px;
+        text-align: center;
+        margin: 0;
+        padding: 0 0 16px 0;
 
         img {
-            width: 20px;
+            width: 12px;
         }
     }
-}
 
-.nameInput {
-    width: 100%;
-    margin-bottom: 16px;
-
-    input {
+    #StoryBoxImg {
+        display: flex;
+        justify-content: center;
         width: 100%;
-        box-sizing: border-box;
-        height: 40px;
-        border-radius: 15px;
-        border-width: 0;
+        margin: 0;
+        padding: 0 0 16px 0;
+
+        img {
+            width: 60%;
+        }
+    }
+
+    #work {
         font-size: 18px;
-        padding: 5px 0 5px 15px;
+        margin: 0;
+        padding: 0 0 16px 0;
+        text-align: center;
+    }
+
+    #graveId {
+        font-size: 18px;
+        margin: 0;
+        padding: 0 0 16px 0;
+        text-align: center;
+    }
+
+    #story {
+        font-size: 18px;
+        margin: 0;
+        padding: 0;
+        font-weight: 400;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    h4 {
+        font-weight: 400;
+        padding-bottom: 16px;
+        font-size: 18px;
+        margin-top: 0;
+    }
+
+    .showMoreContentHidden {
+        display: none;
+    }
+
+    #showMoreContent {
+        display: block;
+    }
+
+    .showHistoryBtn {
+        display: flex;
+        justify-content: center;
+
+        button {
+            padding: 10px 20px;
+            margin: 16px 0;
+            border-radius: 30px;
+            border-width: 3.5px;
+            border-color: #46512C;
+            background-color: #ffffff;
+            font-size: 18px;
+        }
+    }
+
+    .showstoryBtn {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 10px 20px;
+        font-size: 18px;
+        color: black;
+        text-decoration: none;
+        background-color: #ffffff;
+        border-radius: 30px;
+        border-width: 3.5px;
+        border-color: #46512C;
     }
 }
 
-.bornAndDeadContainer {
-    display: flex;
-    width: 100%;
-    box-sizing: border-box;
-    justify-content: space-between;
-    margin-bottom: 16px;
-    
-    .bornInput, .deadInput {
-        width: 80px;
-        height: 40px;
-        background-color: #ffffff;
+.addStoryBox {
+    width: 90%;
+    margin: 0 auto;
+
+
+    .addHistoryHeader {
         text-align: center;
-        // padding: 10px;
-        font-size: 18px;
-        border-radius: 15px;
-        display: inline-block;
-        position: relative;
-  
-        .datepicker-toggle-button {
-            position: absolute;
-            left: 0;
-            top: 0;
+        font-size: 48px;
+        margin-top: 86px;
+    }
+
+    .nameInput {
+        width: 100%;
+        margin-bottom: 16px;
+
+        input {
+            width: 100%;
+            box-sizing: border-box;
+            height: 40px;
+            border-radius: 15px;
+            border-width: 0;
+            font-size: 18px;
+            padding: 5px 0 5px 15px;
+        }
+    }
+
+    .bornAndDeadContainer {
+        display: flex;
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: space-between;
+        margin-bottom: 16px;
+        
+        .bornInput, .deadInput {
             width: 80px;
             height: 40px;
             background-color: #ffffff;
             text-align: center;
+            // padding: 10px;
+            font-size: 18px;
             border-radius: 15px;
-            border-width: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: inline-block;
+            position: relative;
+    
+            .datepicker-toggle-button {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 80px;
+                height: 40px;
+                background-color: #ffffff;
+                text-align: center;
+                border-radius: 15px;
+                border-width: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+    
+            .datepicker-input {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                cursor: pointer;
+                box-sizing: border-box;
+            }
         }
- 
-        .datepicker-input {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            cursor: pointer;
-            box-sizing: border-box;
-        }
-    }
 
-    .datepicker-input::-webkit-calendar-picker-indicator {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
-    }
-}
-
-.imgInput, .workInput {
-    width: 150px;
-    background-color: #ffffff;
-    padding: 10px;
-    margin-bottom: 16px;
-    border-radius: 15px;
-    border-width: 0;
-    font-size: 18px;
-
-    #addImgContainer, #workInputField {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
-
-.historyInput textarea {
-    width: 285px;
-    height: 100px;
-    padding: 15px;
-    margin-bottom: 16px;
-    border-radius: 15px;
-    border-width: 0;
-}
-
-.graveIdInput {
-    margin-bottom: 16px;
-}
-
-.submitHistoryBtn {
-    width: 180px;
-    margin: 0 auto;
-
-    .formsubmit {
+        .datepicker-input::-webkit-calendar-picker-indicator {
+        position: absolute;
+        left: 0;
+        top: 0;
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+        }
+    }
+
+    .imgInput, .workInput {
+        width: 150px;
         background-color: #ffffff;
+        padding: 10px;
+        margin-bottom: 16px;
         border-radius: 15px;
         border-width: 0;
-        padding: 5px 10px;
-        box-sizing: border-box;
         font-size: 18px;
-    }
-}
 
-.StoryBox {
-    width: 80%;
-    margin: 0 auto;
-    img {
-        width: 100%;
+        #addImgContainer, #workInputField {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    .historyInput textarea {
+        width: 285px;
+        height: 100px;
+        padding: 15px;
+        margin-bottom: 16px;
+        border-radius: 15px;
+        border-width: 0;
+    }
+
+    .graveIdInput {
+        margin-bottom: 16px;
+    }
+
+    .submitHistoryBtn {
+        width: 180px;
+        margin: 0 auto;
+
+        .formsubmit {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            border-radius: 15px;
+            border-width: 0;
+            padding: 5px 10px;
+            box-sizing: border-box;
+            font-size: 18px;
+        }
     }
 }

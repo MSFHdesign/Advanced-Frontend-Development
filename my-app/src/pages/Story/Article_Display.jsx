@@ -1,7 +1,9 @@
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import React, { useState, useEffect } from "react";
-
+import { NavLink } from "react-router-dom";
 import { db } from "../../firebaseConfig";
+import stjerne from "../../pics/shapes/stjerne.svg";
+import kors from "../../pics/shapes/kors.svg";
 
 
 export default function Artikler() {
@@ -26,17 +28,34 @@ export default function Artikler() {
     <div className="historie">
 
       {Artikler.length === 0 ? (
-        <p> Nothing to see</p>
+        <p> Nothing to see, yet....</p>
         ) : (
-        Artikler.map(({ Navn, id }) => (
+        Artikler.map(({ Navn, id, born, dead, story, graveId }) => (
           <div className="StoriesBox" key={id}>
           
             <div className="StoryBox">
 
 
               <h2>{Navn}</h2> 
-            
+              <img src={stjerne} alt="Stjerne" /> {born}{" "}
+                  <img src={kors} alt="Kors" /> {dead}
               </div>
+
+              <NavLink
+                  className="showArticleBtn"
+                  to={{ pathname: `/qr/${Navn}` }}
+                  state={{
+                    name: Navn,
+                    bornImg: stjerne,
+                    born: born,
+                    deadImg: kors,
+                    dead: dead,
+                    story: story,
+                    graveId: graveId
+               
+                  }} >
+                  <button>Vis historien</button>
+                </NavLink>
           </div>
         ))
         )}
