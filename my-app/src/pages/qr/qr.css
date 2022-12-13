@@ -1,4 +1,21 @@
 .qrscanner {
+  display: flex;
   width: 100vw;
   height: 500px;
+  justify-content: center;
+}
+
+.qrsite {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90vh;
+}
+
+.qr-image-wrapper section {
+  border-radius: 50px;
+}
+
+.qr-image-wrapper section div {
+  box-shadow: black 0px 0px 0px 2px inset !important;
 }
