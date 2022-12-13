@@ -61,7 +61,7 @@ export default function Articles() {
                   <img src={kors} alt="Kors" /> {dead}
                 </h3>
                 <div id="StoryBoxImg">
-                  <img src={imageUrl} alt="title" />
+                  {!imageUrl ? "" : <img src={imageUrl} alt="title" /> } 
                 </div>
 
                 <div className="showMoreContentHidden">
