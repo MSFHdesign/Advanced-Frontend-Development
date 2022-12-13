@@ -3,8 +3,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import QrScan from "react-qr-reader";
 
-
-
 function QRscanner() {
   const [qrscan, setQrscan] = useState("No result");
   const navigate = useNavigate();
@@ -22,10 +20,18 @@ function QRscanner() {
   };
 
   return (
-    <div>
-      <span>QR Scanner</span>
+    <div className="qrsite">
+      <h1>Scan QR-kode</h1>
       <div className="qrscanner">
-        <QrScan delay={300} onError={handleError} onScan={handleScan} />
+        <QrScan
+          delay={300}
+          onError={handleError}
+          onScan={handleScan}
+          facingMode="environment"
+          className="qr-image-wrapper"
+          resolution={100}
+          style={{ width: "90vw" }}
+        />
       </div>
     </div>
   );

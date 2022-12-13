@@ -1,4 +1,4 @@
-import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
+import { collection, onSnapshot, orderBy, query, limit } from "firebase/firestore";
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { db } from "../../firebaseConfig";
@@ -31,7 +31,7 @@ export default function Articles() {
 
   useEffect(() => {
     const articleRef = collection(db, "Historier");
-    const q = query(articleRef, orderBy("graveId"));
+    const q = query(articleRef, orderBy("createdAt", "desc"), limit(50));
     onSnapshot(q, (snapshot) => {
       const articles = snapshot.docs.map((doc) => ({
         id: doc.id,
@@ -96,8 +96,7 @@ export default function Articles() {
                   <button>Vis historien</button>
                 </NavLink>
 
-                {/* what is dis?? */}
-                {/* <div className={!imageUrl ? "noimg" : "img"}> </div> */}
+              
               </div>
             </div>
           )
