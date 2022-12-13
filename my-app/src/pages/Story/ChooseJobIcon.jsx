@@ -10,7 +10,12 @@ import suit from "../../pics/jobicons/suit.svg";
 import node from "../../pics/jobicons/node.svg";
 import pencil from "../../pics/jobicons/pencil.svg";
 
+import React, {useState} from 'react';
+
 export default function JobIcons() {
+    
+    const [checked, setChecked] = useState(true);
+    
     return (
         <div className="jobIconContainer">
             <h4>Vælg ikoner som passer til erhvervet</h4>
