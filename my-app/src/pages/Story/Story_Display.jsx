@@ -9,7 +9,6 @@ export default function Articles() {
   const [Articles, SetArticles] = useState([]);
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState("Historier hentes...")
-
   // Søge funktion
 
   const SearchStory = (e) => {
@@ -25,12 +24,9 @@ export default function Articles() {
         Articles.dead.toString().includes(search.toString())||
         Articles.born.toString().includes(search.toString())||
         Articles.graveId.toString().includes(search.toString())
-        )
-
-        );
-        
-
+        ));
   };
+
 
 
   useEffect(() => {
@@ -43,8 +39,10 @@ export default function Articles() {
       }));
       SetArticles(articles);
       console.log(articles);
+      
     });
-  }, []);
+   
+  }, [search]);
 
   return (
     <div className="historie">
