@@ -25,6 +25,7 @@ export default function Articles() {
         Articles.born.toString().includes(search.toString())||
         Articles.graveId.toString().includes(search.toString())
         ));
+       
   };
 
 
