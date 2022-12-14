@@ -49,6 +49,7 @@
   margin-right: auto;
   background-image: url(../../pics/jobicons/dollar.svg);
 }
+
 .hammer {
   width: 100px;
   height: 100px;
@@ -56,6 +57,7 @@
   margin-right: auto;
   background-image: url(../../pics/jobicons/hammer.svg);
 }
+
 .leaf {
   width: 100px;
   height: 100px;
@@ -64,7 +66,7 @@
   background-image: url(../../pics/jobicons/leaf.svg);
 }
 
-.node {
+.note {
   width: 100px;
   height: 100px;
   margin-left: auto;
@@ -87,6 +89,7 @@
   margin-right: auto;
   background-image: url(../../pics/jobicons/pencil.svg);
 }
+
 .suit {
   width: 100px;
   height: 100px;
@@ -94,6 +97,7 @@
   margin-right: auto;
   background-image: url(../../pics/jobicons/suit.svg);
 }
+
 .saw {
   width: 100px;
   height: 100px;
@@ -101,6 +105,7 @@
   margin-right: auto;
   background-image: url(../../pics/jobicons/saw.svg);
 }
+
 #job {
   text-align: center;
   padding: 0;

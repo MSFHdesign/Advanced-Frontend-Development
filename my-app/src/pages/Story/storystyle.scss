@@ -197,16 +197,15 @@ input, textarea, button {
         box-sizing: border-box;
         justify-content: space-between;
         margin-bottom: 16px;
+        z-index: 0;
         
         .bornInput, .deadInput {
-            width: 80px;
+            width: 150px;
             height: 40px;
             background-color: #ffffff;
-            text-align: center;
             font-size: 18px;
             font-weight: 600;
             border-radius: 30px;
-            display: inline-block;
             position: relative;
     
             .datepicker-toggle-button {
@@ -216,12 +215,12 @@ input, textarea, button {
                 width: 80px;
                 height: 40px;
                 background-color: #ffffff;
-                text-align: center;
                 border-radius: 30px;
                 border-width: 0;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                width: 150px;
             }
     
             .datepicker-input {
@@ -306,7 +305,7 @@ input, textarea, button {
                 display: inline-block;
             }
 
-            input[type="checkbox"][id^="jobIconbox"] {
+            input[type="radio"][id^="jobIconbox"] {
                 display: none;
             }
 
@@ -363,6 +362,101 @@ input, textarea, button {
                 z-index: -1;
                 display: flex;
             }
+
+            .ruler {
+                background-image: url(../../pics/jobicons/ruler.svg);
+                width: 100px;
+                height: 100px;
+                margin-left: auto;
+                margin-right: auto;
+              }
+              
+              .book {
+                background-image: url(../../pics/jobicons/book.svg);
+                width: 100px;
+                height: 100px;
+                margin-left: auto;
+                margin-right: auto;
+              }
+              
+              .briefcase {
+                background-image: url(../../pics/jobicons/briefcase.svg);
+                width: 100px;
+                height: 100px;
+                margin-left: auto;
+                margin-right: auto;
+              }
+              
+              .dollar {
+                width: 100px;
+                height: 100px;
+                margin-left: auto;
+                margin-right: auto;
+                background-image: url(../../pics/jobicons/dollar.svg);
+              }
+              
+              .hammer {
+                width: 100px;
+                height: 100px;
+                margin-left: auto;
+                margin-right: auto;
+                background-image: url(../../pics/jobicons/hammer.svg);
+              }
+              
+              .leaf {
+                width: 100px;
+                height: 100px;
+                margin-left: auto;
+                margin-right: auto;
+                background-image: url(../../pics/jobicons/leaf.svg);
+              }
+              
+              .note {
+                width: 100px;
+                height: 100px;
+                margin-left: auto;
+                margin-right: auto;
+                background-image: url(../../pics/jobicons/node.svg);
+              }
+              
+              .noIcon {
+                width: 100px;
+                height: 100px;
+                margin-left: auto;
+                margin-right: auto;
+                background-image: url(../../pics/jobicons/NoIcon.svg);
+              }
+              
+              .pencil {
+                width: 100px;
+                height: 100px;
+                margin-left: auto;
+                margin-right: auto;
+                background-image: url(../../pics/jobicons/pencil.svg);
+              }
+              
+              .suit {
+                width: 100px;
+                height: 100px;
+                margin-left: auto;
+                margin-right: auto;
+                background-image: url(../../pics/jobicons/suit.svg);
+              }
+              
+              .saw {
+                width: 100px;
+                height: 100px;
+                margin-left: auto;
+                margin-right: auto;
+                background-image: url(../../pics/jobicons/saw.svg);
+              }
+              
+              #job {
+                text-align: center;
+                padding: 0;
+                margin: 0;
+              }
+              
         }
 
         button {
