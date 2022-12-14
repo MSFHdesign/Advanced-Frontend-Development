@@ -7,17 +7,17 @@ import AddedModal from "./AddedModal";
 import Topnav from "../../components/top-nav/topnav";
 
 // job icons
-// import book from "../../pics/jobicons/book.svg";
-// import briefcase from "../../pics/jobicons/briefcase.svg";
-// import dollar from "../../pics/jobicons/dollar.svg";
-// import hammer from "../../pics/jobicons/hammer.svg";
-// import leaf from "../../pics/jobicons/leaf.svg";
-// import ruler from "../../pics/jobicons/ruler.svg";
-// import saw from "../../pics/jobicons/saw.svg";
-// import suit from "../../pics/jobicons/suit.svg";
-// import node from "../../pics/jobicons/node.svg";
-// import pencil from "../../pics/jobicons/pencil.svg";
-// import noIcon from "../../pics/jobicons/NoIcon.svg";
+import book from "../../pics/jobicons/book.svg";
+import briefcase from "../../pics/jobicons/briefcase.svg";
+import dollar from "../../pics/jobicons/dollar.svg";
+import hammer from "../../pics/jobicons/hammer.svg";
+import leaf from "../../pics/jobicons/leaf.svg";
+import ruler from "../../pics/jobicons/ruler.svg";
+import saw from "../../pics/jobicons/saw.svg";
+import suit from "../../pics/jobicons/suit.svg";
+import node from "../../pics/jobicons/node.svg";
+import pencil from "../../pics/jobicons/pencil.svg";
+import noIcon from "../../pics/jobicons/NoIcon.svg";
 
 export default function AddArticle() {
   // form clear after submit
@@ -49,10 +49,10 @@ export default function AddArticle() {
   };
 
   // workstuff checkboxes
-  // const [isShown, setIsShown] = useState(false);
-  // const showWorkIcons = event => {
-  //   setIsShown(current => !current);
-  // };
+  const [isShown, setIsShown] = useState(false);
+   const showWorkIcons = event => {
+   setIsShown(current => !current);
+   };
 
   // Manage modal
   const [show, setShow] = useState(false)
@@ -94,8 +94,8 @@ export default function AddArticle() {
           born: "",
           dead: "",
           image: "",
-          // jobname: "",
-          // jobIcon: "",
+          jobname: "",
+          jobIcon: "",
           ErhvervLogo:"",
           story: "",
           graveId: "",
@@ -113,8 +113,8 @@ export default function AddArticle() {
               createdAt: Timestamp.now().toDate(),
               born: formData.born,
               dead: formData.dead,
-              // jobname: formData.jobName,
-              // jobIcon: formData.jobIcons,  
+             jobname: formData.jobName,
+             // jobIcon: formData.jobIcons,  
               graveId: formData.graveId,
               ErhvervLogo: formData.ErhvervLogo,
               lastname: formData.lastname,
@@ -139,8 +139,8 @@ export default function AddArticle() {
                 createdAt: Timestamp.now().toDate(),
                 born: formData.born,
                 dead: formData.dead,
-                // jobname: formData.jobName,
-                // jobIcon: formData.jobIcons,  
+                jobname: formData.jobName,
+               // jobIcon: formData.value,  
                 graveId: formData.graveId,
                 ErhvervLogo: formData.ErhvervLogo,
                 lastname: formData.lastname,
@@ -251,35 +251,41 @@ export default function AddArticle() {
             )}
           </button>
 
-          {/* <button onClick={showWorkIcons} className="workInput">
+           <button onClick={showWorkIcons} className="workInput">
             <label id="workInputField" htmlFor="workInput">Tilføj erhverv 
               <svg width="30" height="30" viewBox="0 0 392 392" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M57.315 334.505C-19.105 258.085 -19.105 133.735 57.315 57.315C133.735 -19.105 258.085 -19.105 334.505 57.315C410.925 133.735 410.925 258.085 334.505 334.505C258.085 410.925 133.735 410.925 57.315 334.505V334.505ZM313.285 78.535C248.565 13.815 143.245 13.815 78.525 78.535C13.805 143.255 13.805 248.575 78.525 313.295C143.245 378.015 248.565 378.015 313.285 313.295C378.005 248.575 378.005 143.255 313.285 78.535V78.535Z" fill="#46512C"/>
                 <path d="M305.405 180.915H210.905V86.415C210.905 78.135 204.185 71.415 195.905 71.415C187.625 71.415 180.905 78.135 180.905 86.415V180.915H86.405C78.125 180.915 71.405 187.635 71.405 195.915C71.405 204.195 78.125 210.915 86.405 210.915H180.905V305.415C180.905 313.695 187.625 320.415 195.905 320.415C204.185 320.415 210.905 313.695 210.905 305.415V210.915H305.405C313.685 210.915 320.405 204.195 320.405 195.915C320.405 187.635 313.685 180.915 305.405 180.915Z" fill="#46512C"/>
               </svg>
             </label>
-          </button> */}
+          </button> 
         </div>
 
-        {/* {isShown && (
+         {isShown && (
           <div className="jobIconContainer">
           <h4>Vælg ikoner som passer til erhvervet</h4>
-          <input type="text" placeholder="Indtast erhverv..." id="workName" value={formData.jobName} onChange={(e) => handleChange(e)}/>
+          <input name="jobName" type="text" placeholder="Indtast erhverv..." id="workName" value={formData.jobName} onChange={(e) => handleChange(e)}/>
           <div className="jobIcons">
-              <li><input type="checkbox" name="jobIcon" id="jobIconbox1" value={formData.jobIcons} onChange={(e) => handleChange(e)}/><label htmlFor="jobIconbox1"><img src={book} alt="Bog"/></label></li>
-              <li><input type="checkbox" name="jobIcon" id="jobIconbox2" value={formData.jobIcons} onChange={(e) => handleChange(e)}/><label htmlFor="jobIconbox2"><img src={briefcase} alt="Taske"/></label></li>
-              <li><input type="checkbox" name="jobIcon" id="jobIconbox3" value={formData.jobIcons} onChange={(e) => handleChange(e)}/><label htmlFor="jobIconbox3"><img src={dollar} alt="Penge"/></label></li>
-              <li><input type="checkbox" name="jobIcon" id="jobIconbox4" value={formData.jobIcons} onChange={(e) => handleChange(e)}/><label htmlFor="jobIconbox4"><img src={hammer} alt="Hammer"/></label></li>
-              <li><input type="checkbox" name="jobIcon" id="jobIconbox5" value={formData.jobIcons} onChange={(e) => handleChange(e)}/><label htmlFor="jobIconbox5"><img src={leaf} alt="Blade"/></label></li>
-              <li><input type="checkbox" name="jobIcon" id="jobIconbox6" value={formData.jobIcons} onChange={(e) => handleChange(e)}/><label htmlFor="jobIconbox6"><img src={ruler} alt="lineal"/></label></li>
-              <li><input type="checkbox" name="jobIcon" id="jobIconbox7" value={formData.jobIcons} onChange={(e) => handleChange(e)}/><label htmlFor="jobIconbox7"><img src={saw} alt="Sav"/></label></li>
-              <li><input type="checkbox" name="jobIcon" id="jobIconbox8" value={formData.jobIcons} onChange={(e) => handleChange(e)}/><label htmlFor="jobIconbox8"><img src={suit} alt="Jakkesæt"/></label></li>
-              <li><input type="checkbox" name="jobIcon" id="jobIconbox9" value={formData.jobIcons} onChange={(e) => handleChange(e)}/><label htmlFor="jobIconbox9"><img src={node} alt="Node"/></label></li>
-              <li><input type="checkbox" name="jobIcon" id="jobIconbox10" value={formData.jobIcons}  onChange={(e) => handleChange(e)}/><label htmlFor="jobIconbox10"><img src={pencil} alt="Blyant"/></label></li>
-              <li><input type="checkbox" name="jobIcon" id="jobIconbox11" value={formData.jobIcons}  onChange={(e) => handleChange(e)}/><label htmlFor="jobIconbox11"><img src={noIcon} alt="Intet valg"/></label></li>
+              <li>
+                <input type="checkbox" name="jobIcon" id="jobIconbox1" value={"book"} onChange={(e) => handleChange(e)}/>
+                <label htmlFor="jobIconbox1">
+                  <img src={book} alt="Bog"/>
+                </label>
+              </li>
+
+              <li><input type="checkbox" name="jobIcon" id="jobIconbox2" value={"briefcase"} onChange={(e) => handleChange(e)}/><label htmlFor="jobIconbox2"><img src={briefcase} alt="Taske"/></label></li>
+              <li><input type="checkbox" name="jobIcon" id="jobIconbox3" value={"penge"} onChange={(e) => handleChange(e)}/><label htmlFor="jobIconbox3"><img src={dollar} alt="Penge"/></label></li>
+              <li><input type="checkbox" name="jobIcon" id="jobIconbox4" value={"hammer"} onChange={(e) => handleChange(e)}/><label htmlFor="jobIconbox4"><img src={hammer} alt="Hammer"/></label></li>
+              <li><input type="checkbox" name="jobIcon" id="jobIconbox5" value={"blade"} onChange={(e) => handleChange(e)}/><label htmlFor="jobIconbox5"><img src={leaf} alt="Blade"/></label></li>
+              <li><input type="checkbox" name="jobIcon" id="jobIconbox6" value={"lineal"} onChange={(e) => handleChange(e)}/><label htmlFor="jobIconbox6"><img src={ruler} alt="lineal"/></label></li>
+              <li><input type="checkbox" name="jobIcon" id="jobIconbox7" value={""} onChange={(e) => handleChange(e)}/><label htmlFor="jobIconbox7"><img src={saw} alt="Sav"/></label></li>
+              <li><input type="checkbox" name="jobIcon" id="jobIconbox8" value={"suit"} onChange={(e) => handleChange(e)}/><label htmlFor="jobIconbox8"><img src={suit} alt="Jakkesæt"/></label></li>
+              <li><input type="checkbox" name="jobIcon" id="jobIconbox9" value={"node"} onChange={(e) => handleChange(e)}/><label htmlFor="jobIconbox9"><img src={node} alt="Node"/></label></li>
+              <li><input type="checkbox" name="jobIcon" id="jobIconbox10" value={"blyant"}  onChange={(e) => handleChange(e)}/><label htmlFor="jobIconbox10"><img src={pencil} alt="Blyant"/></label></li>
+              <li><input type="checkbox" name="jobIcon" id="jobIconbox11" value={"non"}  onChange={(e) => handleChange(e)}/><label htmlFor="jobIconbox11"><img src={noIcon} alt="Intet valg"/></label></li>
           </div>
       </div>
-        )} */}
+        )}
 
         <div className="historyInput">
           <textarea
