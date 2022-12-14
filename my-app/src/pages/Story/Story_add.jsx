@@ -31,6 +31,7 @@ export default function AddArticle() {
     gravId: "",
     ErhvervLogo:"",
     lastname: "",
+    jobName: "",
   });
 
   //progress state
@@ -94,7 +95,7 @@ export default function AddArticle() {
           born: "",
           dead: "",
           image: "",
-          jobname: "",
+          jobName: "",
           jobIcon: "",
           ErhvervLogo:"",
           story: "",
@@ -113,7 +114,7 @@ export default function AddArticle() {
               createdAt: Timestamp.now().toDate(),
               born: formData.born,
               dead: formData.dead,
-             jobname: formData.jobName,
+             jobName: formData.jobName,
              // jobIcon: formData.jobIcons,  
               graveId: formData.graveId,
               ErhvervLogo: formData.ErhvervLogo,
@@ -139,7 +140,7 @@ export default function AddArticle() {
                 createdAt: Timestamp.now().toDate(),
                 born: formData.born,
                 dead: formData.dead,
-                jobname: formData.jobName,
+               jobName: formData.jobName,
                // jobIcon: formData.value,  
                 graveId: formData.graveId,
                 ErhvervLogo: formData.ErhvervLogo,
