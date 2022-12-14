@@ -40,6 +40,10 @@ export default function HistoryPrivate() {
                   <img src={url}></img>
                   <img src={Icon} alt="" />
                   <p>{job}</p>
+                  <h1>Resume</h1>
+                  <p>{resume}</p>
+                  <h1>Livs historie</h1>
+                  <p>{lifestory}</p>
                 </div>
               </div>
             ) : (
