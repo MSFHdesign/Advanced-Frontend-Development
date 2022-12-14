@@ -1,6 +1,7 @@
 import "../../pages/map/map.css";
 import React, { useRef, useEffect, useState } from "react";
 import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
+import Topnav from "../../components/top-nav/topnav";
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoibWljaGFlbHNpaW4iLCJhIjoiY2xibTdkZXY5MDZqODNubWludDZkeW5wbyJ9.sdAMLLkFUUwCLOLLv-dWIQ";
@@ -33,6 +34,7 @@ export default function App() {
 
   return (
     <div>
+      <Topnav/>
       <div className="sidebar">
         Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
       </div>

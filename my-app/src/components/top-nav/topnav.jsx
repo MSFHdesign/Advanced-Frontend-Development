@@ -8,6 +8,7 @@ function Topnav() {
       <Link to= "/" >
         <img src={logo} alt="Kirkegårds appen" className='srcLogo'/>
       </Link>
+      <h3>Kirkegårdshistorier</h3>
     </div>
   )
 }

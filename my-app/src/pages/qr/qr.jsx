@@ -2,6 +2,7 @@ import "../../pages/qr/qr.css";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import QrScan from "react-qr-reader";
+import Topnav from "../../components/top-nav/topnav";
 
 function QRscanner() {
   const [qrscan, setQrscan] = useState("No result");
@@ -21,6 +22,7 @@ function QRscanner() {
 
   return (
     <div className="qrsite">
+      <Topnav />
       <h1>Scan QR-kode</h1>
       <div className="qrscanner">
         <QrScan
