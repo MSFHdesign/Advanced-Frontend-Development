@@ -29,7 +29,6 @@ export default function AddArticle() {
     image: "",
     createdAt: Timestamp.now().toDate(),
     gravId: "",
-    ErhvervLogo:"",
     lastname: "",
     jobName: "",
   });
@@ -97,7 +96,6 @@ export default function AddArticle() {
           image: "",
           jobName: "",
           jobIcon: "",
-          ErhvervLogo:"",
           story: "",
           graveId: "",
           lastname:"",
@@ -115,9 +113,8 @@ export default function AddArticle() {
               born: formData.born,
               dead: formData.dead,
              jobName: formData.jobName,
-             // jobIcon: formData.jobIcons,  
+             jobIcon: formData.jobIcon,  
               graveId: formData.graveId,
-              ErhvervLogo: formData.ErhvervLogo,
               lastname: formData.lastname,
 
 
@@ -141,9 +138,8 @@ export default function AddArticle() {
                 born: formData.born,
                 dead: formData.dead,
                jobName: formData.jobName,
-               // jobIcon: formData.value,  
+               jobIcon: formData.jobIcon,  
                 graveId: formData.graveId,
-                ErhvervLogo: formData.ErhvervLogo,
                 lastname: formData.lastname,
 
             })
