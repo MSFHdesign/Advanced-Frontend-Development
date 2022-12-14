@@ -14,7 +14,6 @@ export default function HistoryPrivate() {
                 <h2>{state.name}</h2> 
                 <h3><img src={state.bornImg} alt="Stjerne"/> {state.born} <img src={state.deadImg} alt="Kors"/> {state.dead}</h3>
            
-                
                 <div id="StoryBoxImg">
                 {!state.img ? "" : <img src={state.img} alt="title" /> } 
                 </div>
@@ -22,7 +21,7 @@ export default function HistoryPrivate() {
                 <div className="showMoreContent" id="showMoreContent">
                     <p id="work"> {state.work} </p>
                     <p id="graveId">Gravnummer: {state.graveId} </p>
-                    {/* <p>Indsendt: {createdAt.toDate().toDateString()}</p> */}
+                    
                 </div>
                 <h4 id="story allStory">{state.story}</h4>
             </div>

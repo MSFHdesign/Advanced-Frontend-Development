@@ -9,18 +9,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
-  background-image: url(../../pics/background.svg);
-  background-position: bottom;
-  background-repeat:no-repeat;
-  background-attachment: fixed;
+  height: 90vh;
 }
 
 .qr-image-wrapper section {
-  border-radius: 30px;
+  border-radius: 50px;
 }
 
 .qr-image-wrapper section div {
-  box-shadow: #f2f2f2 0px 0px 0px 2px inset !important;
-  background-color: #ffffff;
+  box-shadow: black 0px 0px 0px 2px inset !important;
 }
