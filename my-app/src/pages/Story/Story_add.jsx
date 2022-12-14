@@ -33,6 +33,19 @@ export default function AddArticle() {
     jobName: "",
     jobIcon: "",
   });
+  const today = new Date();
+  let [month, day, year] = [
+    today.getMonth() + 1,
+    today.getDate(),
+    today.getFullYear(),
+  ];
+
+  if (month <= 9) month = "0" + month;
+
+  if (day < 10) day = "0" + day;
+
+  let dag = year + "-" + month + "-" + day;
+  console.log(dag);
 
   //progress state
   const [progress, setProgress] = useState(0);
@@ -200,6 +213,7 @@ export default function AddArticle() {
               placeholder="Født"
               onChange={(e) => handleChange(e)}
               className="datepicker-input"
+              max={dag}
             />
           </span>
 
@@ -213,8 +227,9 @@ export default function AddArticle() {
               className="datepicker-input"
               value={formData.dead}
               onChange={(e) => handleChange(e)}
-            />{" "}
-            <p></p>
+              min={formData.born}
+              max={dag}
+            />
           </span>
         </div>
 
