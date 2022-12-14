@@ -30,7 +30,6 @@ export default function HistoryPrivate() {
       }));
       SetArtikler(Artikler);
       console.log(Artikler);
-      console.log(Artikler.id);
     });
   }, []);
 
@@ -38,18 +37,20 @@ export default function HistoryPrivate() {
     <div className="historie">
       {Artikler.length === 0 ? (
         <p> Nothing to see, yet....</p>
-      ) : Artikler.id == filter ? (
-        <p> This person does not exsist</p>
       ) : (
-        Artikler.map(({ Navn, id, born, dead, story, graveId }) => (
-          <div className="StoriesBox" key={id}>
-            <div className="StoryBox">
-              <h2>{Navn}</h2>
-              <img src={stjerne} alt="Stjerne" /> {born}{" "}
-              <img src={kors} alt="Kors" /> {dead}
+        Artikler.map(({ Navn, id, born, dead, story, graveId }) =>
+          id == filter ? (
+            <div className="StoriesBox" key={id}>
+              <div className="StoryBox">
+                <h2>{Navn}</h2>
+                <img src={stjerne} alt="Stjerne" /> {born}{" "}
+                <img src={kors} alt="Kors" /> {dead}
+              </div>
             </div>
-          </div>
-        ))
+          ) : (
+            <p></p>
+          )
+        )
       )}
     </div>
   );
