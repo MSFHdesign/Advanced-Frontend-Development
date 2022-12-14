@@ -5,19 +5,10 @@ import stjerne from "../../pics/shapes/stjerne.svg";
 import kors from "../../pics/shapes/kors.svg";
 
 export default function HistoryPrivate() {
-  const [search, setSearch] = useState("");
+ 
   const [Artikler, SetArtikler] = useState([]);
   const filter = sessionStorage.QrNavn;
 
-  const SearchStory = (e) => {
-    e.preventDefault();
-    SetArtikler(
-      Artikler.filter((Articles) =>
-        //Filters
-        Artikler.name.toLowerCase().includes(search.toLowerCase())
-      )
-    );
-  };
 
   useEffect(() => {
     const articleRef = collection(db, "Artikler");
@@ -39,7 +30,7 @@ export default function HistoryPrivate() {
         <p> Nothing to see, yet....</p>
       ) : (
         Artikler.map(({ Navn, id, born, dead, story, graveId }) =>
-          id == filter ? (
+          id === filter ? (
             <div className="StoriesBox" key={id}>
               <div className="StoryBox">
                 <h2>{Navn}</h2>
