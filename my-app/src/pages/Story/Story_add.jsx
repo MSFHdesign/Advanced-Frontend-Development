@@ -277,16 +277,16 @@ export default function AddArticle() {
 
         <div className="graveIdInput">
           {/* Grave ID */}
-          <label htmlFor="">Gravnummer:</label>
+          {/* <label htmlFor="">Gravnummer:</label> */}
           <input
             type="number"
             min="1" max="400"
             name="graveId"
             className="inputfield"
+            placeholder="Gravnummer..."
             value={formData.graveId}
             onChange={(e) => handleChange(e)}
           />
-
         </div>
 
         <div className="submitHistoryBtn">
