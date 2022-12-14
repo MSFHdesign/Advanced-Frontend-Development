@@ -25,11 +25,12 @@ export default function HistoryPrivate() {
   }, []);
 
   return (
+
     <div className="historie">
       {Artikler.length === 0 ? (
         <p> Nothing to see, yet....</p>
       ) : (
-        Artikler.map(({ Navn, id, born, dead, story, graveId }) =>
+        Artikler.map(({ Navn, id, born, dead, story, GraveId }) =>
           id === filter ? (
             <div className="StoriesBox" key={id}>
               <div className="StoryBox">
