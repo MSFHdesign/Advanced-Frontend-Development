@@ -9,6 +9,7 @@ import saw from "../../pics/jobicons/saw.svg";
 import suit from "../../pics/jobicons/suit.svg";
 import node from "../../pics/jobicons/node.svg";
 import pencil from "../../pics/jobicons/pencil.svg";
+import noIcon from "../../pics/jobicons/NoIcon.svg";
 
 import React, {useState} from 'react';
 
@@ -29,7 +30,7 @@ export default function JobIcons() {
                 <li><input type="checkbox" name="jobIcon" id="jobIconbox8"/><label htmlFor="jobIconbox8"><img src={suit} alt="Jakkesæt"/></label></li>
                 <li><input type="checkbox" name="jobIcon" id="jobIconbox9"/><label htmlFor="jobIconbox9"><img src={node} alt="Node"/></label></li>
                 <li><input type="checkbox" name="jobIcon" id="jobIconbox10"/><label htmlFor="jobIconbox10"><img src={pencil} alt="Blyant"/></label></li>
-                <li><input type="checkbox" name="jobIcon" id="jobIconbox10"/><label htmlFor="jobIconbox10"><img src={pencil} alt="Blyant"/></label></li>
+                <li><input type="checkbox" name="jobIcon" id="jobIconbox11"/><label htmlFor="jobIconbox11"><img src={noIcon} alt="Intet valg"/></label></li>
             </div>
         </div>
     )
