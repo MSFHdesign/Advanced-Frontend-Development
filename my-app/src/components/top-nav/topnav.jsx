@@ -6,13 +6,12 @@ import info from '../../pics/icons/Info1.svg'
 function Topnav() {
   return (
     <div className='topNavbox'>
-      <Link to= "/" >
+      <Link to= "/"  id='logoName'>
         <img src={logo} alt="Kirkegårds appen" className='srcLogo'/>
         <h3>Kirkegårdshistorier</h3>
       </Link>
-      <h3>Kirkegårdshistorier</h3>
-      <Link to= "/step0" >
-        <img src={info} alt="Info-logo" className='srcLogo'/>
+      <Link to= "/step0" id='info'>
+        <img src={info} alt="Info-logo"/>
       </Link>
     </div>
   )
