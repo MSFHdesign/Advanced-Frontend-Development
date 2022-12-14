@@ -8,8 +8,7 @@ import Ingenioer from "../../pics/jobicons/ruler.svg";
 export default function HistoryPrivate() {
   const [Artikler, SetArtikler] = useState([]);
   const filter = sessionStorage.QrNavn;
-  const [Icon, SetIcon] = useState();
-
+ 
   useEffect(() => {
     const articleRef = collection(db, "Artikler");
     const q = query(articleRef, orderBy("Navn"));
@@ -37,9 +36,9 @@ export default function HistoryPrivate() {
                   <h2>{Navn}</h2>
                   <img src={stjerne} alt="Stjerne" /> {born}{" "}
                   <img src={kors} alt="Kors" /> {dead}
-                  <img src={url}></img>
-                  <img src={Icon} alt="" />
-                  <p>{job}</p>
+                  <img src={url}/> <br/>
+                  <div className={job}/>
+                  <img src={job} alt={job} width='100px' height='100px'/>
                   <h1>Resume</h1>
                   <p>{resume}</p>
                   <h1>Livs historie</h1>
