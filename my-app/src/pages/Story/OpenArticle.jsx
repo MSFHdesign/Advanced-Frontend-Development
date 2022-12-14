@@ -48,7 +48,7 @@ export default function HistoryPrivate() {
               </div>
             </div>
           ) : (
-            <p></p>
+            <p> </p>
           )
         )
       )}
