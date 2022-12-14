@@ -190,7 +190,7 @@ export default function AddArticle() {
         </div>
 
         <div className="nameInput">
-          {/*Name here */}
+          {/*Lastname here */}
           <input
             type="text"
             name="lastname"
@@ -245,7 +245,7 @@ export default function AddArticle() {
               hidden
             />
             <label id="addImgContainer" htmlFor="imgUpload">
-              Tilføj billede
+              Billede
               <svg
                 width="30"
                 height="30"
@@ -274,7 +274,7 @@ export default function AddArticle() {
 
           <button onClick={showWorkIcons} className="workInput">
             <label id="workInputField" htmlFor="workInput">
-              Tilføj erhverv
+              Erhverv
               <svg
                 width="30"
                 height="30"

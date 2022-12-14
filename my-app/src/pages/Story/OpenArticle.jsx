@@ -54,10 +54,10 @@ export default function HistoryPrivate() {
                   </div>
                   <div className={Icon} />
                   <p id="job">{job}</p>
-                  <h1>Resume</h1>
-                  <p>{resume}</p>
-                  <h1>Livs historie</h1>
-                  <p>{lifestory}</p>
+                  <h2 id="resumeTitle">Resume</h2>
+                  <p id="resumeText">{resume}</p>
+                  <h2 id="storyTitel">Livs historie</h2>
+                  <p id="storyText">{lifestory}</p>
                 </div>
               </div>
             ) : (

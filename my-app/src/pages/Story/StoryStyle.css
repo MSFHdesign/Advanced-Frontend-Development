@@ -15,15 +15,13 @@ a:active {
   text-decoration: none;
 }
 
-input,
-textarea,
-button {
+input, textarea, button {
   font-family: "Hurme Geometric Sans 4";
 }
 
 .historie {
-  padding-bottom: 86px;
-  margin-top: 86px;
+  padding-bottom: 76px;
+  padding-top: 70px;
   background-image: url(../../pics/background.svg);
   background-position: bottom;
   background-repeat: no-repeat;
@@ -49,7 +47,7 @@ button {
   margin: 0 10px;
   border-radius: 30px;
   border-width: 3.5px;
-  border-color: #46512c;
+  border-color: #46512C;
   background-color: #ffffff;
   font-size: 18px;
 }
@@ -57,7 +55,7 @@ button {
 .StoriesBox {
   background-color: #ffffff;
   width: 80%;
-  margin: 16px auto 0;
+  margin: 0 auto 16px;
   border-radius: 30px;
   width: 90%;
 }
@@ -126,7 +124,7 @@ button {
   font-weight: 400;
   padding-bottom: 16px;
   font-size: 18px;
-  margin-top: 0;
+  margin: 0;
 }
 .StoryBox .showMoreContentHidden {
   display: none;
@@ -143,7 +141,7 @@ button {
   margin: 16px 0;
   border-radius: 30px;
   border-width: 3.5px;
-  border-color: #46512c;
+  border-color: #46512C;
   background-color: #ffffff;
   font-size: 18px;
 }
@@ -158,7 +156,7 @@ button {
   background-color: #ffffff;
   border-radius: 30px;
   border-width: 3.5px;
-  border-color: #46512c;
+  border-color: #46512C;
 }
 
 .addStoryBox {
@@ -177,7 +175,7 @@ button {
 .addStoryBox .nameInput input {
   width: 100%;
   box-sizing: border-box;
-  height: 40px;
+  height: 45px;
   border-radius: 30px;
   border-width: 0;
   font-size: 18px;
@@ -186,23 +184,19 @@ button {
 .addStoryBox .bornAndDeadContainer {
   display: flex;
   width: 100%;
-  box-sizing: border-box;
   justify-content: space-between;
   margin-bottom: 16px;
-  z-index: 0;
 }
-.addStoryBox .bornAndDeadContainer .bornInput,
-.addStoryBox .bornAndDeadContainer .deadInput {
-  width: 150px;
-  height: 40px;
+.addStoryBox .bornAndDeadContainer .bornInput, .addStoryBox .bornAndDeadContainer .deadInput {
+  width: 165px;
+  height: 45px;
   background-color: #ffffff;
   font-size: 18px;
   font-weight: 600;
   border-radius: 30px;
   position: relative;
 }
-.addStoryBox .bornAndDeadContainer .bornInput .datepicker-toggle-button,
-.addStoryBox .bornAndDeadContainer .deadInput .datepicker-toggle-button {
+.addStoryBox .bornAndDeadContainer .bornInput .datepicker-toggle-button, .addStoryBox .bornAndDeadContainer .deadInput .datepicker-toggle-button {
   position: absolute;
   left: 0;
   top: 0;
@@ -216,8 +210,7 @@ button {
   justify-content: center;
   width: 150px;
 }
-.addStoryBox .bornAndDeadContainer .bornInput .datepicker-input,
-.addStoryBox .bornAndDeadContainer .deadInput .datepicker-input {
+.addStoryBox .bornAndDeadContainer .bornInput .datepicker-input, .addStoryBox .bornAndDeadContainer .deadInput .datepicker-input {
   position: absolute;
   left: 0;
   top: 0;
@@ -227,9 +220,7 @@ button {
   cursor: pointer;
   box-sizing: border-box;
 }
-.addStoryBox
-  .bornAndDeadContainer
-  .datepicker-input::-webkit-calendar-picker-indicator {
+.addStoryBox .bornAndDeadContainer .datepicker-input::-webkit-calendar-picker-indicator {
   position: absolute;
   left: 0;
   top: 0;
@@ -241,25 +232,25 @@ button {
 }
 .addStoryBox #imgWorkFlex {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
-.addStoryBox #imgWorkFlex .imgInput,
-.addStoryBox #imgWorkFlex .workInput {
-  width: 180px;
+.addStoryBox #imgWorkFlex .imgInput, .addStoryBox #imgWorkFlex .workInput {
+  width: 165px;
+  height: 45px;
   background-color: #ffffff;
-  padding: 10px;
   margin-bottom: 16px;
   border-radius: 30px;
   border-width: 0;
   font-size: 18px;
 }
-.addStoryBox #imgWorkFlex .imgInput #addImgContainer,
-.addStoryBox #imgWorkFlex .imgInput #workInputField,
-.addStoryBox #imgWorkFlex .workInput #addImgContainer,
-.addStoryBox #imgWorkFlex .workInput #workInputField {
+.addStoryBox #imgWorkFlex .imgInput #addImgContainer, .addStoryBox #imgWorkFlex .imgInput #workInputField, .addStoryBox #imgWorkFlex .workInput #addImgContainer, .addStoryBox #imgWorkFlex .workInput #workInputField {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+}
+.addStoryBox #imgWorkFlex .imgInput #addImgContainer svg, .addStoryBox #imgWorkFlex .imgInput #workInputField svg, .addStoryBox #imgWorkFlex .workInput #addImgContainer svg, .addStoryBox #imgWorkFlex .workInput #workInputField svg {
+  margin-left: 16px;
 }
 .addStoryBox .jobIconContainer {
   width: 100%;
@@ -294,7 +285,7 @@ button {
 .addStoryBox .jobIconContainer .jobIcons li {
   display: inline-block;
 }
-.addStoryBox .jobIconContainer .jobIcons input[type="radio"][id^="jobIconbox"] {
+.addStoryBox .jobIconContainer .jobIcons input[type=radio][id^=jobIconbox] {
   display: none;
 }
 .addStoryBox .jobIconContainer .jobIcons label {
@@ -331,11 +322,11 @@ button {
   transform-origin: 50% 50%;
 }
 .addStoryBox .jobIconContainer .jobIcons :checked + label {
-  border: 3.5px solid #46512c;
+  border: 3.5px solid #46512C;
 }
 .addStoryBox .jobIconContainer .jobIcons :checked + label:before {
   content: "✓";
-  background-color: #8b9769;
+  background-color: #8B9769;
   transform: scale(1);
   z-index: 30;
 }
@@ -345,92 +336,10 @@ button {
   z-index: -1;
   display: flex;
 }
-.addStoryBox .jobIconContainer .jobIcons .ruler {
-  background-image: url(../../pics/jobicons/ruler.svg);
-  width: 100px;
-  height: 100px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.addStoryBox .jobIconContainer .jobIcons .book {
-  background-image: url(../../pics/jobicons/book.svg);
-  width: 100px;
-  height: 100px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.addStoryBox .jobIconContainer .jobIcons .briefcase {
-  background-image: url(../../pics/jobicons/briefcase.svg);
-  width: 100px;
-  height: 100px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.addStoryBox .jobIconContainer .jobIcons .dollar {
-  width: 100px;
-  height: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: url(../../pics/jobicons/dollar.svg);
-}
-.addStoryBox .jobIconContainer .jobIcons .hammer {
-  width: 100px;
-  height: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: url(../../pics/jobicons/hammer.svg);
-}
-.addStoryBox .jobIconContainer .jobIcons .leaf {
-  width: 100px;
-  height: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: url(../../pics/jobicons/leaf.svg);
-}
-.addStoryBox .jobIconContainer .jobIcons .note {
-  width: 100px;
-  height: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: url(../../pics/jobicons/node.svg);
-}
-.addStoryBox .jobIconContainer .jobIcons .noIcon {
-  width: 100px;
-  height: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: url(../../pics/jobicons/NoIcon.svg);
-}
-.addStoryBox .jobIconContainer .jobIcons .pencil {
-  width: 100px;
-  height: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: url(../../pics/jobicons/pencil.svg);
-}
-.addStoryBox .jobIconContainer .jobIcons .suit {
-  width: 100px;
-  height: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: url(../../pics/jobicons/suit.svg);
-}
-.addStoryBox .jobIconContainer .jobIcons .saw {
-  width: 100px;
-  height: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: url(../../pics/jobicons/saw.svg);
-}
-.addStoryBox .jobIconContainer .jobIcons #job {
-  text-align: center;
-  padding: 0;
-  margin: 0;
-}
 .addStoryBox .jobIconContainer button {
   border-radius: 30px;
   border-width: 3.5px;
-  border-color: #46512c;
+  border-color: #46512C;
   background-color: #ffffff;
   font-size: 18px;
   padding: 5px 15px;
@@ -455,8 +364,7 @@ button {
 }
 .addStoryBox .graveIdInput {
   margin-bottom: 16px;
-  width: 100%;
-  height: 50px;
+  height: 45px;
   border-radius: 30px;
   display: flex;
   justify-content: space-evenly;
@@ -464,7 +372,7 @@ button {
 }
 .addStoryBox .graveIdInput input {
   padding: 10px 15px;
-  width: 75%;
+  width: 100%;
   border-radius: 30px;
   border-width: 0;
   font-size: 18px;
@@ -479,18 +387,21 @@ button {
   text-align: center;
 }
 .addStoryBox .submitHistoryBtn {
-  width: 180px;
-  margin: 0 auto;
+  width: 150px;
+  height: 45px;
 }
 .addStoryBox .submitHistoryBtn .formsubmit {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background-color: #ffffff;
   border-radius: 30px;
-  border-width: 0;
+  border: 3.5px solid #46512C;
   padding: 5px 10px;
   box-sizing: border-box;
   font-size: 18px;
-} /*# sourceMappingURL=storystyle.css.map */
+}
+.addStoryBox .submitHistoryBtn .formsubmit svg {
+  margin-right: 16px;
+}/*# sourceMappingURL=storystyle.css.map */
