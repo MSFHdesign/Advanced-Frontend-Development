@@ -6,7 +6,6 @@ import { Route, Routes } from "react-router-dom";
 
 // Pages
 
-import StartIntro from "./pages/start-intro/start-intro";
 import Qr from "./pages/qr/qr";
 import Map from "./pages/map/map";
 import Story from "./pages/Story/Story.jsx";
