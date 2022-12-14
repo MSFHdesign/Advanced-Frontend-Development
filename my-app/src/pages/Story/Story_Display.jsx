@@ -93,7 +93,6 @@ export default function Articles() {
                     deadImg: kors,
                     dead: dead,
                     img: imageUrl,
-                    work: job,
                     graveId: graveId,
                     story: story,
                     lastname: lastname,

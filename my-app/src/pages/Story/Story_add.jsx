@@ -321,123 +321,120 @@ export default function AddArticle() {
               </li>
 
               <li>
-                <input
-                  type="radio"
-                  name="jobIcon"
-                  id="jobIconbox2"
-                  value={"briefcase"}
-                  onChange={(e) => handleChange(e)}
-                />
-                <label htmlFor="jobIconbox2">
-                  <img src={briefcase} alt="Taske" />
+                <input 
+                  type="radio" 
+                  name="jobIcon" 
+                  id="jobIconbox2" 
+                  value={"briefcase"} 
+                  onChange={(e) => handleChange(e)}/>
+                <label htmlFor="jobIconbox2"><img src={briefcase} alt="Taske"/></label>
+              </li>
+
+              <li>
+                <input 
+                  type="radio" 
+                  name="jobIcon" 
+                  id="jobIconbox3" 
+                  value={"dollar"} 
+                  onChange={(e) => handleChange(e)}/>
+                  <label htmlFor="jobIconbox3">
+                    <img src={dollar} alt="Penge"/>
                 </label>
               </li>
+
               <li>
-                <input
-                  type="radio"
-                  name="jobIcon"
-                  id="jobIconbox3"
-                  value={"penge"}
-                  onChange={(e) => handleChange(e)}
-                />
-                <label htmlFor="jobIconbox3">
-                  <img src={dollar} alt="Penge" />
-                </label>
-              </li>
-              <li>
-                <input
-                  type="radio"
-                  name="jobIcon"
-                  id="jobIconbox4"
-                  value={"hammer"}
-                  onChange={(e) => handleChange(e)}
-                />
+                <input 
+                  type="radio" 
+                  name="jobIcon" 
+                  id="jobIconbox4" 
+                  value={"hammer"} 
+                  onChange={(e) => handleChange(e)}/>
                 <label htmlFor="jobIconbox4">
-                  <img src={hammer} alt="Hammer" />
+                  <img src={hammer} alt="Hammer"/>
                 </label>
               </li>
+              
               <li>
-                <input
-                  type="radio"
-                  name="jobIcon"
-                  id="jobIconbox5"
-                  value={"blade"}
-                  onChange={(e) => handleChange(e)}
-                />
+                <input 
+                  type="radio" 
+                  name="jobIcon" 
+                  id="jobIconbox5" 
+                  value={"leaf"} 
+                  onChange={(e) => handleChange(e)}/>
                 <label htmlFor="jobIconbox5">
-                  <img src={leaf} alt="Blade" />
+                  <img src={leaf} alt="Blade"/>
                 </label>
               </li>
+              
               <li>
-                <input
-                  type="radio"
-                  name="jobIcon"
-                  id="jobIconbox6"
-                  value={"lineal"}
-                  onChange={(e) => handleChange(e)}
-                />
+                <input 
+                  type="radio" 
+                  name="jobIcon" 
+                  id="jobIconbox6" 
+                  value={"ruler"} 
+                  onChange={(e) => handleChange(e)}/>
                 <label htmlFor="jobIconbox6">
-                  <img src={ruler} alt="lineal" />
+                  <img src={ruler} alt="lineal"/>
                 </label>
               </li>
+
               <li>
-                <input
-                  type="radio"
-                  name="jobIcon"
-                  id="jobIconbox7"
-                  value={""}
-                  onChange={(e) => handleChange(e)}
-                />
+                <input 
+                  type="radio" 
+                  name="jobIcon" 
+                  id="jobIconbox7" 
+                  value={"saw"} 
+                  onChange={(e) => handleChange(e)}/>
                 <label htmlFor="jobIconbox7">
-                  <img src={saw} alt="Sav" />
+                  <img src={saw} alt="Sav"/>
                 </label>
               </li>
+
               <li>
-                <input
-                  type="radio"
-                  name="jobIcon"
-                  id="jobIconbox8"
-                  value={"suit"}
-                  onChange={(e) => handleChange(e)}
-                />
+                <input 
+                  type="radio" 
+                  name="jobIcon" 
+                  id="jobIconbox8" 
+                  value={"suit"} 
+                  onChange={(e) => handleChange(e)}/>
                 <label htmlFor="jobIconbox8">
-                  <img src={suit} alt="Jakkesæt" />
+                  <img src={suit} alt="Jakkesæt"/>
                 </label>
               </li>
+
               <li>
-                <input
-                  type="radio"
-                  name="jobIcon"
-                  id="jobIconbox9"
-                  value={"node"}
-                  onChange={(e) => handleChange(e)}
-                />
+                <input 
+                  type="radio" 
+                  name="jobIcon" 
+                  id="jobIconbox9" 
+                  value={"note"}
+                  onChange={(e) => handleChange(e)}/>
                 <label htmlFor="jobIconbox9">
-                  <img src={node} alt="Node" />
+                  <img src={node} alt="Node"/>
                 </label>
               </li>
+
               <li>
-                <input
-                  type="radio"
-                  name="jobIcon"
-                  id="jobIconbox10"
-                  value={"blyant"}
-                  onChange={(e) => handleChange(e)}
-                />
+                <input 
+                 type="radio" 
+                 name="jobIcon" 
+                 id="jobIconbox10" 
+                 value={"pencil"}  
+                 onChange={(e) => handleChange(e)}/>
                 <label htmlFor="jobIconbox10">
-                  <img src={pencil} alt="Blyant" />
+                  <img src={pencil} alt="Blyant"/>
                 </label>
               </li>
+              
               <li>
-                <input
-                  type="radio"
-                  name="jobIcon"
-                  id="jobIconbox11"
-                  value={"non"}
-                  onChange={(e) => handleChange(e)}
-                />
+                <input 
+                  type="radio" 
+                  name="jobIcon" 
+                  id="jobIconbox11" 
+                  value={"noIcon"}  
+                  onChange={(e) => handleChange(e)}/>
                 <label htmlFor="jobIconbox11">
-                  <img src={noIcon} alt="Intet valg" />
+                  <img src={noIcon} alt="Intet valg"/>
                 </label>
               </li>
             </div>
@@ -456,7 +453,6 @@ export default function AddArticle() {
 
         <div className="graveIdInput">
           {/* Grave ID */}
-          {/* <label htmlFor="">Gravnummer:</label> */}
           <input
             type="number"
             min="1"

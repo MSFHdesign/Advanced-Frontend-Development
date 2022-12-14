@@ -189,17 +189,16 @@ button {
   box-sizing: border-box;
   justify-content: space-between;
   margin-bottom: 16px;
+  z-index: 0;
 }
 .addStoryBox .bornAndDeadContainer .bornInput,
 .addStoryBox .bornAndDeadContainer .deadInput {
-  width: 80px;
+  width: 150px;
   height: 40px;
   background-color: #ffffff;
-  text-align: center;
   font-size: 18px;
   font-weight: 600;
   border-radius: 30px;
-  display: inline-block;
   position: relative;
 }
 .addStoryBox .bornAndDeadContainer .bornInput .datepicker-toggle-button,
@@ -210,12 +209,12 @@ button {
   width: 80px;
   height: 40px;
   background-color: #ffffff;
-  text-align: center;
   border-radius: 30px;
   border-width: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 150px;
 }
 .addStoryBox .bornAndDeadContainer .bornInput .datepicker-input,
 .addStoryBox .bornAndDeadContainer .deadInput .datepicker-input {
@@ -295,10 +294,7 @@ button {
 .addStoryBox .jobIconContainer .jobIcons li {
   display: inline-block;
 }
-.addStoryBox
-  .jobIconContainer
-  .jobIcons
-  input[type="checkbox"][id^="jobIconbox"] {
+.addStoryBox .jobIconContainer .jobIcons input[type="radio"][id^="jobIconbox"] {
   display: none;
 }
 .addStoryBox .jobIconContainer .jobIcons label {
@@ -348,6 +344,88 @@ button {
   /* box-shadow: 0 0 5px #333; */
   z-index: -1;
   display: flex;
+}
+.addStoryBox .jobIconContainer .jobIcons .ruler {
+  background-image: url(../../pics/jobicons/ruler.svg);
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.addStoryBox .jobIconContainer .jobIcons .book {
+  background-image: url(../../pics/jobicons/book.svg);
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.addStoryBox .jobIconContainer .jobIcons .briefcase {
+  background-image: url(../../pics/jobicons/briefcase.svg);
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.addStoryBox .jobIconContainer .jobIcons .dollar {
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../../pics/jobicons/dollar.svg);
+}
+.addStoryBox .jobIconContainer .jobIcons .hammer {
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../../pics/jobicons/hammer.svg);
+}
+.addStoryBox .jobIconContainer .jobIcons .leaf {
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../../pics/jobicons/leaf.svg);
+}
+.addStoryBox .jobIconContainer .jobIcons .note {
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../../pics/jobicons/node.svg);
+}
+.addStoryBox .jobIconContainer .jobIcons .noIcon {
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../../pics/jobicons/NoIcon.svg);
+}
+.addStoryBox .jobIconContainer .jobIcons .pencil {
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../../pics/jobicons/pencil.svg);
+}
+.addStoryBox .jobIconContainer .jobIcons .suit {
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../../pics/jobicons/suit.svg);
+}
+.addStoryBox .jobIconContainer .jobIcons .saw {
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../../pics/jobicons/saw.svg);
+}
+.addStoryBox .jobIconContainer .jobIcons #job {
+  text-align: center;
+  padding: 0;
+  margin: 0;
 }
 .addStoryBox .jobIconContainer button {
   border-radius: 30px;
