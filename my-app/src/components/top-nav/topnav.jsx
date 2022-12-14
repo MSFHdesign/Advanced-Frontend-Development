@@ -10,6 +10,7 @@ function Topnav() {
         <img src={logo} alt="Kirkegårds appen" className='srcLogo'/>
         <h3>Kirkegårdshistorier</h3>
       </Link>
+      <h3>Kirkegårdshistorier</h3>
       <Link to= "/step0" >
         <img src={info} alt="Info-logo" className='srcLogo'/>
       </Link>
