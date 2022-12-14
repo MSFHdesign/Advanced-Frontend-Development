@@ -25,7 +25,6 @@ export default function HistoryPrivate() {
   }, []);
 
   return (
-
     <div className="historie">
       {Artikler.length === 0 ? (
         <p> Nothing to see, yet....</p>
@@ -38,7 +37,7 @@ export default function HistoryPrivate() {
                   <h2>{Navn}</h2>
                   <img src={stjerne} alt="Stjerne" /> {born}{" "}
                   <img src={kors} alt="Kors" /> {dead}
-                  <img src={{url}}></img>
+                  <img src={url}></img>
                   <img src={Icon} alt="" />
                   <p>{job}</p>
                   <h1>Resume</h1>
