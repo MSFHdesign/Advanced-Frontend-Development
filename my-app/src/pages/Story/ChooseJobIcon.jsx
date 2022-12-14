@@ -19,7 +19,7 @@ export default function JobIcons() {
     return (
         <div className="jobIconContainer">
             <h4>Vælg ikoner som passer til erhvervet</h4>
-            <input type="text" name="" id="" />
+            <input type="text" placeholder="Indtast erhverv..." id="workName" />
             <div className="jobIcons">
                 <li><input type="checkbox" name="jobIcon" id="jobIconbox1"/><label htmlFor="jobIconbox1"><img src={book} alt="Bog"/></label></li>
                 <li><input type="checkbox" name="jobIcon" id="jobIconbox2"/><label htmlFor="jobIconbox2"><img src={briefcase} alt="Taske"/></label></li>
