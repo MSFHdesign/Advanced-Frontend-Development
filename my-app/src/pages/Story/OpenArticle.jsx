@@ -8,7 +8,6 @@ import kors from "../../pics/shapes/kors.svg";
 export default function HistoryPrivate() {
     
     const [search, setSearch] = useState("");
-
     const [Artikler, SetArtikler] = useState([]);
 
     const SearchStory = (e) => {
