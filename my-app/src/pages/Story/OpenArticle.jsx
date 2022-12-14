@@ -50,7 +50,7 @@ export default function HistoryPrivate() {
                     <img src={kors} alt="Kors" /> {dead}
                   </h3>
                   <div id="StoryBoxImg">
-                    <img src={url} />
+                    <img src={url} alt={Navn} />
                   </div>
                   <div className={Icon} />
                   <p id="job">{job}</p>
