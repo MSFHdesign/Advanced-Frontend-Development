@@ -38,7 +38,7 @@ export default function HistoryPrivate() {
                   <img src={kors} alt="Kors" /> {dead}
                   <img src={url}/> <br/>
                   <div className={job}/>
-                  <img src={job} alt={job} width='100px' height='100px'/>
+                  <img src={{job}} alt={job} width='100px' height='100px'/>
                   <h1>Resume</h1>
                   <p>{resume}</p>
                   <h1>Livs historie</h1>
