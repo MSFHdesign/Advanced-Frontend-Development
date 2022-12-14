@@ -21,12 +21,13 @@ import Step5 from "./pages/intro/step5.jsx";
 import Livshistorie from "./pages/Story/OpenStory.jsx";
 
 import NameStory from "./pages/Story/OpenArticle";
-
+import TopNav from "./components/top-nav/topnav";
 import NameTest from "./pages/Story/Article_Display";
 
 function App() {
   return (
     <div className="App">
+       <TopNav />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
@@ -48,7 +49,7 @@ function App() {
 
         <Route path="/Livshistorie/:Name" element={<Livshistorie />} />
       </Routes>
-      {/* <Topnav /> */}
+    
       <BtmNav />
     </div>
   );
