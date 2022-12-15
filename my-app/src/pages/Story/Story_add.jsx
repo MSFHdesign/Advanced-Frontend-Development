@@ -505,6 +505,7 @@ export default function AddArticle() {
             </svg>
             Færdig
           </button>
+          <div className='addOrBackModal'>
           <AddedModal
             title="Post livshistorie?"
             onClose={closeModal}
@@ -533,7 +534,7 @@ export default function AddArticle() {
             Indsend
             </button>
             <button className="btn formsubmit" onClick={closeModal}>Tilbage</button>
-          </AddedModal>
+          </AddedModal></div>
         </div>
       </div>
     </section>
