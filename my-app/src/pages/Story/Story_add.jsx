@@ -505,11 +505,11 @@ export default function AddArticle() {
             </svg>
             Færdig
           </button>
+          
           <AddedModal
             title="Post livshistorie?"
             onClose={closeModal}
             show={show}
-            className="addOrBackModal"
           >
             <button
               className="btn formsubmit"
