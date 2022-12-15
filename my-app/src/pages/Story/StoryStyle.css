@@ -188,7 +188,7 @@ input, textarea, button {
   margin-bottom: 16px;
 }
 .addStoryBox .bornAndDeadContainer .bornInput, .addStoryBox .bornAndDeadContainer .deadInput {
-  width: 165px;
+  width: 47%;
   height: 45px;
   background-color: #ffffff;
   font-size: 18px;
@@ -200,7 +200,7 @@ input, textarea, button {
   position: absolute;
   left: 0;
   top: 0;
-  width: 80px;
+  width: 47%;
   height: 40px;
   background-color: #ffffff;
   border-radius: 30px;
