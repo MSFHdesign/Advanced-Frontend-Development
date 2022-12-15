@@ -1,6 +1,4 @@
 import * as React from 'react';
-import "../../pages/Story/ModalStyle.css";
-
 
 const AddedModal = props => {
   if (!props.show) {
