@@ -2,10 +2,17 @@ import { addDoc, collection, Timestamp } from "firebase/firestore";
 import React, { useState } from "react";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { storage, db } from "../../firebaseConfig";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import AddedModal from "./AddedModal";
 import Topnav from "../../components/top-nav/topnav";
+//TOAST
 
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
+   
+ 
 // job icons
 import book from "../../pics/jobicons/book.svg";
 import briefcase from "../../pics/jobicons/briefcase.svg";
@@ -23,7 +30,9 @@ import { useNavigate } from "react-router-dom";
 
 export default function AddArticle() {
   const navigatesubmit = useNavigate();
+
  
+
   // form clear after submit
   const [formData, setFormData] = useState({
     name: "",
@@ -140,8 +149,18 @@ export default function AddArticle() {
               lastname: formData.lastname,
             })
               .then(() => {
-                toast("Dit opslag er postet", { type: "success" });
+                toast.success('🦄 Wow so easy!', {
+                  position: "top-center",
+                  autoClose: 5000,
+                  hideProgressBar: false,
+                  closeOnClick: true,
+                  pauseOnHover: true,
+                  draggable: true,
+                  progress: undefined,
+                  theme: "dark",
+                  });
                 setProgress(0);
+                 navigatesubmit('/');
                 // openModal();
               })
               .catch((err) => {
@@ -163,9 +182,19 @@ export default function AddArticle() {
               lastname: formData.lastname,
             })
               .then(() => {
-                toast("Historien er tilføjet med succes", { type: "success" });
-                
+                toast.success('🦄 Wow so easy!', {
+                  position: "top-center",
+                  autoClose: 5000,
+                  hideProgressBar: false,
+                  closeOnClick: true,
+                  pauseOnHover: true,
+                  draggable: true,
+                  progress: undefined,
+                  theme: "dark",
+                  });
+                navigatesubmit('/');
                 setProgress(0);
+               
            
               })
               .catch((err) => {
@@ -181,6 +210,18 @@ export default function AddArticle() {
     <section>
       <Topnav />
       <div className="addStoryBox">
+                  <ToastContainer
+                      position="top-center"
+                      autoClose={5000}
+                      hideProgressBar={false}
+                      newestOnTop={false}
+                      closeOnClick
+                      rtl={false}
+                      pauseOnFocusLoss
+                      draggable
+                      pauseOnHover
+                      theme="dark"
+            />
         <h2 className="addHistoryHeader">Opret historie</h2>
 
         <div className="nameInput">
@@ -497,7 +538,7 @@ export default function AddArticle() {
               onClick={() => {
                 handlePublish();
                 closeModal();
-                navigatesubmit('/');
+                
                
               }}
             >
@@ -513,7 +554,7 @@ export default function AddArticle() {
                   fill="#8b9769"
                 />
               </svg>
-              Godkend
+              Indsend
             </button>
             <button onClick={closeModal}>Tilbage</button>
           </AddedModal>
