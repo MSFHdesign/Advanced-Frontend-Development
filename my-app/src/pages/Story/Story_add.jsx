@@ -2,8 +2,9 @@ import { addDoc, collection, Timestamp } from "firebase/firestore";
 import React, { useState } from "react";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { storage, db } from "../../firebaseConfig";
-import { toast, ToastContainer } from "react-toastify";
-import AddedModal from "./AddedModal";
+// import { toast } from "react-toastify";
+import AddedModal from "../../components/introModal/Step1";
+import {toast, ToastContainer } from "react-toastify";
 import Topnav from "../../components/top-nav/topnav";
 //TOAST
 
