@@ -11,7 +11,7 @@ export default function HistoryPrivate() {
       <section className="StoriesBox" id="StoriesBoxOpen">
         <Backbtn />
         <div className="StoryBox">
-          <h2>{state.name}</h2>
+          <h2>{state.name} {state.lastname} </h2>
           <h3>
             <img src={state.bornImg} alt="Stjerne" /> {state.born}{" "}
             <img src={state.deadImg} alt="Kors" /> {state.dead}
