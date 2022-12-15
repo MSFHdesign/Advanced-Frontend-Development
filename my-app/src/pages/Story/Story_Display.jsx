@@ -25,6 +25,7 @@ export default function Articles() {
         (Articles) =>
           //Filters
           Articles.name.toLowerCase().includes(search.toLowerCase()) ||
+          Articles.lastname.toLowerCase().includes(search.toLowerCase()) ||
           Articles.dead.toString().includes(search.toString()) ||
           Articles.born.toString().includes(search.toString()) ||
           Articles.graveId.toString().includes(search.toString())
@@ -61,6 +62,7 @@ export default function Articles() {
               setSearch(e.target.value);
             }}
           />{" "}
+          
         </div>
       </form>
 
