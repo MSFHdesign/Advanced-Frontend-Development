@@ -18,8 +18,12 @@ import suit from "../../pics/jobicons/suit.svg";
 import node from "../../pics/jobicons/node.svg";
 import pencil from "../../pics/jobicons/pencil.svg";
 import noIcon from "../../pics/jobicons/NoIcon.svg";
+import { useNavigate } from "react-router-dom";
+
 
 export default function AddArticle() {
+  const navigatesubmit = useNavigate();
+ 
   // form clear after submit
   const [formData, setFormData] = useState({
     name: "",
@@ -45,7 +49,7 @@ export default function AddArticle() {
   if (day < 10) day = "0" + day;
 
   let dag = year + "-" + month + "-" + day;
-  console.log(dag);
+
 
   //progress state
   const [progress, setProgress] = useState(0);
@@ -89,6 +93,7 @@ export default function AddArticle() {
       alert("Alle felter skal udfyldes");
       return;
     }
+  
 
     const storageRef = ref(storage, `/images/${formData.image.name}`);
 
@@ -159,8 +164,9 @@ export default function AddArticle() {
             })
               .then(() => {
                 toast("Historien er tilføjet med succes", { type: "success" });
+                
                 setProgress(0);
-                // openModal();
+           
               })
               .catch((err) => {
                 toast("Error: historien er ikke tilføjet", { type: "error" });
@@ -491,6 +497,8 @@ export default function AddArticle() {
               onClick={() => {
                 handlePublish();
                 closeModal();
+                navigatesubmit('/');
+               
               }}
             >
               <svg

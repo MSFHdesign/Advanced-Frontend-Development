@@ -5,6 +5,7 @@ import stjerne from "../../pics/shapes/stjerne.svg";
 import kors from "../../pics/shapes/kors.svg";
 import "../../pages/Story/OpenArticle.css";
 
+import Backbtn from "../../components/backbtn/backbtn";
 export default function HistoryPrivate() {
   const [Artikler, SetArtikler] = useState([]);
   const filter = sessionStorage.QrNavn;
@@ -25,6 +26,7 @@ export default function HistoryPrivate() {
 
   return (
     <div className="historie">
+     
       {Artikler.length === 0 ? (
         <p> Nothing to see, yet....</p>
       ) : (
@@ -43,7 +45,9 @@ export default function HistoryPrivate() {
           }) =>
             id === filter ? (
               <div className="StoriesBox" id="StoriesBox" key={id}>
+                
                 <div className="StoryBox" id="StoryBox">
+                <Backbtn />
                   <h2>{Navn}</h2>
                   <h3>
                     <img src={stjerne} alt="Stjerne" /> {born}{" "}
@@ -58,6 +62,7 @@ export default function HistoryPrivate() {
                   <p id="resumeText">{resume}</p>
                   <h2 id="storyTitel">Livs historie</h2>
                   <p id="storyText">{lifestory}</p>
+                  <Backbtn />
                 </div>
               </div>
             ) : (
