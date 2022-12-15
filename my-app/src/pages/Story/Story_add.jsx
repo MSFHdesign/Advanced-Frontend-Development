@@ -4,11 +4,11 @@ import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { storage, db } from "../../firebaseConfig";
 // import { toast } from "react-toastify";
 import AddedModal from "../../components/introModal/Step1";
-import {toast, ToastContainer } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import Topnav from "../../components/top-nav/topnav";
-import "../../components/top-nav/topnavstyle.css"
+import "../../components/top-nav/topnavstyle.css";
 //TOAST
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 // job icons
 import book from "../../pics/jobicons/book.svg";
 import briefcase from "../../pics/jobicons/briefcase.svg";
@@ -24,7 +24,6 @@ import noIcon from "../../pics/jobicons/NoIcon.svg";
 import { useNavigate } from "react-router-dom";
 
 export default function AddArticle() {
-
   const navigatesubmit = useNavigate();
 
   // form clear after submit
@@ -35,7 +34,7 @@ export default function AddArticle() {
     dead: "Død:",
     image: "",
     createdAt: Timestamp.now().toDate(),
-    gravId: "",
+    graveId: "",
     lastname: "",
     jobName: "",
     jobIcon: "",
@@ -52,7 +51,6 @@ export default function AddArticle() {
   if (day < 10) day = "0" + day;
 
   let dag = year + "-" + month + "-" + day;
-
 
   //progress state
   const [progress, setProgress] = useState(0);
@@ -89,6 +87,7 @@ export default function AddArticle() {
   const handlePublish = () => {
     if (
       !formData.name ||
+      !formData.lastname ||
       !formData.born ||
       !formData.dead ||
       !formData.graveId
@@ -96,7 +95,6 @@ export default function AddArticle() {
       alert("Alle felter skal udfyldes");
       return;
     }
-  
 
     const storageRef = ref(storage, `/images/${formData.image.name}`);
 
@@ -145,8 +143,8 @@ export default function AddArticle() {
               .then(() => {
                 toast("Dit opslag er postet", { type: "success" });
                 setProgress(0);
-                
-                 navigatesubmit('/');
+
+                navigatesubmit("/");
                 // openModal();
               })
               .catch((err) => {
@@ -169,10 +167,8 @@ export default function AddArticle() {
             })
               .then(() => {
                 toast("Historien er tilføjet med succes", { type: "success" });
-                navigatesubmit('/');
+                navigatesubmit("/");
                 setProgress(0);
-               
-           
               })
               .catch((err) => {
                 toast("Error: historien er ikke tilføjet", { type: "error" });
@@ -188,18 +184,18 @@ export default function AddArticle() {
       <Topnav />
       <div className="addStoryBox">
         <h2 className="addHistoryHeader">Opret historie</h2>
-          <ToastContainer
-            position="top-center"
-            autoClose={5000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-            theme="light"
-            />
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
 
         <div className="nameInput">
           {/*Name here */}
@@ -345,120 +341,132 @@ export default function AddArticle() {
               </li>
 
               <li>
-                <input 
-                  type="radio" 
-                  name="jobIcon" 
-                  id="jobIconbox2" 
-                  value={"briefcase"} 
-                  onChange={(e) => handleChange(e)}/>
-                <label htmlFor="jobIconbox2"><img src={briefcase} alt="Taske"/></label>
-              </li>
-
-              <li>
-                <input 
-                  type="radio" 
-                  name="jobIcon" 
-                  id="jobIconbox3" 
-                  value={"dollar"} 
-                  onChange={(e) => handleChange(e)}/>
-                  <label htmlFor="jobIconbox3">
-                    <img src={dollar} alt="Penge"/>
+                <input
+                  type="radio"
+                  name="jobIcon"
+                  id="jobIconbox2"
+                  value={"briefcase"}
+                  onChange={(e) => handleChange(e)}
+                />
+                <label htmlFor="jobIconbox2">
+                  <img src={briefcase} alt="Taske" />
                 </label>
               </li>
 
               <li>
-                <input 
-                  type="radio" 
-                  name="jobIcon" 
-                  id="jobIconbox4" 
-                  value={"hammer"} 
-                  onChange={(e) => handleChange(e)}/>
+                <input
+                  type="radio"
+                  name="jobIcon"
+                  id="jobIconbox3"
+                  value={"dollar"}
+                  onChange={(e) => handleChange(e)}
+                />
+                <label htmlFor="jobIconbox3">
+                  <img src={dollar} alt="Penge" />
+                </label>
+              </li>
+
+              <li>
+                <input
+                  type="radio"
+                  name="jobIcon"
+                  id="jobIconbox4"
+                  value={"hammer"}
+                  onChange={(e) => handleChange(e)}
+                />
                 <label htmlFor="jobIconbox4">
-                  <img src={hammer} alt="Hammer"/>
+                  <img src={hammer} alt="Hammer" />
                 </label>
               </li>
-              
+
               <li>
-                <input 
-                  type="radio" 
-                  name="jobIcon" 
-                  id="jobIconbox5" 
-                  value={"leaf"} 
-                  onChange={(e) => handleChange(e)}/>
+                <input
+                  type="radio"
+                  name="jobIcon"
+                  id="jobIconbox5"
+                  value={"leaf"}
+                  onChange={(e) => handleChange(e)}
+                />
                 <label htmlFor="jobIconbox5">
-                  <img src={leaf} alt="Blade"/>
+                  <img src={leaf} alt="Blade" />
                 </label>
               </li>
-              
+
               <li>
-                <input 
-                  type="radio" 
-                  name="jobIcon" 
-                  id="jobIconbox6" 
-                  value={"ruler"} 
-                  onChange={(e) => handleChange(e)}/>
+                <input
+                  type="radio"
+                  name="jobIcon"
+                  id="jobIconbox6"
+                  value={"ruler"}
+                  onChange={(e) => handleChange(e)}
+                />
                 <label htmlFor="jobIconbox6">
-                  <img src={ruler} alt="lineal"/>
+                  <img src={ruler} alt="lineal" />
                 </label>
               </li>
 
               <li>
-                <input 
-                  type="radio" 
-                  name="jobIcon" 
-                  id="jobIconbox7" 
-                  value={"saw"} 
-                  onChange={(e) => handleChange(e)}/>
+                <input
+                  type="radio"
+                  name="jobIcon"
+                  id="jobIconbox7"
+                  value={"saw"}
+                  onChange={(e) => handleChange(e)}
+                />
                 <label htmlFor="jobIconbox7">
-                  <img src={saw} alt="Sav"/>
+                  <img src={saw} alt="Sav" />
                 </label>
               </li>
 
               <li>
-                <input 
-                  type="radio" 
-                  name="jobIcon" 
-                  id="jobIconbox8" 
-                  value={"suit"} 
-                  onChange={(e) => handleChange(e)}/>
+                <input
+                  type="radio"
+                  name="jobIcon"
+                  id="jobIconbox8"
+                  value={"suit"}
+                  onChange={(e) => handleChange(e)}
+                />
                 <label htmlFor="jobIconbox8">
-                  <img src={suit} alt="Jakkesæt"/>
+                  <img src={suit} alt="Jakkesæt" />
                 </label>
               </li>
 
               <li>
-                <input 
-                  type="radio" 
-                  name="jobIcon" 
-                  id="jobIconbox9" 
+                <input
+                  type="radio"
+                  name="jobIcon"
+                  id="jobIconbox9"
                   value={"note"}
-                  onChange={(e) => handleChange(e)}/>
+                  onChange={(e) => handleChange(e)}
+                />
                 <label htmlFor="jobIconbox9">
-                  <img src={node} alt="Node"/>
+                  <img src={node} alt="Node" />
                 </label>
               </li>
 
               <li>
-                <input 
-                 type="radio" 
-                 name="jobIcon" 
-                 id="jobIconbox10" 
-                 value={"pencil"}  
-                 onChange={(e) => handleChange(e)}/>
+                <input
+                  type="radio"
+                  name="jobIcon"
+                  id="jobIconbox10"
+                  value={"pencil"}
+                  onChange={(e) => handleChange(e)}
+                />
                 <label htmlFor="jobIconbox10">
-                  <img src={pencil} alt="Blyant"/>
+                  <img src={pencil} alt="Blyant" />
                 </label>
               </li>
-              
+
               <li>
-                <input 
-                  type="radio" 
-                  name="jobIcon" 
-                  id="jobIconbox11" 
-                  value={"noIcon"}  
-                  onChange={(e) => handleChange(e)}/>
+                <input
+                  type="radio"
+                  name="jobIcon"
+                  id="jobIconbox11"
+                  value={"noIcon"}
+                  onChange={(e) => handleChange(e)}
+                />
                 <label htmlFor="jobIconbox11">
-                  <img src={noIcon} alt="Intet valg"/>
+                  <img src={noIcon} alt="Intet valg" />
                 </label>
               </li>
             </div>
@@ -486,6 +494,7 @@ export default function AddArticle() {
             placeholder="Gravnummer..."
             value={formData.graveId}
             onChange={(e) => handleChange(e)}
+            required
           />
         </div>
 
@@ -505,25 +514,31 @@ export default function AddArticle() {
             </svg>
             Færdig
           </button>
-          <div className='addOrBackModal'>
+          <div className="addOrBackModal">
             <AddedModal
               title="Post livshistorie?"
               onClose={closeModal}
               show={show}
             >
-              <button className="btn formsubmit" id="backToForm" onClick={closeModal}>Tilbage</button>
+              <button
+                className="btn formsubmit"
+                id="backToForm"
+                onClick={closeModal}
+              >
+                Tilbage
+              </button>
               <button
                 className="btn formsubmit"
                 id="storySubmit"
                 onClick={() => {
                   handlePublish();
                   closeModal();
-                  toast("fail");
                 }}
               >
-              Indsend
+                Indsend
               </button>
-            </AddedModal></div>
+            </AddedModal>
+          </div>
         </div>
       </div>
     </section>
