@@ -510,7 +510,6 @@ export default function AddArticle() {
             title="Post livshistorie?"
             onClose={closeModal}
             show={show}
-            className="addOrBackModal"
           >
             <button
               className="btn formsubmit"
