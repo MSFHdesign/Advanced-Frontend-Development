@@ -15,13 +15,8 @@ a:active {
   text-decoration: none;
 }
 
-input,
-textarea,
-button {
+input, textarea, button {
   font-family: "Hurme Geometric Sans 4";
-}
-#start {
-  padding-top: 80px;
 }
 
 .historie {
@@ -32,7 +27,6 @@ button {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100vw;
-  min-height: 80vh;
 }
 
 .searchContainer {
@@ -53,7 +47,7 @@ button {
   margin: 0 10px;
   border-radius: 30px;
   border-width: 3.5px;
-  border-color: #46512c;
+  border-color: #46512C;
   background-color: #ffffff;
   font-size: 18px;
 }
@@ -67,6 +61,7 @@ button {
 }
 
 #StoriesBoxOpen {
+  margin-top: 86px;
   margin-bottom: 86px;
 }
 
@@ -95,12 +90,9 @@ button {
 .StoryBox #StoryBoxImg {
   display: flex;
   justify-content: center;
-  width: 100%;
+  height: 180px;
   margin: 0;
   padding: 0 0 16px 0;
-}
-.StoryBox #StoryBoxImg img {
-  width: 60%;
 }
 .StoryBox #work {
   font-size: 18px;
@@ -146,7 +138,7 @@ button {
   margin: 16px 0;
   border-radius: 30px;
   border-width: 3.5px;
-  border-color: #46512c;
+  border-color: #46512C;
   background-color: #ffffff;
   font-size: 18px;
 }
@@ -161,7 +153,7 @@ button {
   background-color: #ffffff;
   border-radius: 30px;
   border-width: 3.5px;
-  border-color: #46512c;
+  border-color: #46512C;
 }
 
 .addStoryBox {
@@ -192,8 +184,7 @@ button {
   justify-content: space-between;
   margin-bottom: 16px;
 }
-.addStoryBox .bornAndDeadContainer .bornInput,
-.addStoryBox .bornAndDeadContainer .deadInput {
+.addStoryBox .bornAndDeadContainer .bornInput, .addStoryBox .bornAndDeadContainer .deadInput {
   width: 47%;
   height: 45px;
   background-color: #ffffff;
@@ -202,8 +193,7 @@ button {
   border-radius: 30px;
   position: relative;
 }
-.addStoryBox .bornAndDeadContainer .bornInput .datepicker-toggle-button,
-.addStoryBox .bornAndDeadContainer .deadInput .datepicker-toggle-button {
+.addStoryBox .bornAndDeadContainer .bornInput .datepicker-toggle-button, .addStoryBox .bornAndDeadContainer .deadInput .datepicker-toggle-button {
   position: absolute;
   left: 0;
   top: 0;
@@ -216,8 +206,7 @@ button {
   align-items: center;
   justify-content: center;
 }
-.addStoryBox .bornAndDeadContainer .bornInput .datepicker-input,
-.addStoryBox .bornAndDeadContainer .deadInput .datepicker-input {
+.addStoryBox .bornAndDeadContainer .bornInput .datepicker-input, .addStoryBox .bornAndDeadContainer .deadInput .datepicker-input {
   position: absolute;
   left: 0;
   top: 0;
@@ -227,9 +216,7 @@ button {
   cursor: pointer;
   box-sizing: border-box;
 }
-.addStoryBox
-  .bornAndDeadContainer
-  .datepicker-input::-webkit-calendar-picker-indicator {
+.addStoryBox .bornAndDeadContainer .datepicker-input::-webkit-calendar-picker-indicator {
   position: absolute;
   left: 0;
   top: 0;
@@ -244,8 +231,7 @@ button {
   justify-content: space-between;
   align-items: center;
 }
-.addStoryBox #imgWorkFlex .imgInput,
-.addStoryBox #imgWorkFlex .workInput {
+.addStoryBox #imgWorkFlex .imgInput, .addStoryBox #imgWorkFlex .workInput {
   width: 47%;
   height: 45px;
   background-color: #ffffff;
@@ -254,18 +240,12 @@ button {
   border-width: 0;
   font-size: 18px;
 }
-.addStoryBox #imgWorkFlex .imgInput #addImgContainer,
-.addStoryBox #imgWorkFlex .imgInput #workInputField,
-.addStoryBox #imgWorkFlex .workInput #addImgContainer,
-.addStoryBox #imgWorkFlex .workInput #workInputField {
+.addStoryBox #imgWorkFlex .imgInput #addImgContainer, .addStoryBox #imgWorkFlex .imgInput #workInputField, .addStoryBox #imgWorkFlex .workInput #addImgContainer, .addStoryBox #imgWorkFlex .workInput #workInputField {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.addStoryBox #imgWorkFlex .imgInput #addImgContainer svg,
-.addStoryBox #imgWorkFlex .imgInput #workInputField svg,
-.addStoryBox #imgWorkFlex .workInput #addImgContainer svg,
-.addStoryBox #imgWorkFlex .workInput #workInputField svg {
+.addStoryBox #imgWorkFlex .imgInput #addImgContainer svg, .addStoryBox #imgWorkFlex .imgInput #workInputField svg, .addStoryBox #imgWorkFlex .workInput #addImgContainer svg, .addStoryBox #imgWorkFlex .workInput #workInputField svg {
   margin-left: 10px;
 }
 .addStoryBox .jobIconContainer {
@@ -301,7 +281,7 @@ button {
 .addStoryBox .jobIconContainer .jobIcons li {
   display: inline-block;
 }
-.addStoryBox .jobIconContainer .jobIcons input[type="radio"][id^="jobIconbox"] {
+.addStoryBox .jobIconContainer .jobIcons input[type=radio][id^=jobIconbox] {
   display: none;
 }
 .addStoryBox .jobIconContainer .jobIcons label {
@@ -338,11 +318,11 @@ button {
   transform-origin: 50% 50%;
 }
 .addStoryBox .jobIconContainer .jobIcons :checked + label {
-  border: 3.5px solid #46512c;
+  border: 3.5px solid #46512C;
 }
 .addStoryBox .jobIconContainer .jobIcons :checked + label:before {
   content: "✓";
-  background-color: #8b9769;
+  background-color: #8B9769;
   transform: scale(1);
   z-index: 30;
 }
@@ -355,7 +335,7 @@ button {
 .addStoryBox .jobIconContainer button {
   border-radius: 30px;
   border-width: 3.5px;
-  border-color: #46512c;
+  border-color: #46512C;
   background-color: #ffffff;
   font-size: 18px;
   padding: 5px 15px;
@@ -414,7 +394,7 @@ button {
   align-items: center;
   background-color: #ffffff;
   border-radius: 30px;
-  border: 3.5px solid #46512c;
+  border: 3.5px solid #46512C;
   padding: 5px 10px;
   box-sizing: border-box;
   font-size: 18px;
@@ -453,8 +433,7 @@ button {
     justify-content: space-between;
     margin-bottom: 16px;
   }
-  .addStoryBox .bornAndDeadContainer .bornInput,
-  .addStoryBox .bornAndDeadContainer .deadInput {
+  .addStoryBox .bornAndDeadContainer .bornInput, .addStoryBox .bornAndDeadContainer .deadInput {
     width: 47%;
     height: 45px;
     background-color: #ffffff;
@@ -463,8 +442,7 @@ button {
     border-radius: 30px;
     position: relative;
   }
-  .addStoryBox .bornAndDeadContainer .bornInput .datepicker-toggle-button,
-  .addStoryBox .bornAndDeadContainer .deadInput .datepicker-toggle-button {
+  .addStoryBox .bornAndDeadContainer .bornInput .datepicker-toggle-button, .addStoryBox .bornAndDeadContainer .deadInput .datepicker-toggle-button {
     position: absolute;
     left: 0;
     top: 0;
@@ -477,8 +455,7 @@ button {
     align-items: center;
     justify-content: center;
   }
-  .addStoryBox .bornAndDeadContainer .bornInput .datepicker-input,
-  .addStoryBox .bornAndDeadContainer .deadInput .datepicker-input {
+  .addStoryBox .bornAndDeadContainer .bornInput .datepicker-input, .addStoryBox .bornAndDeadContainer .deadInput .datepicker-input {
     position: absolute;
     left: 0;
     top: 0;
@@ -488,9 +465,7 @@ button {
     cursor: pointer;
     box-sizing: border-box;
   }
-  .addStoryBox
-    .bornAndDeadContainer
-    .datepicker-input::-webkit-calendar-picker-indicator {
+  .addStoryBox .bornAndDeadContainer .datepicker-input::-webkit-calendar-picker-indicator {
     position: absolute;
     left: 0;
     top: 0;
@@ -505,8 +480,7 @@ button {
     justify-content: space-between;
     align-items: center;
   }
-  .addStoryBox #imgWorkFlex .imgInput,
-  .addStoryBox #imgWorkFlex .workInput {
+  .addStoryBox #imgWorkFlex .imgInput, .addStoryBox #imgWorkFlex .workInput {
     width: 47%;
     height: 45px;
     background-color: #ffffff;
@@ -515,18 +489,12 @@ button {
     border-width: 0;
     font-size: 18px;
   }
-  .addStoryBox #imgWorkFlex .imgInput #addImgContainer,
-  .addStoryBox #imgWorkFlex .imgInput #workInputField,
-  .addStoryBox #imgWorkFlex .workInput #addImgContainer,
-  .addStoryBox #imgWorkFlex .workInput #workInputField {
+  .addStoryBox #imgWorkFlex .imgInput #addImgContainer, .addStoryBox #imgWorkFlex .imgInput #workInputField, .addStoryBox #imgWorkFlex .workInput #addImgContainer, .addStoryBox #imgWorkFlex .workInput #workInputField {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .addStoryBox #imgWorkFlex .imgInput #addImgContainer svg,
-  .addStoryBox #imgWorkFlex .imgInput #workInputField svg,
-  .addStoryBox #imgWorkFlex .workInput #addImgContainer svg,
-  .addStoryBox #imgWorkFlex .workInput #workInputField svg {
+  .addStoryBox #imgWorkFlex .imgInput #addImgContainer svg, .addStoryBox #imgWorkFlex .imgInput #workInputField svg, .addStoryBox #imgWorkFlex .workInput #addImgContainer svg, .addStoryBox #imgWorkFlex .workInput #workInputField svg {
     margin-left: 10px;
   }
   .addStoryBox .jobIconContainer {
@@ -562,10 +530,7 @@ button {
   .addStoryBox .jobIconContainer .jobIcons li {
     display: inline-block;
   }
-  .addStoryBox
-    .jobIconContainer
-    .jobIcons
-    input[type="radio"][id^="jobIconbox"] {
+  .addStoryBox .jobIconContainer .jobIcons input[type=radio][id^=jobIconbox] {
     display: none;
   }
   .addStoryBox .jobIconContainer .jobIcons label {
@@ -602,11 +567,11 @@ button {
     transform-origin: 50% 50%;
   }
   .addStoryBox .jobIconContainer .jobIcons :checked + label {
-    border: 3.5px solid #46512c;
+    border: 3.5px solid #46512C;
   }
   .addStoryBox .jobIconContainer .jobIcons :checked + label:before {
     content: "✓";
-    background-color: #8b9769;
+    background-color: #8B9769;
     transform: scale(1);
     z-index: 30;
   }
@@ -619,7 +584,7 @@ button {
   .addStoryBox .jobIconContainer button {
     border-radius: 30px;
     border-width: 3.5px;
-    border-color: #46512c;
+    border-color: #46512C;
     background-color: #ffffff;
     font-size: 18px;
     padding: 5px 15px;
@@ -669,9 +634,9 @@ button {
     align-items: center;
     background-color: #ffffff;
     border-radius: 30px;
-    border: 3.5px solid #46512c;
+    border: 3.5px solid #46512C;
     padding: 5px 10px;
     box-sizing: border-box;
     font-size: 18px;
   }
-} /*# sourceMappingURL=storystyle.css.map */
+}/*# sourceMappingURL=storystyle.css.map */

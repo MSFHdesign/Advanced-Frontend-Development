@@ -83,7 +83,7 @@ function Topnav() {
         <h3>Kirkegårdshistorier</h3>
       </Link>
       <div onClick={openModal}>
-        <img src={info} alt="Info-logo" height={30} />
+        <img src={info} alt="Info-logo" height={30} id="info" />
         <Intro1 title="Startguide" onClose={closeModal} show={show}>
           <svg
             width="80"
