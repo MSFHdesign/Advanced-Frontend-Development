@@ -29,7 +29,7 @@ button {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100vw;
-  min-height: 80vh;
+  height: 80vh;
 }
 .historie h1 {
   text-align: center;
@@ -53,16 +53,6 @@ button {
   padding: 0;
   box-sizing: border-box;
   padding: 16px;
-}
-
-#start {
-  padding-top: 1px;
-  background-image: url(../../pics/background.svg);
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100vw;
-  padding-bottom: 80px;
 }
 
 .StoriesBox {
@@ -204,7 +194,7 @@ button {
   margin: 16px 0;
   border-radius: 30px;
   border-width: 3.5px;
-  border-color: #46512c;
+  border-color: #46512C;
   background-color: #ffffff;
   font-size: 18px;
 }
@@ -219,7 +209,7 @@ button {
   background-color: #ffffff;
   border-radius: 30px;
   border-width: 3.5px;
-  border-color: #46512c;
+  border-color: #46512C;
 }
 
 .addStoryBox {
@@ -242,7 +232,11 @@ button {
   border-radius: 30px;
   border-width: 0;
   font-size: 18px;
-  padding: 5px 0 5px 15px;
+  padding: 5px 0 5px 20px;
+  background-image: url(../../pics/required.svg);
+  background-repeat: no-repeat;
+  background-size: 11px;
+  background-position: 6px 50%;
 }
 .addStoryBox .bornAndDeadContainer {
   display: flex;
@@ -273,6 +267,10 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url(../../pics/required.svg);
+  background-repeat: no-repeat;
+  background-size: 11px;
+  background-position: 5px 50%;
 }
 .addStoryBox .bornAndDeadContainer .bornInput .datepicker-input,
 .addStoryBox .bornAndDeadContainer .deadInput .datepicker-input {
@@ -285,9 +283,7 @@ button {
   cursor: pointer;
   box-sizing: border-box;
 }
-.addStoryBox
-  .bornAndDeadContainer
-  .datepicker-input::-webkit-calendar-picker-indicator {
+.addStoryBox .bornAndDeadContainer .datepicker-input::-webkit-calendar-picker-indicator {
   position: absolute;
   left: 0;
   top: 0;
@@ -359,7 +355,7 @@ button {
 .addStoryBox .jobIconContainer .jobIcons li {
   display: inline-block;
 }
-.addStoryBox .jobIconContainer .jobIcons input[type="radio"][id^="jobIconbox"] {
+.addStoryBox .jobIconContainer .jobIcons input[type=radio][id^=jobIconbox] {
   display: none;
 }
 .addStoryBox .jobIconContainer .jobIcons label {
@@ -445,11 +441,15 @@ button {
   align-items: center;
 }
 .addStoryBox .graveIdInput input {
-  padding: 10px 15px;
+  padding: 10px 15px 10px 20px;
   width: 100%;
   border-radius: 30px;
   border-width: 0;
   font-size: 18px;
+  background-image: url(../../pics/required.svg);
+  background-repeat: no-repeat;
+  background-size: 11px;
+  background-position: 5px 50%;
 }
 .addStoryBox .graveIdInput select {
   padding: 5px;
@@ -512,7 +512,7 @@ button {
     margin-bottom: 16px;
   }
   .addStoryBox .bornAndDeadContainer .bornInput,
-  .addStoryBox .bornAndDeadContainer .deadInput {
+.addStoryBox .bornAndDeadContainer .deadInput {
     width: 47%;
     height: 45px;
     background-color: #ffffff;
@@ -522,7 +522,7 @@ button {
     position: relative;
   }
   .addStoryBox .bornAndDeadContainer .bornInput .datepicker-toggle-button,
-  .addStoryBox .bornAndDeadContainer .deadInput .datepicker-toggle-button {
+.addStoryBox .bornAndDeadContainer .deadInput .datepicker-toggle-button {
     position: absolute;
     left: 0;
     top: 0;
@@ -536,7 +536,7 @@ button {
     justify-content: center;
   }
   .addStoryBox .bornAndDeadContainer .bornInput .datepicker-input,
-  .addStoryBox .bornAndDeadContainer .deadInput .datepicker-input {
+.addStoryBox .bornAndDeadContainer .deadInput .datepicker-input {
     position: absolute;
     left: 0;
     top: 0;
@@ -546,9 +546,7 @@ button {
     cursor: pointer;
     box-sizing: border-box;
   }
-  .addStoryBox
-    .bornAndDeadContainer
-    .datepicker-input::-webkit-calendar-picker-indicator {
+  .addStoryBox .bornAndDeadContainer .datepicker-input::-webkit-calendar-picker-indicator {
     position: absolute;
     left: 0;
     top: 0;
@@ -564,7 +562,7 @@ button {
     align-items: center;
   }
   .addStoryBox #imgWorkFlex .imgInput,
-  .addStoryBox #imgWorkFlex .workInput {
+.addStoryBox #imgWorkFlex .workInput {
     width: 47%;
     height: 45px;
     background-color: #ffffff;
@@ -574,17 +572,17 @@ button {
     font-size: 18px;
   }
   .addStoryBox #imgWorkFlex .imgInput #addImgContainer,
-  .addStoryBox #imgWorkFlex .imgInput #workInputField,
-  .addStoryBox #imgWorkFlex .workInput #addImgContainer,
-  .addStoryBox #imgWorkFlex .workInput #workInputField {
+.addStoryBox #imgWorkFlex .imgInput #workInputField,
+.addStoryBox #imgWorkFlex .workInput #addImgContainer,
+.addStoryBox #imgWorkFlex .workInput #workInputField {
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .addStoryBox #imgWorkFlex .imgInput #addImgContainer svg,
-  .addStoryBox #imgWorkFlex .imgInput #workInputField svg,
-  .addStoryBox #imgWorkFlex .workInput #addImgContainer svg,
-  .addStoryBox #imgWorkFlex .workInput #workInputField svg {
+.addStoryBox #imgWorkFlex .imgInput #workInputField svg,
+.addStoryBox #imgWorkFlex .workInput #addImgContainer svg,
+.addStoryBox #imgWorkFlex .workInput #workInputField svg {
     margin-left: 10px;
   }
   .addStoryBox .jobIconContainer {
@@ -620,10 +618,7 @@ button {
   .addStoryBox .jobIconContainer .jobIcons li {
     display: inline-block;
   }
-  .addStoryBox
-    .jobIconContainer
-    .jobIcons
-    input[type="radio"][id^="jobIconbox"] {
+  .addStoryBox .jobIconContainer .jobIcons input[type=radio][id^=jobIconbox] {
     display: none;
   }
   .addStoryBox .jobIconContainer .jobIcons label {
@@ -732,4 +727,4 @@ button {
     box-sizing: border-box;
     font-size: 18px;
   }
-} /*# sourceMappingURL=storystyle.css.map */
+}/*# sourceMappingURL=storystyle.css.map */

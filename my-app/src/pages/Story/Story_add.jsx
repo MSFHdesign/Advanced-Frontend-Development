@@ -6,6 +6,7 @@ import { storage, db } from "../../firebaseConfig";
 import AddedModal from "../../components/introModal/Step1";
 import { toast, ToastContainer } from "react-toastify";
 import Topnav from "../../components/top-nav/topnav";
+import { useNavigate } from "react-router-dom";
 import "../../components/top-nav/topnavstyle.css";
 //TOAST
 import "react-toastify/dist/ReactToastify.css";
@@ -21,7 +22,6 @@ import suit from "../../pics/jobicons/suit.svg";
 import node from "../../pics/jobicons/node.svg";
 import pencil from "../../pics/jobicons/pencil.svg";
 import noIcon from "../../pics/jobicons/NoIcon.svg";
-import { useNavigate } from "react-router-dom";
 
 export default function AddArticle() {
   const navigatesubmit = useNavigate();

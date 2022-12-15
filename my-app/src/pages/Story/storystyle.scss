@@ -257,7 +257,11 @@ button {
       border-radius: 30px;
       border-width: 0;
       font-size: 18px;
-      padding: 5px 0 5px 15px;
+      padding: 5px 0 5px 20px;
+      background-image: url(../../pics/required.svg);
+      background-repeat: no-repeat;
+      background-size: 11px;
+      background-position: 6px 50%;
     }
   }
 
@@ -289,6 +293,10 @@ button {
         display: flex;
         align-items: center;
         justify-content: center;
+        background-image: url(../../pics/required.svg);
+        background-repeat: no-repeat;
+        background-size: 11px;
+        background-position: 5px 50%;
       }
 
       .datepicker-input {
@@ -478,11 +486,15 @@ button {
     align-items: center;
 
     input {
-      padding: 10px 15px;
+      padding: 10px 15px 10px 20px;
       width: 100%;
       border-radius: 30px;
       border-width: 0;
       font-size: 18px;
+      background-image: url(../../pics/required.svg);
+      background-repeat: no-repeat;
+      background-size: 11px;
+      background-position: 5px 50%;
     }
 
     select {
