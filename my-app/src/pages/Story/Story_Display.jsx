@@ -53,7 +53,7 @@ export default function Articles() {
 
   return (
     <div className="historie">
-      <h1>Livshistorier</h1>
+      <h1>Kirkegårdshistorier </h1>
       <form
         className="searchContainer"
         onSubmit={(e) => {
