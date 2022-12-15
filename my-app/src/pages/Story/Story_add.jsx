@@ -31,7 +31,8 @@ import { useNavigate } from "react-router-dom";
 export default function AddArticle() {
   const navigatesubmit = useNavigate();
 
- 
+  const notify = () => toast("Wow so easy!");
+
 
   // form clear after submit
   const [formData, setFormData] = useState({
@@ -149,17 +150,9 @@ export default function AddArticle() {
               lastname: formData.lastname,
             })
               .then(() => {
-                toast.success('🦄 Wow so easy!', {
-                  position: "top-center",
-                  autoClose: 5000,
-                  hideProgressBar: false,
-                  closeOnClick: true,
-                  pauseOnHover: true,
-                  draggable: true,
-                  progress: undefined,
-                  theme: "dark",
-                  });
+                notify("Dit opslag er postet", { type: "success" });
                 setProgress(0);
+                
                  navigatesubmit('/');
                 // openModal();
               })
@@ -182,16 +175,7 @@ export default function AddArticle() {
               lastname: formData.lastname,
             })
               .then(() => {
-                toast.success('🦄 Wow so easy!', {
-                  position: "top-center",
-                  autoClose: 5000,
-                  hideProgressBar: false,
-                  closeOnClick: true,
-                  pauseOnHover: true,
-                  draggable: true,
-                  progress: undefined,
-                  theme: "dark",
-                  });
+                notify("Historien er tilføjet med succes", { type: "success" });
                 navigatesubmit('/');
                 setProgress(0);
                
@@ -210,19 +194,20 @@ export default function AddArticle() {
     <section>
       <Topnav />
       <div className="addStoryBox">
-                  <ToastContainer
-                      position="top-center"
-                      autoClose={5000}
-                      hideProgressBar={false}
-                      newestOnTop={false}
-                      closeOnClick
-                      rtl={false}
-                      pauseOnFocusLoss
-                      draggable
-                      pauseOnHover
-                      theme="dark"
-            />
         <h2 className="addHistoryHeader">Opret historie</h2>
+      <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+          
+          />
 
         <div className="nameInput">
           {/*Name here */}
@@ -538,6 +523,7 @@ export default function AddArticle() {
               onClick={() => {
                 handlePublish();
                 closeModal();
+                
                 
                
               }}
