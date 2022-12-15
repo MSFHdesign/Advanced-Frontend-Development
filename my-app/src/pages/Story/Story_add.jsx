@@ -511,6 +511,7 @@ export default function AddArticle() {
               onClose={closeModal}
               show={show}
             >
+              <button className="btn formsubmit" id="backToForm" onClick={closeModal}>Tilbage</button>
               <button
                 className="btn formsubmit"
                 id="storySubmit"
@@ -522,7 +523,6 @@ export default function AddArticle() {
               >
               Indsend
               </button>
-              <button className="btn formsubmit" id="backToForm" onClick={closeModal}>Tilbage</button>
             </AddedModal></div>
         </div>
       </div>
