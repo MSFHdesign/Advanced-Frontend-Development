@@ -30,7 +30,7 @@ export default function Artikler() {
       {Artikler.length === 0 ? (
         <p> Nothing to see, yet....</p>
         ) : (
-        Artikler.map(({ Navn, id, born, dead, story, graveId }) => (
+        Artikler.map(({ Navn, id, born, dead, story, GraveId }) => (
           <div className="StoriesBox" key={id}>
           
             <div className="StoryBox">
@@ -51,7 +51,7 @@ export default function Artikler() {
                     deadImg: kors,
                     dead: dead,
                     story: story,
-                    graveId: graveId
+                    GraveId: GraveId
                
                   }} >
                   <button>Vis historien</button>
