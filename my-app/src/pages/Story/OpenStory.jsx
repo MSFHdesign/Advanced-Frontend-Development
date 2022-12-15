@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-
+import Backbtn from "../../components/backbtn/backbtn";
 export default function HistoryPrivate() {
 
     const location = useLocation();
@@ -9,8 +9,9 @@ export default function HistoryPrivate() {
     
     return (
         <section className="StoriesBox" id="StoriesBoxOpen">
-          
+          <Backbtn />
             <div className="StoryBox">
+                
                 <h2>{state.name}</h2> 
                 <h3><img src={state.bornImg} alt="Stjerne"/> {state.born} <img src={state.deadImg} alt="Kors"/> {state.dead}</h3>
            
