@@ -14,8 +14,12 @@
 
 .qr-image-wrapper section {
   border-radius: 50px;
+  box-sizing: border-box;
 }
 
 .qr-image-wrapper section div {
-  box-shadow: black 0px 0px 0px 2px inset !important;
+  box-shadow: rgb(242, 242, 242) 0px 0px 0px 2px inset !important;
+  box-sizing: border-box;
+  border: 20px solid rgba(0, 0, 0, 0.3) !important;
+  border-radius: 50px !important;
 }

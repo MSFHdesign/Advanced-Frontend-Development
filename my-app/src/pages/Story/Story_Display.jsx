@@ -25,6 +25,7 @@ export default function Articles() {
         Articles.born.toString().includes(search.toString())||
         Articles.graveId.toString().includes(search.toString())
         ));
+       
   };
 
 
@@ -61,7 +62,7 @@ export default function Articles() {
         <p>{loading}</p>
       ) : (
         Articles.map(
-          ({id, name, born, dead, story, imageUrl, lastname, job, graveId}) => (
+          ({id, name, born, dead, story, imageUrl, lastname, job, graveId, jobIcon, jobName}) => (
             <div className="StoriesBox" key={id}>
               <div className="StoryBox">
                 <h2>{name} {lastname}</h2>
@@ -84,13 +85,14 @@ export default function Articles() {
                   className="showHistoryBtn"
                   to={{ pathname: `/Livshistorie/${name}` }}
                   state={{
+                    jobIcon: jobIcon,
+                    jobName: jobName,
                     name: name,
                     bornImg: stjerne,
                     born: born,
                     deadImg: kors,
                     dead: dead,
                     img: imageUrl,
-                    work: job,
                     graveId: graveId,
                     story: story,
                     lastname: lastname,

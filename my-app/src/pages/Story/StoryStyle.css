@@ -20,8 +20,13 @@ input, textarea, button {
 }
 
 .historie {
-  margin-bottom: 86px;
-  margin-top: 86px;
+  padding-bottom: 76px;
+  padding-top: 70px;
+  background-image: url(../../pics/background.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100vw;
 }
 
 .searchContainer {
@@ -50,7 +55,7 @@ input, textarea, button {
 .StoriesBox {
   background-color: #ffffff;
   width: 80%;
-  margin: 16px auto 0;
+  margin: 0 auto 16px;
   border-radius: 30px;
   width: 90%;
 }
@@ -97,6 +102,7 @@ input, textarea, button {
   margin: 0;
   padding: 0 0 16px 0;
   text-align: center;
+  display: block;
 }
 .StoryBox #graveId {
   font-size: 18px;
@@ -118,7 +124,7 @@ input, textarea, button {
   font-weight: 400;
   padding-bottom: 16px;
   font-size: 18px;
-  margin-top: 0;
+  margin: 0;
 }
 .StoryBox .showMoreContentHidden {
   display: none;
@@ -169,7 +175,7 @@ input, textarea, button {
 .addStoryBox .nameInput input {
   width: 100%;
   box-sizing: border-box;
-  height: 40px;
+  height: 45px;
   border-radius: 30px;
   border-width: 0;
   font-size: 18px;
@@ -178,29 +184,25 @@ input, textarea, button {
 .addStoryBox .bornAndDeadContainer {
   display: flex;
   width: 100%;
-  box-sizing: border-box;
   justify-content: space-between;
   margin-bottom: 16px;
 }
 .addStoryBox .bornAndDeadContainer .bornInput, .addStoryBox .bornAndDeadContainer .deadInput {
-  width: 80px;
-  height: 40px;
+  width: 47%;
+  height: 45px;
   background-color: #ffffff;
-  text-align: center;
   font-size: 18px;
   font-weight: 600;
   border-radius: 30px;
-  display: inline-block;
   position: relative;
 }
 .addStoryBox .bornAndDeadContainer .bornInput .datepicker-toggle-button, .addStoryBox .bornAndDeadContainer .deadInput .datepicker-toggle-button {
   position: absolute;
   left: 0;
   top: 0;
-  width: 80px;
-  height: 40px;
+  width: 100%;
+  height: 45px;
   background-color: #ffffff;
-  text-align: center;
   border-radius: 30px;
   border-width: 0;
   display: flex;
@@ -229,12 +231,13 @@ input, textarea, button {
 }
 .addStoryBox #imgWorkFlex {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 .addStoryBox #imgWorkFlex .imgInput, .addStoryBox #imgWorkFlex .workInput {
-  width: 180px;
+  width: 47%;
+  height: 45px;
   background-color: #ffffff;
-  padding: 10px;
   margin-bottom: 16px;
   border-radius: 30px;
   border-width: 0;
@@ -242,8 +245,11 @@ input, textarea, button {
 }
 .addStoryBox #imgWorkFlex .imgInput #addImgContainer, .addStoryBox #imgWorkFlex .imgInput #workInputField, .addStoryBox #imgWorkFlex .workInput #addImgContainer, .addStoryBox #imgWorkFlex .workInput #workInputField {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+}
+.addStoryBox #imgWorkFlex .imgInput #addImgContainer svg, .addStoryBox #imgWorkFlex .imgInput #workInputField svg, .addStoryBox #imgWorkFlex .workInput #addImgContainer svg, .addStoryBox #imgWorkFlex .workInput #workInputField svg {
+  margin-left: 10px;
 }
 .addStoryBox .jobIconContainer {
   width: 100%;
@@ -278,7 +284,7 @@ input, textarea, button {
 .addStoryBox .jobIconContainer .jobIcons li {
   display: inline-block;
 }
-.addStoryBox .jobIconContainer .jobIcons input[type=checkbox][id^=jobIconbox] {
+.addStoryBox .jobIconContainer .jobIcons input[type=radio][id^=jobIconbox] {
   display: none;
 }
 .addStoryBox .jobIconContainer .jobIcons label {
@@ -357,8 +363,7 @@ input, textarea, button {
 }
 .addStoryBox .graveIdInput {
   margin-bottom: 16px;
-  width: 100%;
-  height: 50px;
+  height: 45px;
   border-radius: 30px;
   display: flex;
   justify-content: space-evenly;
@@ -366,7 +371,7 @@ input, textarea, button {
 }
 .addStoryBox .graveIdInput input {
   padding: 10px 15px;
-  width: 75%;
+  width: 100%;
   border-radius: 30px;
   border-width: 0;
   font-size: 18px;
@@ -381,18 +386,260 @@ input, textarea, button {
   text-align: center;
 }
 .addStoryBox .submitHistoryBtn {
-  width: 180px;
+  width: 47%;
+  height: 45px;
   margin: 0 auto;
 }
 .addStoryBox .submitHistoryBtn .formsubmit {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background-color: #ffffff;
   border-radius: 30px;
-  border-width: 0;
+  border: 3.5px solid #46512C;
   padding: 5px 10px;
   box-sizing: border-box;
   font-size: 18px;
+}
+.addStoryBox .submitHistoryBtn .formsubmit svg {
+  margin-right: 10px;
+}
+
+@media only screen and (min-width: 481px) {
+  .addStoryBox {
+    width: 90%;
+    max-width: 481px;
+    margin: 0 auto 86px;
+  }
+  .addStoryBox .addHistoryHeader {
+    text-align: center;
+    font-size: 48px;
+    margin-top: 86px;
+  }
+  .addStoryBox .nameInput {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .addStoryBox .nameInput input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 45px;
+    border-radius: 30px;
+    border-width: 0;
+    font-size: 18px;
+    padding: 5px 0 5px 15px;
+  }
+  .addStoryBox .bornAndDeadContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  .addStoryBox .bornAndDeadContainer .bornInput, .addStoryBox .bornAndDeadContainer .deadInput {
+    width: 47%;
+    height: 45px;
+    background-color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 30px;
+    position: relative;
+  }
+  .addStoryBox .bornAndDeadContainer .bornInput .datepicker-toggle-button, .addStoryBox .bornAndDeadContainer .deadInput .datepicker-toggle-button {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 45px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    border-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .addStoryBox .bornAndDeadContainer .bornInput .datepicker-input, .addStoryBox .bornAndDeadContainer .deadInput .datepicker-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+  .addStoryBox .bornAndDeadContainer .datepicker-input::-webkit-calendar-picker-indicator {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+  .addStoryBox #imgWorkFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .addStoryBox #imgWorkFlex .imgInput, .addStoryBox #imgWorkFlex .workInput {
+    width: 47%;
+    height: 45px;
+    background-color: #ffffff;
+    margin-bottom: 16px;
+    border-radius: 30px;
+    border-width: 0;
+    font-size: 18px;
+  }
+  .addStoryBox #imgWorkFlex .imgInput #addImgContainer, .addStoryBox #imgWorkFlex .imgInput #workInputField, .addStoryBox #imgWorkFlex .workInput #addImgContainer, .addStoryBox #imgWorkFlex .workInput #workInputField {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .addStoryBox #imgWorkFlex .imgInput #addImgContainer svg, .addStoryBox #imgWorkFlex .imgInput #workInputField svg, .addStoryBox #imgWorkFlex .workInput #addImgContainer svg, .addStoryBox #imgWorkFlex .workInput #workInputField svg {
+    margin-left: 10px;
+  }
+  .addStoryBox .jobIconContainer {
+    width: 100%;
+    border-radius: 30px;
+    background-color: #ffffff;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+  .addStoryBox .jobIconContainer h4 {
+    text-align: center;
+  }
+  .addStoryBox .jobIconContainer #workName {
+    width: 75%;
+    padding: 10px;
+    margin: 0 auto;
+    border: solid #f2f2f2;
+    border-radius: 30px;
+    font-size: 18px;
+  }
+  .addStoryBox .jobIconContainer .jobIcons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .addStoryBox .jobIconContainer .jobIcons ul {
+    list-style-type: none;
+  }
+  .addStoryBox .jobIconContainer .jobIcons li {
+    display: inline-block;
+  }
+  .addStoryBox .jobIconContainer .jobIcons input[type=radio][id^=jobIconbox] {
+    display: none;
+  }
+  .addStoryBox .jobIconContainer .jobIcons label {
+    border: 3.5px solid #ffffff;
+    border-radius: 60px;
+    padding: 0 !important;
+    display: block;
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
+  }
+  .addStoryBox .jobIconContainer .jobIcons label:before {
+    background-color: white;
+    color: white;
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.4s;
+    transform: scale(0);
+  }
+  .addStoryBox .jobIconContainer .jobIcons label img {
+    height: 60px;
+    width: auto;
+    transition-duration: 0.2s;
+    transform-origin: 50% 50%;
+  }
+  .addStoryBox .jobIconContainer .jobIcons :checked + label {
+    border: 3.5px solid #46512C;
+  }
+  .addStoryBox .jobIconContainer .jobIcons :checked + label:before {
+    content: "✓";
+    background-color: #8B9769;
+    transform: scale(1);
+    z-index: 30;
+  }
+  .addStoryBox .jobIconContainer .jobIcons :checked + label img {
+    transform: scale(0.9);
+    /* box-shadow: 0 0 5px #333; */
+    z-index: -1;
+    display: flex;
+  }
+  .addStoryBox .jobIconContainer button {
+    border-radius: 30px;
+    border-width: 3.5px;
+    border-color: #46512C;
+    background-color: #ffffff;
+    font-size: 18px;
+    padding: 5px 15px;
+    margin: 0 auto 16px;
+    width: 100px;
+  }
+  .addStoryBox .historyInput {
+    width: 100%;
+    margin: 0 auto 16px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .addStoryBox .historyInput .inputfield {
+    width: 100%;
+    height: 100px;
+    padding: 15px;
+    margin: 0;
+    border-radius: 30px;
+    border-width: 0;
+    font-size: 18px;
+  }
+  .addStoryBox .graveIdInput {
+    margin-bottom: 16px;
+    height: 45px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .addStoryBox .graveIdInput input {
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 30px;
+    border-width: 0;
+    font-size: 18px;
+  }
+  .addStoryBox .submitHistoryBtn {
+    width: 47%;
+    height: 45px;
+    margin: 0 auto;
+  }
+  .addStoryBox .submitHistoryBtn .formsubmit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 30px;
+    border: 3.5px solid #46512C;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    font-size: 18px;
+  }
 }/*# sourceMappingURL=storystyle.css.map */

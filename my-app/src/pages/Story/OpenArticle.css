@@ -1,0 +1,123 @@
+.historie {
+  display: block;
+}
+
+#StoriesBox {
+  display: flex;
+  justify-content: center;
+}
+
+#storyBox {
+  display: flex;
+  justify-content: center;
+}
+
+.storyBox > img {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ruler {
+  background-image: url(../../pics/jobicons/ruler.svg);
+  width: 60px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.book {
+  background-image: url(../../pics/jobicons/book.svg);
+  width: 60px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.briefcase {
+  background-image: url(../../pics/jobicons/briefcase.svg);
+  width: 60px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dollar {
+  width: 60px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../../pics/jobicons/dollar.svg);
+}
+
+.hammer {
+  width: 60px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../../pics/jobicons/hammer.svg);
+}
+
+.leaf {
+  width: 60px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../../pics/jobicons/leaf.svg);
+}
+
+.note {
+  width: 60px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../../pics/jobicons/node.svg);
+}
+
+.noIcon {
+  width: 60px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../../pics/jobicons/NoIcon.svg);
+}
+
+.pencil {
+  width: 60px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../../pics/jobicons/pencil.svg);
+}
+
+.suit {
+  width: 60px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../../pics/jobicons/suit.svg);
+}
+
+.saw {
+  width: 60px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../../pics/jobicons/saw.svg);
+}
+
+#job {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+}
+
+#resumeTitle, #storyTitel {
+  padding: 10px 0 0;
+}
+
+#resumeText, #storyText {
+  margin: 0;
+  font-size: 22px;
+}
