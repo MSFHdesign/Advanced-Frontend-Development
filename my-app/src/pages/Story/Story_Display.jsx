@@ -6,7 +6,6 @@ import {
   limit,
 } from "firebase/firestore";
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
 import { db } from "../../firebaseConfig";
 import stjerne from "../../pics/shapes/stjerne.svg";
 import kors from "../../pics/shapes/kors.svg";
@@ -62,7 +61,6 @@ export default function Articles() {
               setSearch(e.target.value);
             }}
           />{" "}
-          <button type="submit"> Søg </button>
         </div>
       </form>
 

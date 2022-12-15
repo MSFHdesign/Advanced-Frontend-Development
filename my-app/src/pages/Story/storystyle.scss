@@ -21,28 +21,22 @@ input, textarea, button {
 .searchContainer {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
 
+    #searchButtons {
+        width: 90%;
+    }
 
     input {
-        padding: 15px;
+        height: 45px;
+        width: 100%;
         margin-bottom: 16px;
         font-size: 18px;
         border-radius: 30px;
         border-width: 0;
-    }
-
-    #searchButtons {
-        button {
-            padding: 10px 20px;
-            margin: 0 10px;
-            border-radius: 30px;
-            border-width: 3.5px;
-            border-color: #46512C;
-            background-color: #ffffff;
-            font-size: 18px;
-        }
+        padding: 0;
+        box-sizing: border-box;
+        padding: 16px;
     }
 }
 
@@ -697,11 +691,11 @@ input, textarea, button {
     
         .submitHistoryBtn {
             width: 47%;
-            height: 45px;
             margin: 0 auto;
     
             .formsubmit {
                 width: 100%;
+                height: 45px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
