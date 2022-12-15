@@ -32,7 +32,7 @@ import { useNavigate } from "react-router-dom";
 export default function AddArticle() {
   const navigatesubmit = useNavigate();
 
-  const notify = () => toast("Wow so easy!");
+ 
 
 
   // form clear after submit
@@ -151,7 +151,7 @@ export default function AddArticle() {
               lastname: formData.lastname,
             })
               .then(() => {
-                notify("Dit opslag er postet", { type: "success" });
+                toast("Dit opslag er postet", { type: "success" });
                 setProgress(0);
                 
                  navigatesubmit('/');
@@ -176,7 +176,7 @@ export default function AddArticle() {
               lastname: formData.lastname,
             })
               .then(() => {
-                notify("Historien er tilføjet med succes", { type: "success" });
+                toast("Historien er tilføjet med succes", { type: "success" });
                 navigatesubmit('/');
                 setProgress(0);
                
@@ -196,19 +196,18 @@ export default function AddArticle() {
       <Topnav />
       <div className="addStoryBox">
         <h2 className="addHistoryHeader">Opret historie</h2>
-      <ToastContainer
-          position="top-center"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="dark"
-          
-          />
+          <ToastContainer
+            position="top-center"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="light"
+            />
 
         <div className="nameInput">
           {/*Name here */}
@@ -524,7 +523,7 @@ export default function AddArticle() {
               onClick={() => {
                 handlePublish();
                 closeModal();
-                
+                toast("fail");
                 
                
               }}
