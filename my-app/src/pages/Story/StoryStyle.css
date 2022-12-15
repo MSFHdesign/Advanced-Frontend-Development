@@ -87,9 +87,11 @@ input, textarea, button {
 .StoryBox #StoryBoxImg {
   display: flex;
   justify-content: center;
-  height: 180px;
   margin: 0;
   padding: 0 0 16px 0;
+}
+.StoryBox #StoryBoxImg img {
+  height: 180px;
 }
 .StoryBox #work {
   font-size: 18px;

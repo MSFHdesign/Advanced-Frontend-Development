@@ -80,3 +80,35 @@
     margin: 0 auto;
     bottom: 16px;
 }
+
+.addOrBackModal .modal-content {
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    width: 90%;
+}
+
+.addOrBackModal .modal-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.addOrBackModal .modal-body button {
+    margin: 8px;
+    height: 45px;
+}
+
+#storySubmit {
+    background-color: #46512C;
+    color: #ffffff;
+    border-width: 0;
+}
+
+#backToForm {
+    /* border-width: 0;
+    background-color: #f2f2f2; */
+}
