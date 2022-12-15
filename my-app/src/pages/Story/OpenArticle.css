@@ -75,11 +75,7 @@
 }
 
 .noIcon {
-  width: 60px;
-  height: 60px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: url(../../pics/jobicons/NoIcon.svg);
+  display: none;
 }
 
 .pencil {
@@ -113,11 +109,13 @@
   font-size: 18px;
 }
 
-#resumeTitle, #storyTitel {
+#resumeTitle,
+#storyTitel {
   padding: 10px 0 0;
 }
 
-#resumeText, #storyText {
+#resumeText,
+#storyText {
   margin: 0;
   font-size: 22px;
 }

@@ -24,3 +24,59 @@
     width: 30px;
     margin: 0 16px;
 }
+
+/* modal styling */
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.modal-content {
+    width: 500px;
+    height: 400px;
+    background-color: #fff;
+    position: relative;
+}
+
+.modal-content .modal-body {
+    display: flex;
+    align-items: center;
+}
+
+.modal-title {
+    text-align: center;
+    margin: 16px 0 0;
+}
+
+.modal-body {
+    padding: 16px;
+    /* border-radius: 30px; */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-body svg {
+}
+
+#modalText {
+    margin: 0;
+}
+
+#exitIcon {
+    height: 40px;
+    position: absolute; 
+    left: 0;  
+    right: 0;  
+    margin: 0 auto;
+    bottom: 16px;
+}
