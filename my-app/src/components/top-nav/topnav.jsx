@@ -94,7 +94,7 @@ function Topnav() {
           >
             <path d={image} fill="#46512C" />
           </svg>
-          <p>{text}</p>
+          <p id="modalText">{text}</p>
           <div className="modal-btns">
             <button className="btn formsubmit" onClick={toPrevious}>
               Tilbage
@@ -103,7 +103,7 @@ function Topnav() {
               Næste
             </button>
           </div>
-          <img src={exitIcon} alt="Exit" className="Icon" id="exitIcon" height="40px" onClick={closeModal} />  
+          <img src={exitIcon} alt="Exit" id="exitIcon" onClick={closeModal} />  
         </Intro1>
       </div>
     </div>
