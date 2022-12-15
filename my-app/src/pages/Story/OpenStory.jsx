@@ -24,7 +24,7 @@ export default function HistoryPrivate() {
           <div className="showMoreContent" id="showMoreContent">
             <p id="work"> {state.jobName} </p>
             <div className={state.jobIcon} />
-            <p id="graveId">Gravnummer: {state.graveId} </p>
+            <p id="graveId"><span id="bolded">Gravnummer:</span> {state.graveId} </p>
           </div>
           <h4 id="story allStory">{state.story}</h4>
         </div>

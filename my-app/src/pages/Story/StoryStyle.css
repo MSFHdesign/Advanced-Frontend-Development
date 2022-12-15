@@ -105,9 +105,12 @@ input, textarea, button {
 }
 .StoryBox #graveId {
   font-size: 18px;
-  margin: 0;
+  margin: 16px 0 0 0;
   padding: 0 0 16px 0;
   text-align: center;
+}
+.StoryBox #graveId #bolded {
+  font-weight: 600;
 }
 .StoryBox #story {
   font-size: 18px;

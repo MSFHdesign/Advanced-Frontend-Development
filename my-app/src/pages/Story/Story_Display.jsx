@@ -98,8 +98,7 @@ export default function Articles() {
 
                 <div className="showMoreContentHidden">
                   <p id="work"> {job} </p>
-                  <p id="graveId">Gravnummer: {graveId} </p>
-                  {/* <p>Indsendt: {createdAt.toDate().toDateString()}</p> */}
+                  <p id="graveId"><span id="bolded">Gravnummer:</span> {graveId} </p>
                 </div>
                 <h4 id="story">{story}</h4>
 

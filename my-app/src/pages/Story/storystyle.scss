@@ -103,10 +103,15 @@ input, textarea, button {
 
     #graveId {
         font-size: 18px;
-        margin: 0;
+        margin: 16px 0 0 0;
         padding: 0 0 16px 0;
         text-align: center;
+        
+        #bolded {
+            font-weight: 600;
+        }
     }
+
 
     #story {
         font-size: 18px;

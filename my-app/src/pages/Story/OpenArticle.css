@@ -12,6 +12,10 @@
   justify-content: center;
 }
 
+#bolded {
+  font-weight: 600;
+}
+
 .storyBox > img {
   display: flex;
   margin-left: auto;
