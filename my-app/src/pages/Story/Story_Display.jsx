@@ -24,6 +24,11 @@ export default function Articles() {
       Articles.filter(
         (Articles) =>
           //Filters
+          (
+            Articles.name.toLowerCase() +
+            " " +
+            Articles.lastname.toLowerCase()
+          ).includes(search.toLowerCase()) ||
           Articles.name.toLowerCase().includes(search.toLowerCase()) ||
           Articles.lastname.toLowerCase().includes(search.toLowerCase()) ||
           Articles.dead.toString().includes(search.toString()) ||
@@ -62,7 +67,6 @@ export default function Articles() {
               setSearch(e.target.value);
             }}
           />{" "}
-          
         </div>
       </form>
 
@@ -118,7 +122,6 @@ export default function Articles() {
                     img: imageUrl,
                     graveId: graveId,
                     story: story,
-                    
                   }}
                 >
                   <button>Vis historien</button>
