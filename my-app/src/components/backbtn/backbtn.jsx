@@ -5,7 +5,7 @@ function Backbtn() {
     const navigate = useNavigate();
   return (
     <div>
-        <button className="backBTN" onClick={() => navigate(-1)}>Go back</button>
+        <button className="backBTN" onClick={() => navigate('/')}>Go back</button>
     </div>
   )
 }
