@@ -30,7 +30,6 @@ function App() {
        <TopNav />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/" element={<Home />} />
         <Route path="/*" element={<Home />} />
         <Route path="/Map" element={<Map />} />
         <Route path="/Qr" element={<Qr />} />
