@@ -11,7 +11,9 @@ export default function HistoryPrivate() {
       <section className="StoriesBox" id="StoriesBoxOpen">
         <Backbtn />
         <div className="StoryBox">
-          <h2>{state.name} {state.lastname} </h2>
+          <h2>
+            {state.name} {state.lastname}{" "}
+          </h2>
           <h3>
             <img src={state.bornImg} alt="Stjerne" /> {state.born}{" "}
             <img src={state.deadImg} alt="Kors" /> {state.dead}
@@ -24,7 +26,9 @@ export default function HistoryPrivate() {
           <div className="showMoreContent" id="showMoreContent">
             <p id="work"> {state.jobName} </p>
             <div className={state.jobIcon} />
-            <p id="graveId"><span id="bolded">Gravnummer:</span> {state.graveId} </p>
+            <p id="graveId">
+              <span id="bolded">Gravnummer:</span> {state.graveId}{" "}
+            </p>
           </div>
           <h4 id="story allStory">{state.story}</h4>
         </div>
