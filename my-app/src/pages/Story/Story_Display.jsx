@@ -110,6 +110,7 @@ export default function Articles() {
                     jobIcon: jobIcon,
                     jobName: jobName,
                     name: name,
+                    lastname: lastname,
                     bornImg: stjerne,
                     born: born,
                     deadImg: kors,
@@ -117,7 +118,7 @@ export default function Articles() {
                     img: imageUrl,
                     graveId: graveId,
                     story: story,
-                    lastname: lastname,
+                    
                   }}
                 >
                   <button>Vis historien</button>
