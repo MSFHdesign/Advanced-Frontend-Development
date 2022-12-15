@@ -7,7 +7,6 @@ import Intro1 from "../introModal/Step1";
 import exitIcon from "../../pics/icons/cross.svg";
 
 function Topnav() {
-
   const Images = [
     ``,
     `M327.84,118.71l-48.83-38.87c.62-2.05,.96-4.22,.96-6.46V35.7c0-12.43-10.17-22.6-22.6-22.6h-18.84c-10.53,0-19.41,7.31-21.89,17.1l-30.45-24.23c-9.99-7.95-24.15-7.95-34.14,0L10.39,118.71c-17.64,14.04-11.31,40.57,7.68,47.27v171.15c0,13.68,11.19,24.87,24.87,24.87h61.3c13.68,0,24.87-11.19,24.87-24.87v-87.32c0-12.77,10.36-23.13,23.13-23.13h31.03c12.88,0,23.32,10.44,23.32,23.32v87.13c0,13.68,11.19,24.87,24.87,24.87h61.3c13.68,0,24.87-11.19,24.87-24.87V166.75c20.94-5.13,28.63-33.39,10.22-48.04Z`,
@@ -35,7 +34,7 @@ function Topnav() {
   const [image, setImage] = useState(Images[0]);
   const [text, setText] = useState(Texts[0]);
 
-  // 
+  //
   function toNext() {
     setCurrentIndex((state) => {
       const nextIndex = state < 5 ? state + 1 : 5;
@@ -90,7 +89,8 @@ function Topnav() {
               width="100px"
               height="100px"
               viewBox="0 0 392 392"
-              cx="50%" cy="50%"
+              cx="50%"
+              cy="50%"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -99,17 +99,19 @@ function Topnav() {
           </div>
           <p id="modalText">{text}</p>
           <div className="modal-btns">
-
-            <button className="btn formsubmit" id="notSolid" onClick={toPrevious}>
+            <button
+              className="btn formsubmit"
+              id="notSolid"
+              onClick={toPrevious}
+            >
               Tilbage
             </button>
 
             <button id="solid" onClick={toNext}>
               Næste
             </button>
-
           </div>
-          <img src={exitIcon} alt="Exit" id="exitIcon" onClick={closeModal} />  
+          <img src={exitIcon} alt="Exit" id="exitIcon" onClick={closeModal} />
         </Intro1>
       </div>
     </div>
