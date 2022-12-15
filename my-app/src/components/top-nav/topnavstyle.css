@@ -40,10 +40,11 @@
 }
 
 .modal-content {
-    width: 500px;
+    width: 90%;
     height: 400px;
     background-color: #fff;
     position: relative;
+    border-radius: 30px;
 }
 
 .modal-content .modal-body {
@@ -62,6 +63,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+.modal-body svg {
+    width: 40px;
 }
 
 .modal-body .formsubmit {
@@ -70,6 +76,35 @@
 
 #modalText {
     margin: 0;
+    font-size: 18px;
+}
+
+.modal-btns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-body button {
+    border-radius: 30px;
+    border: 0;
+    height: 45px;
+    width: 50%;
+    font-size: 18px;
+    box-sizing: border-box;
+    margin: 16px 0;
+}
+
+#notSolid {
+    margin-right: 8px;
+    background-color: #ffffff;
+    border: 3.5 solid #46512C;
+}
+
+#solid {
+    margin-left: 8px;
+    background-color: #46512C;
+    color: #ffffff;
 }
 
 #exitIcon {
@@ -81,6 +116,7 @@
     bottom: 16px;
 }
 
+/* add history modal */
 .addOrBackModal .modal-content {
     height: 160px;
     display: flex;
@@ -106,9 +142,4 @@
     background-color: #46512C;
     color: #ffffff;
     border-width: 0;
-}
-
-#backToForm {
-    /* border-width: 0;
-    background-color: #f2f2f2; */
 }

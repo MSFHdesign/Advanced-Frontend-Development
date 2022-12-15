@@ -6,7 +6,6 @@ import ArticleDisplay from "../Story/Article_Display";
 export default function Home() {
   return (
     <>
-     
       <StoryDisplay />
     </>
   );

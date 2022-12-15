@@ -12,6 +12,10 @@
   height: 90vh;
 }
 
+.qrsite h1 {
+  text-align: center;
+}
+
 .qr-image-wrapper section {
   border-radius: 50px;
   box-sizing: border-box;

@@ -83,25 +83,31 @@ function Topnav() {
         <h3>Kirkegårdshistorier</h3>
       </Link>
       <div onClick={openModal}>
-        <img src={info} alt="Info-logo" height={30} id="info" />
+        <img src={info} alt="Info-logo" id="info" />
         <Intro1 title="Startguide" onClose={closeModal} show={show}>
-          <svg
-            width="80"
-            height="80"
-            viewBox="0 0 392 392"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d={image} fill="#46512C" />
-          </svg>
+          <div>
+            <svg
+              width="100px"
+              height="100px"
+              viewBox="0 0 392 392"
+              cx="50%" cy="50%"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d={image} fill="#46512C" />
+            </svg>
+          </div>
           <p id="modalText">{text}</p>
           <div className="modal-btns">
-            <button className="btn formsubmit" onClick={toPrevious}>
+
+            <button className="btn formsubmit" id="notSolid" onClick={toPrevious}>
               Tilbage
             </button>
+
             <button id="solid" onClick={toNext}>
               Næste
             </button>
+
           </div>
           <img src={exitIcon} alt="Exit" id="exitIcon" onClick={closeModal} />  
         </Intro1>
