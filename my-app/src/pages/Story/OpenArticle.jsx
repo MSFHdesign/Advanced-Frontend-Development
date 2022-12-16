@@ -26,7 +26,6 @@ export default function HistoryPrivate() {
 
   return (
     <div className="historie">
-     
       {Artikler.length === 0 ? (
         <p> Nothing to see, yet....</p>
       ) : (
@@ -45,9 +44,8 @@ export default function HistoryPrivate() {
           }) =>
             id === filter ? (
               <div className="StoriesBox" id="StoriesBox" key={id}>
-                
                 <div className="StoryBox" id="StoryBox">
-                <Backbtn />
+                  <Backbtn />
                   <h2>{Navn}</h2>
                   <h3>
                     <img src={stjerne} alt="Stjerne" /> {born}{" "}
@@ -65,9 +63,7 @@ export default function HistoryPrivate() {
                   <Backbtn />
                 </div>
               </div>
-            ) : (
-              <p> </p>
-            )
+            ) : null
         )
       )}
     </div>

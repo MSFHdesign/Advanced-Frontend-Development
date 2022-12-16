@@ -1,21 +1,13 @@
 import "../../pages/qr/qr.css";
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import QrScan from "react-qr-reader";
 
 function QRscanner() {
-  const [qrscan, setQrscan] = useState("No result");
   const navigate = useNavigate();
-  // var URL = "";
   const handleScan = (data) => {
-    if (data) {
-      setQrscan(data);
-      // URL = `/qr/${data}`;
-      // navigate(URL);
-      sessionStorage.QrNavn = data;
-      navigate(data);
-      console.log(qrscan);
-    }
+    sessionStorage.QrNavn = data;
+    navigate(data);
   };
   const handleError = (err) => {
     console.error(err);
