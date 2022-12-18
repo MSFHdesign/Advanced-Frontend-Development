@@ -15,8 +15,8 @@ export default function Articles() {
   const [Articles, SetArticles] = useState([]);
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState("Historier hentes...");
+  
   // Søge funktion
-
   const SearchStory = (e) => {
     e.preventDefault();
     setLoading("Intet at vise");
@@ -28,6 +28,11 @@ export default function Articles() {
             Articles.name.toLowerCase() +
             " " +
             Articles.lastname.toLowerCase()
+          ).includes(search.toLowerCase()) ||
+          (
+            Articles.lastname.toLowerCase() +
+            " " +
+            Articles.name.toLowerCase()
           ).includes(search.toLowerCase()) ||
           Articles.name.toLowerCase().includes(search.toLowerCase()) ||
           Articles.lastname.toLowerCase().includes(search.toLowerCase()) ||

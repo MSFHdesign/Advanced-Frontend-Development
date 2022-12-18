@@ -1,7 +1,11 @@
-import { addDoc, collection, Timestamp } from "firebase/firestore";
 import React, { useState } from "react";
+
+// FIRE BASE 
+import { addDoc, collection, Timestamp } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { storage, db } from "../../firebaseConfig";
+
+
 // import { toast } from "react-toastify";
 import AddedModal from "../../components/introModal/Step1";
 import { toast, ToastContainer } from "react-toastify";
@@ -58,7 +62,7 @@ export default function AddArticle() {
   // Change aint no thiiing
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    console.log(formData);
+   
   };
 
   // Pictures can be rocking
