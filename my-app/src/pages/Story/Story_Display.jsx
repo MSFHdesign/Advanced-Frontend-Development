@@ -76,7 +76,7 @@ export default function Articles() {
       </form>
 
       {Articles.length === 0 ? (
-        <p>{loading}</p>
+        <p className="loading">{loading}</p>
       ) : (
         Articles.map(
           ({

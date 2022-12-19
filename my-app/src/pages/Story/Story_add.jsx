@@ -6,7 +6,7 @@ import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { storage, db } from "../../firebaseConfig";
 
 
-// import { toast } from "react-toastify";
+
 import AddedModal from "../../components/introModal/Step1";
 import { toast, ToastContainer } from "react-toastify";
 import Topnav from "../../components/top-nav/topnav";
